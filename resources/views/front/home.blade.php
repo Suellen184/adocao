@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="dog_thumb d-none d-lg-block">
-            <img src="img/banner/dog.png" alt="">
+            <img src="front/assets/img/banner/dog.png" alt="">
         </div>
     </div>
 </div>
@@ -39,7 +39,7 @@
                 <div class="single_service active">
                      <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
                          <div class="service_icon">
-                             <img src="img/service/service_icon_2.png" alt="">
+                             <img src="front/assets/img/service/service_icon_2.png" alt="">
                          </div>
                      </div>
                      <div class="service_content text-center">
@@ -52,7 +52,7 @@
                 <div class="single_service">
                      <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
                          <div class="service_icon">
-                             <img src="img/service/service_icon_3.png" alt="">
+                             <img src="front/assets/img/service/service_icon_3.png" alt="">
                          </div>
                      </div>
                      <div class="service_content text-center">
@@ -72,7 +72,7 @@
         <div class="row align-items-center">
             <div class="col-lg-5 col-md-6">
                 <div class="pet_thumb">
-                    <img src="img/about/pet_care.png" alt="">
+                    <img src="front/assets/img/about/pet_care.png" alt="">
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1 col-md-6">
@@ -110,7 +110,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6">
                             <div class="single_adapt text-center">
-                                <img src="img/adapt_icon/1.png" alt="">
+                                <img src="front/assets/img/adapt_icon/1.png" alt="">
                                 <div class="adapt_content">
                                     <h3 class="counter">452</h3>
                                     <p>Pets Available</p>
@@ -119,14 +119,14 @@
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="single_adapt text-center">
-                                <img src="img/adapt_icon/3.png" alt="">
+                                <img src="front/assets/img/adapt_icon/3.png" alt="">
                                 <div class="adapt_content">
                                     <h3><span class="counter">52</span>+</h3>
                                     <p>Pets Available</p>
                                 </div>
                             </div>
                             <div class="single_adapt text-center">
-                                <img src="img/adapt_icon/2.png" alt="">
+                                <img src="front/assets/img/adapt_icon/2.png" alt="">
                                 <div class="adapt_content">
                                     <h3><span class="counter">52</span>+</h3>
                                     <p>Pets Available</p>
@@ -150,7 +150,7 @@
                     <div class="testmonial_wrap">
                         <div class="single_testmonial d-flex align-items-center">
                             <div class="test_thumb">
-                                <img src="img/testmonial/1.png" alt="">
+                                <img src="front/assets/img/testmonial/1.png" alt="">
                             </div>
                             <div class="test_content">
                                 <h4>Jhon Walker</h4>
@@ -162,7 +162,7 @@
                     <div class="testmonial_wrap">
                         <div class="single_testmonial d-flex align-items-center">
                             <div class="test_thumb">
-                                <img src="img/testmonial/1.png" alt="">
+                                <img src="front/assets/img/testmonial/1.png" alt="">
                             </div>
                             <div class="test_content">
                                 <h4>Jhon Walker</h4>
@@ -174,7 +174,7 @@
                     <div class="testmonial_wrap">
                         <div class="single_testmonial d-flex align-items-center">
                             <div class="test_thumb">
-                                <img src="img/testmonial/1.png" alt="">
+                                <img src="front/assets/img/testmonial/1.png" alt="">
                             </div>
                             <div class="test_content">
                                 <h4>Jhon Walker</h4>
@@ -206,7 +206,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single_team">
                     <div class="thumb">
-                        <img src="img/team/1.png" alt="">
+                        <img src="front/assets/img/team/1.png" alt="">
                     </div>
                     <div class="member_name text-center">
                         <div class="mamber_inner">
@@ -219,7 +219,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single_team">
                     <div class="thumb">
-                        <img src="img/team/2.png" alt="">
+                        <img src="front/assets/img/team/2.png" alt="">
                     </div>
                     <div class="member_name text-center">
                         <div class="mamber_inner">
@@ -232,7 +232,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single_team">
                     <div class="thumb">
-                        <img src="img/team/3.png" alt="">
+                        <img src="front/assets/img/team/3.png" alt="">
                     </div>
                     <div class="member_name text-center">
                         <div class="mamber_inner">

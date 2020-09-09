@@ -33,7 +33,7 @@
                 <div class="single_service">
                      <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
                          <div class="service_icon">
-                             <img src="img/service/service_icon_1.png" alt="">
+                             <img src="front/assets/img/service/service_icon_1.png" alt="">
                          </div>
                      </div>
                      <div class="service_content text-center">
@@ -46,7 +46,7 @@
                 <div class="single_service active">
                      <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
                          <div class="service_icon">
-                             <img src="img/service/service_icon_2.png" alt="">
+                             <img src="front/assets/img/service/service_icon_2.png" alt="">
                          </div>
                      </div>
                      <div class="service_content text-center">
@@ -59,7 +59,7 @@
                 <div class="single_service">
                      <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
                          <div class="service_icon">
-                             <img src="img/service/service_icon_3.png" alt="">
+                             <img src="front/assets/img/service/service_icon_3.png" alt="">
                          </div>
                      </div>
                      <div class="service_content text-center">
@@ -82,7 +82,7 @@
                     <div class="testmonial_wrap">
                         <div class="single_testmonial d-flex align-items-center">
                             <div class="test_thumb">
-                                <img src="img/testmonial/1.png" alt="">
+                                <img src="front/assets/img/testmonial/1.png" alt="">
                             </div>
                             <div class="test_content">
                                 <h4>Jhon Walker</h4>
@@ -94,7 +94,7 @@
                     <div class="testmonial_wrap">
                         <div class="single_testmonial d-flex align-items-center">
                             <div class="test_thumb">
-                                <img src="img/testmonial/1.png" alt="">
+                                <img src="front/assets/img/testmonial/1.png" alt="">
                             </div>
                             <div class="test_content">
                                 <h4>Jhon Walker</h4>
@@ -106,7 +106,7 @@
                     <div class="testmonial_wrap">
                         <div class="single_testmonial d-flex align-items-center">
                             <div class="test_thumb">
-                                <img src="img/testmonial/1.png" alt="">
+                                <img src="front/assets/img/testmonial/1.png" alt="">
                             </div>
                             <div class="test_content">
                                 <h4>Jhon Walker</h4>
@@ -138,7 +138,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single_team">
                     <div class="thumb">
-                        <img src="img/team/1.png" alt="">
+                        <img src="front/assets/img/team/1.png" alt="">
                     </div>
                     <div class="member_name text-center">
                         <div class="mamber_inner">
@@ -151,7 +151,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single_team">
                     <div class="thumb">
-                        <img src="img/team/2.png" alt="">
+                        <img src="front/assets/img/team/2.png" alt="">
                     </div>
                     <div class="member_name text-center">
                         <div class="mamber_inner">
@@ -164,7 +164,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single_team">
                     <div class="thumb">
-                        <img src="img/team/3.png" alt="">
+                        <img src="front/assets/img/team/3.png" alt="">
                     </div>
                     <div class="member_name text-center">
                         <div class="mamber_inner">

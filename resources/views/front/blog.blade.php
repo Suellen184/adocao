@@ -26,7 +26,7 @@
                 <div class="blog_left_sidebar">
                     <article class="blog_item">
                         <div class="blog_item_img">
-                            <img class="card-img rounded-0" src="img/blog/single_blog_1.png" alt="">
+                            <img class="card-img rounded-0" src="front/assets/img/blog/single_blog_1.png" alt="">
                             <a href="#" class="blog_item_date">
                                 <h3>15</h3>
                                 <p>Jan</p>
@@ -48,7 +48,7 @@
 
                     <article class="blog_item">
                         <div class="blog_item_img">
-                            <img class="card-img rounded-0" src="img/blog/single_blog_2.png" alt="">
+                            <img class="card-img rounded-0" src="front/assets/img/blog/single_blog_2.png" alt="">
                             <a href="#" class="blog_item_date">
                                 <h3>15</h3>
                                 <p>Jan</p>
@@ -70,7 +70,7 @@
 
                     <article class="blog_item">
                         <div class="blog_item_img">
-                            <img class="card-img rounded-0" src="img/blog/single_blog_3.png" alt="">
+                            <img class="card-img rounded-0" src="front/assets/img/blog/single_blog_3.png" alt="">
                             <a href="#" class="blog_item_date">
                                 <h3>15</h3>
                                 <p>Jan</p>
@@ -92,7 +92,7 @@
 
                     <article class="blog_item">
                         <div class="blog_item_img">
-                            <img class="card-img rounded-0" src="img/blog/single_blog_4.png" alt="">
+                            <img class="card-img rounded-0" src="front/assets/img/blog/single_blog_4.png" alt="">
                             <a href="#" class="blog_item_date">
                                 <h3>15</h3>
                                 <p>Jan</p>
@@ -114,7 +114,7 @@
 
                     <article class="blog_item">
                         <div class="blog_item_img">
-                            <img class="card-img rounded-0" src="img/blog/single_blog_5.png" alt="">
+                            <img class="card-img rounded-0" src="front/assets/img/blog/single_blog_5.png" alt="">
                             <a href="#" class="blog_item_date">
                                 <h3>15</h3>
                                 <p>Jan</p>
@@ -220,7 +220,7 @@
                     <aside class="single_sidebar_widget popular_post_widget">
                         <h3 class="widget_title">Recent Post</h3>
                         <div class="media post_item">
-                            <img src="img/post/post_1.png" alt="post">
+                            <img src="front/assets/img/post/post_1.png" alt="post">
                             <div class="media-body">
                                 <a href="single-blog.html">
                                     <h3>From life was you fish...</h3>
@@ -229,7 +229,7 @@
                             </div>
                         </div>
                         <div class="media post_item">
-                            <img src="img/post/post_2.png" alt="post">
+                            <img src="front/assets/img/post/post_2.png" alt="post">
                             <div class="media-body">
                                 <a href="single-blog.html">
                                     <h3>The Amazing Hubble</h3>
@@ -238,7 +238,7 @@
                             </div>
                         </div>
                         <div class="media post_item">
-                            <img src="img/post/post_3.png" alt="post">
+                            <img src="front/assets/img/post/post_3.png" alt="post">
                             <div class="media-body">
                                 <a href="single-blog.html">
                                     <h3>Astronomy Or Astrology</h3>
@@ -247,7 +247,7 @@
                             </div>
                         </div>
                         <div class="media post_item">
-                            <img src="img/post/post_4.png" alt="post">
+                            <img src="front/assets/img/post/post_4.png" alt="post">
                             <div class="media-body">
                                 <a href="single-blog.html">
                                     <h3>Asteroids telescope</h3>
@@ -292,32 +292,32 @@
                         <ul class="instagram_row flex-wrap">
                             <li>
                                 <a href="#">
-                                    <img class="img-fluid" src="img/post/post_5.png" alt="">
+                                    <img class="img-fluid" src="front/assets/img/post/post_5.png" alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img class="img-fluid" src="img/post/post_6.png" alt="">
+                                    <img class="img-fluid" src="front/assets/img/post/post_6.png" alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img class="img-fluid" src="img/post/post_7.png" alt="">
+                                    <img class="img-fluid" src="front/assets/img/post/post_7.png" alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img class="img-fluid" src="img/post/post_8.png" alt="">
+                                    <img class="img-fluid" src="front/assets/img/post/post_8.png" alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img class="img-fluid" src="img/post/post_9.png" alt="">
+                                    <img class="img-fluid" src="front/assets/img/post/post_9.png" alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img class="img-fluid" src="img/post/post_10.png" alt="">
+                                    <img class="img-fluid" src="front/assets/img/post/post_10.png" alt="">
                                 </a>
                             </li>
                         </ul>
