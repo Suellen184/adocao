@@ -14,7 +14,8 @@
 
     <!-- CSS here -->
 
-    <link rel="stylesheet" href="{{url(mix('front/assets/css/estilos.css'))}}">
+    <link rel="stylesheet" href="{{url(mix('front/assets/css/vendor.css'))}}">
+    <link rel="stylesheet" href="{{url(mix('front/assets/css/main.css'))}}">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -203,7 +204,9 @@
     <!-- footer_end  -->
 
 
-    <script src="{{url(mix('front/assets/js/scripts.js'))}}"></script>
+    <script src="{{ url(mix('front/assets/js/contact.js')) }}"></script>
+    <script src="{{ url(mix('front/assets/js/vendor.js')) }}"></script>
+    <script src="{{ url(mix('front/assets/js/main.js')) }}"></script>
     <script>
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',

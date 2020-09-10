@@ -11,26 +11,31 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.
-styles([
+mix
+    .styles([
+        'resources/views/front/assets/css/bootstrap.min.css',
+        'resources/views/front/assets/css/owl.carousel.min.css',
+        'resources/views/front/assets/css/magnific-popup.css',
+        'resources/views/front/assets/css/font-awesome.min.css',
+        'resources/views/front/assets/css/themify-icons.css',
+        'resources/views/front/assets/css/nice-select.css',
+        'resources/views/front/assets/css/flaticon.css',
+        'resources/views/front/assets/css/gijgo.css',
+        'resources/views/front/assets/css/animate.css',
+        'resources/views/front/assets/css/slicknav.css'
+    ], 'public/front/assets/css/vendor.css')
 
-    'resources/views/front/assets/css/bootstrap.min.css',
-    'resources/views/front/assets/css/owl.carousel.min.css',
-    'resources/views/front/assets/css/magnific-popup.css',
-    'resources/views/front/assets/css/font-awesome.min.css',
-    'resources/views/front/assets/css/themify-icons.css',
-    'resources/views/front/assets/css/nice-select.css',
-    'resources/views/front/assets/css/flaticon.css',
-    'resources/views/front/assets/css/gijgo.css',
-    'resources/views/front/assets/css/animate.css',
-    'resources/views/front/assets/css/slicknav.css',
-    'resources/views/front/assets/css/style.css'
-
-
-], 'public/front/assets/css/estilos.css')
+.styles('resources/views/front/assets/css/style.css', 'public/front/assets/css/main.css')
 
 .scripts([
+    'resources/views/front/assets/js/contact.js',
+    'resources/views/front/assets/js/jquery.ajaxchimp.min.js',
+    'resources/views/front/assets/js/jquery.form.js',
+    'resources/views/front/assets/js/jquery.validate.min.js',
+    'resources/views/front/assets/js/mail-script.js'
+], 'public/front/assets/js/contact.js')
 
+.scripts([
     'resources/views/front/assets/js/vendor/modernizr-3.5.0.min.js',
     'resources/views/front/assets/js/vendor/jquery-1.12.4.min.js',
     'resources/views/front/assets/js/popper.min.js',
@@ -48,18 +53,13 @@ styles([
     'resources/views/front/assets/js/jquery.slicknav.min.js',
     'resources/views/front/assets/js/jquery.magnific-popup.min.js',
     'resources/views/front/assets/js/plugins.js',
-    'resources/views/front/assets/js/gijgo.min.js',
-    'resources/views/front/assets/js/contact.js',
-    'resources/views/front/assets/js/jquery.ajaxchimp.min.js',
-    'resources/views/front/assets/js/jquery.form.js',
-    'resources/views/front/assets/js/mail-script.js',
-    'resources/views/front/assets/js/main.js',
+    'resources/views/front/assets/js/gijgo.min.js'
+], 'public/front/assets/js/vendor.js')
 
-], 'public/front/assets/js/scripts.js')
+.scripts('resources/views/front/assets/js/main.js', 'public/front/assets/js/main.js')
 
 .copyDirectory('resources/views/front/assets/fonts', 'public/front/assets/fonts')
     .copyDirectory('resources/views/front/assets/img', 'public/front/assets/img')
-
 
 .options({
     processCssUrls: false

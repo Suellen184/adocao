@@ -1,4 +1,7 @@
 {
-    "/front/assets/css/estilos.css": "/front/assets/css/estilos.css?id=a7a699fe00bd4f1320ae",
-    "/front/assets/js/scripts.js": "/front/assets/js/scripts.js?id=a8a30fcd41978a9e88af"
+    "/front/assets/css/vendor.css": "/front/assets/css/vendor.css?id=ddde70e7573262df642a",
+    "/front/assets/css/main.css": "/front/assets/css/main.css?id=0b5af739daf6663567be",
+    "/front/assets/js/contact.js": "/front/assets/js/contact.js?id=f6ed13ad07a76e95ff79",
+    "/front/assets/js/vendor.js": "/front/assets/js/vendor.js?id=6b5bdb7735fa8bef82d5",
+    "/front/assets/js/main.js": "/front/assets/js/main.js?id=4565104f74077a7bcfb5"
 }
