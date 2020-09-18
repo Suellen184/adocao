@@ -8,10 +8,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6">
-                    <div class="slider_text">
-                        <h3>Adote <br> <span>um pet</span></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod.</p>
-                        <a href="contact.html" class="boxed-btn4">Fale Conosco</a>
+                    <div class="slider_text text-center">
+                        <h3>Adote <br>  um <br>  amigo</h3>
+                        <p>  O Amor que falta para complementar <br>  sua vida pode estar aqui à sua espera!</p>
+                        <a href="{{ route('front.contato')}}" class="boxed-btn4">Faça uma doação</a>
                     </div>
                 </div>
             </div>
@@ -29,26 +29,25 @@
         <div class="row justify-content-center ">
             <div class="col-lg-7 col-md-10">
                 <div class="section_title text-center mb-95">
-                    <h3>Services for every dog</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <h3>Faça Sua Parte :)</h3>
+                    <p>Contribua adotando um bichinho para que ele possa ter uma familia repleta de amor!</p>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center text-center">
             <div class="col-lg-4 col-md-6">
                 <div class="single_service active">
                      <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
                          <div class="service_icon">
-                             <img src="front/assets/img/service/service_icon_2.png" alt="">
+                             <img src="front/assets/img/service/service_icon_4.png" alt="">
                          </div>
                      </div>
                      <div class="service_content text-center">
-                        <h3>Healthy Meals</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                        <h3>Adote um gato</h3> 
                      </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6 ">
                 <div class="single_service">
                      <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
                          <div class="service_icon">
@@ -56,12 +55,12 @@
                          </div>
                      </div>
                      <div class="service_content text-center">
-                        <h3>Pet Spa</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                        <h3>Adote um cão</h3>
                      </div>
                 </div>
-            </div>
+            </div>  
         </div>
+        <div class="text-center"> <a href="about.html" class="boxed-btn3 ">Ver Todos</a> </div>
     </div>
 </div>
 <!-- service_area_end -->
@@ -77,12 +76,12 @@
             </div>
             <div class="col-lg-6 offset-lg-1 col-md-6">
                 <div class="pet_info">
-                    <div class="section_title">
-                        <h3><span>We care your pet </span> <br>
-                            As you care</h3>
-                        <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do <br> iusmod tempor incididunt ut labore et dolore magna aliqua. <br> Quis ipsum suspendisse ultrices gravida. Risus commodo <br>
-                            viverra maecenas accumsan.</p>
-                        <a href="about.html" class="boxed-btn3">About Us</a>
+                    <div class="section_title text-center">
+                        <h3><span>Contribua de outras formas, faça uma doação!</h3>
+                        <p>Caso você queira contribuir de outras maneiras, estamos abertos para
+                        receber ajuda de todas as formas, seja com trabalho voluntário, 
+                        doação em dinheiro, ração ou brinquedos para os bichinhos :)</p>
+                        <div class="text-center">  <a href="about.html" class="boxed-btn3">Saiba Como</a></div>
                     </div>
                 </div>
             </div>
@@ -95,13 +94,13 @@
 <div class="adapt_area">
     <div class="container">
         <div class="row justify-content-between align-items-center">
-            <div class="col-lg-5">
+            <div class="col-lg-5 text-center">
                 <div class="adapt_help">
                     <div class="section_title">
-                        <h3><span>We need your</span>
-                            help Adopt Us</h3>
-                        <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do iusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.</p>
-                        <a href="contact.html" class="boxed-btn3">Contact Us</a>
+                        <h3><span>Divulgue! <br>Com sua ajuda chegaremos mais longe.</span></h3>
+                        <p>Sua ajuda é fundamental para alcançarmos novas pessoas
+                           para que cada vez mais bichinhos encontrem um lar cheio de amor</p>
+                        <a href="contact.html" class="boxed-btn3">Compartilhe</a>
                     </div>
                 </div>
             </div>
@@ -110,10 +109,10 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6">
                             <div class="single_adapt text-center">
-                                <img src="front/assets/img/adapt_icon/1.png" alt="">
+                                <img src="front/assets/img/adapt_icon/2.png" alt="">
                                 <div class="adapt_content">
                                     <h3 class="counter">452</h3>
-                                    <p>Pets Available</p>
+                                    <p>Bichinhos Disponíveis</p>
                                 </div>
                             </div>
                         </div>
@@ -122,14 +121,14 @@
                                 <img src="front/assets/img/adapt_icon/3.png" alt="">
                                 <div class="adapt_content">
                                     <h3><span class="counter">52</span>+</h3>
-                                    <p>Pets Available</p>
+                                    <p>Cachorrinhos Adotados</p>
                                 </div>
                             </div>
                             <div class="single_adapt text-center">
-                                <img src="front/assets/img/adapt_icon/2.png" alt="">
+                                <img src="front/assets/img/adapt_icon/4.png" alt="">
                                 <div class="adapt_content">
                                     <h3><span class="counter">52</span>+</h3>
-                                    <p>Pets Available</p>
+                                    <p>Gatinhos Adotados</p>
                                 </div>
                             </div>
                         </div>
@@ -197,8 +196,8 @@
         <div class="row justify-content-center ">
             <div class="col-lg-6 col-md-10">
                 <div class="section_title text-center mb-95">
-                    <h3>Our Team</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <h3>Nossa Equipe</h3>
+                    <p>Nossa equipe é formada primeiramente por pessoas que amam o que fazem, ajudar os bichinhos com muita dedicação é amor sempre vai ser nossa prioridade.</p>
                 </div>
             </div>
         </div>
@@ -244,6 +243,7 @@
             </div>
         </div>
     </div>
+    
 </div>
 <!-- team_area_start  -->
 

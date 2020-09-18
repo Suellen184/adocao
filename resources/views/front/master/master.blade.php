@@ -33,7 +33,7 @@
                             <div class="short_contact_list">
                                 <ul>
                                     <li><a href="#">+880 4664 216</a></li>
-                                    <li><a href="#">Mon - Sat 10:00 - 7:00</a></li>
+                                    <li><a href="#">Seg - Sex 10:00 - 19:00</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -70,22 +70,11 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a  href="index.html">home</a></li>
-                                        <li><a href="about.html">about</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                                
-                                            </ul>
-                                        </li>
-                                        <li><a href="service.html">services</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a  href="{{ route('front.home')}}">INICIO</a></li>
+                                        <li><a href="{{ route('front.sobre')}}">SOBRE</a></li>
+                                        <li><a href="{{ route('front.blog')}}">BLOG</a></li>
+                                        <li><a href="{{ route('front.service')}}">ANIMAIS</a></li>
+                                        <li><a href="{{ route('front.contato')}}">CONTATO</a></li>
                                     </ul>
                                 </nav>
                             </div>
