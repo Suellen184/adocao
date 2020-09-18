@@ -1,4 +1,19 @@
 @extends('front.master.master')
+@section('js')
+<script>
+
+$('document').ready(() => {$('a[href^="#"]').on('click', function(e) {
+  e.preventDefault();
+  var id = $(this).attr('href'),
+  targetOffset = $(id).offset().top;
+    
+  $('html, body').animate({ 
+    scrollTop: targetOffset - 100
+  }, 500);
+});})
+
+</script>
+@endsection
 
 @section('content')
 
@@ -11,7 +26,7 @@
                     <div class="slider_text text-center">
                         <h3>Adote <br>  um <br>  amigo</h3>
                         <p>  O Amor que falta para complementar <br>  sua vida pode estar aqui à sua espera!</p>
-                        <a href="{{ route('front.contato')}}" class="boxed-btn4">Faça uma doação</a>
+                        <a href="#sessao-um" class="boxed-btn4">Faça uma doação</a>
                     </div>
                 </div>
             </div>
@@ -24,7 +39,7 @@
 <!-- slider_area_end -->
 
 <!-- service_area_start  -->
-<div class="service_area">
+<div  class="service_area">
     <div class="container">
         <div class="row justify-content-center ">
             <div class="col-lg-7 col-md-10">
@@ -57,13 +72,15 @@
                      <div class="service_content text-center">
                         <h3>Adote um cão</h3>
                      </div>
+                     
                 </div>
             </div>  
-        </div>
+        </div><div id="sessao-um"></div>
         <div class="text-center"> <a href="about.html" class="boxed-btn3 ">Ver Todos</a> </div>
     </div>
 </div>
 <!-- service_area_end -->
+
 
 <!-- pet_care_area_start  -->
 <div class="pet_care_area">
