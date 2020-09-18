@@ -25,8 +25,8 @@ $('document').ready(() => {$('a[href^="#"]').on('click', function(e) {
                 <div class="col-lg-5 col-md-6">
                     <div class="slider_text text-center">
                         <h3>Adote <br>  um <br>  amigo</h3>
-                        <p>  O Amor que falta para complementar <br>  sua vida pode estar aqui à sua espera!</p>
-                        <a href="#sessao-um" class="boxed-btn4">Faça uma doação</a>
+                        <p> Faça uma doação, sua ajuda pode transformar a vida de varios bichinhos :) <br> </p>
+                        <a href="#sessao-um" class="boxed-btn4">Quero Ajudar!</a>
                     </div>
                 </div>
             </div>
@@ -59,6 +59,8 @@ $('document').ready(() => {$('a[href^="#"]').on('click', function(e) {
                      </div>
                      <div class="service_content text-center">
                         <h3>Adote um gato</h3> 
+                        <p>Adotamos um ao outro, simples assim: nos tornamos melhores amigos porque eu precisava dele e ele de mim.</p>
+                        
                      </div>
                 </div>
             </div>
@@ -71,6 +73,7 @@ $('document').ready(() => {$('a[href^="#"]').on('click', function(e) {
                      </div>
                      <div class="service_content text-center">
                         <h3>Adote um cão</h3>
+                        <p>Quando eu procurava a felicidade, a felicidade me encontrou. Eu mudei seu destino e você me transformou.</p>
                      </div>
                      
                 </div>
