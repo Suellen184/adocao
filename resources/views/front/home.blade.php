@@ -25,7 +25,7 @@ $('document').ready(() => {$('a[href^="#"]').on('click', function(e) {
                 <div class="col-lg-5 col-md-6">
                     <div class="slider_text text-center">
                         <h3>Adote <br>  um <br>  amigo</h3>
-                        <p> Faça uma doação, sua ajuda pode transformar a vida de varios bichinhos :) <br> </p>
+                        <p> Faça sua doação. <br>Ajude-nos a transformar vidas! <br> </p>
                         <a href="#sessao-um" class="boxed-btn4">Quero Ajudar!</a>
                     </div>
                 </div>
@@ -273,12 +273,12 @@ $('document').ready(() => {$('a[href^="#"]').on('click', function(e) {
             <div class="col-lg-8">
                 <div class="contact_text text-center">
                     <div class="section_title text-center">
-                        <h3>Why go with Anipat?</h3>
-                        <p>Because we know that even the best technology is only as good as the people behind it. 24/7 tech support.</p>
+                        <h3>Está com alguma duvida? Fale conosco :)</h3>
+                        <p>Caso precise de mais informaçoes <br> Nosso suporte está aberto de Seg - Sex das 10h - 19h</p>
                     </div>
                     <div class="contact_btn d-flex align-items-center justify-content-center">
-                        <a href="contact.html" class="boxed-btn4">Contact Us</a>
-                        <p>Or  <a href="#"> +880 4664 216</a></p>
+                        <a href="contact.html" class="boxed-btn4">Fale conosco </a>
+                        <p>ou  <a href="#"> +880 4664 216</a></p>
                     </div>
                 </div>
             </div>
