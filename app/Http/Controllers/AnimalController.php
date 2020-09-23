@@ -46,13 +46,13 @@ class AnimalController extends Controller
 
     public function admin()
     {
-        $animais = $this->animal::where('tipo', 'cachorro')->orderBy('animal_id','DESC')->get();
-        return view('admin.cachorro-admin', compact('animais'));
+        $animais = $this->animal::where('tipo', 'cachorro')->orderBy('id','DESC')->get();
+        return view('admin.animal.index', compact('animais'));
     }
     
     public function create()
     {
-        //
+        return view('admin.animal.create');
     }
 
     /**

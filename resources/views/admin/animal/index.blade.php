@@ -60,7 +60,7 @@ function ConfirmDelete() {
 
 <div class="container">
     {{-- @permission('item-create') --}}
-    <a href="{{ URL::to('admin/item/create') }}"><button type="button" class="btn btn-success"><i class="fa fa-plus"></i>Adicionar Cachorro</button></a>
+    <a href="{{ URL::to('admin/item/create') }}"><button type="button" class="btn btn-success"><i class="fa fa-plus"></i>Adicionar animal</button></a>
     {{-- @endpermission --}}
     <p></p>
 
@@ -68,7 +68,7 @@ function ConfirmDelete() {
         <div class="col-lg-12 col-xs-12">
             <div class="box box-info">
                 <div class="box-header with-border">
-                    <p>Aqui você pode editar, deletar e visualizar os cachorros.</p>
+                    <p>Aqui você pode editar, deletar e visualizar os animais.</p>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
