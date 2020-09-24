@@ -29,6 +29,7 @@ Route::get('index.animal', 'AnimalController@admin')->name('index.animal');
 
 //ADMIN
 Route::get('create.animal', 'AnimalController@create')->name('create.animal');
+Route::get('show.animal', 'AnimalController@show')->name('show.animal');
 
 
 //DEPOIMENTOS

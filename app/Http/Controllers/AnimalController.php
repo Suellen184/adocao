@@ -72,9 +72,10 @@ class AnimalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        
+        $animais = $this->animal::where('tipo', 'cachorro')->orderBy('id','DESC')->get();
+        return view('admin.animal.show', compact('animais'));
     }
 
     /**
