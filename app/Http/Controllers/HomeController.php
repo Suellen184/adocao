@@ -3,31 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Testemunho;
-use App\Animal;
 
 class HomeController extends Controller
 {
-    private $testemunho;
-
-    private $animal;
-
-
-    public function __construct(Animal $animal, Testemunho $testemunho)
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        $this->animal = $animal;
-        $this->testemunho = $testemunho;
+        $this->middleware('auth');
     }
 
-    /*LISTANDO DOIS ANIMAIS E UM TESTEMUNHO PARA A PÁGINA HOME*/
-
-    public function exibirHome()
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
     {
-        $animais = $this->animal::whereIn('tipo', ['cachorro', 'gato'])->limit(2)
-        ->get();
-
-        $testemunhos = $this->testemunho::where('status','1')->orderBy('id_testemunho', 'ASC')->limit(1)
-        ->get();
-        return view('cliente.inicio', compact('animais', 'testemunhos'));
+        return view('home');
     }
 }

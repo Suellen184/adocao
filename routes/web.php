@@ -17,19 +17,25 @@ use Illuminate\Support\Facades\Route;
 
 
 //CLIENTE
-Route::get('/home','WebController@home')->name('front.home');
-Route::get('/elemento','WebController@elemento')->name('front.elemento');
-Route::get('/sobre','WebController@sobre')->name('front.sobre');
-Route::get('/article','WebController@article')->name('front.article');
-Route::get('/blog','WebController@blog')->name('front.blog');
-Route::get('/service','WebController@service')->name('front.service');
-Route::get('/contato','WebController@contato')->name('front.contato');
+Route::get('', 'WebController@home')->name('front.home');
+Route::get('/elemento', 'WebController@elemento')->name('front.elemento');
+Route::get('/sobre', 'WebController@sobre')->name('front.sobre');
+Route::get('/article', 'WebController@article')->name('front.article');
+Route::get('/blog', 'WebController@blog')->name('front.blog');
+Route::get('/service', 'WebController@service')->name('front.service');
+Route::get('/contato', 'WebController@contato')->name('front.contato');
 
-Route::get('index.animal', 'AnimalController@admin')->name('index.animal');
 
 //ADMIN
-Route::get('create.animal', 'AnimalController@create')->name('create.animal');
-Route::get('show.animal', 'AnimalController@show')->name('show.animal');
+Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.'], function () {
+
+    // animais
+    Route::resource('animal', 'Admin\AnimalController');
+});
 
 
 //DEPOIMENTOS
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -5,7 +5,7 @@
 @section('title', 'Adicionando Animal')
 
 @section('content_header')
-    <h1>Atualizar animal Animal</h1>
+    <h1>Atualizar Animal</h1>
 @stop
 
 @section('content')
@@ -15,26 +15,31 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+@php()
+$animal=$animal[0];
+var_dump($animal);
+die();
+@endphp
 <form>
     <div class="form-group">
       <label for="nome">Nome</label>
-      <input type="text" class="form-control col-sm-6" id="nome" name="nome" aria-describedby="Nome" placeholder="Nome do animal">
+      <input type="text"  class="form-control col-sm-6" id="nome" name="nome" aria-describedby="Nome" placeholder="Nome do animal">
     </div>
 
     <div class="form-group">
         <label for="cor">Cor</label>
-        <input type="text" class="form-control col-sm-4" id="cor" name="cor" placeholder="Cor do animal">
+        <input type="text" value="{{$animal->cor}}" class="form-control col-sm-4" id="cor" name="cor" placeholder="Cor do animal">
     </div>
 
     <div class="form-group">
         <label for="raca">Raça</label>
-        <input type="text" class="form-control col-sm-4" id="raca" name="raca" placeholder="Raça do animal">
+        <input type="text" value="{{$animal->raca}}" class="form-control col-sm-4" id="raca" name="raca" placeholder="Raça do animal">
     </div>
-    
-     
+
+
     <div class="form-group">
         <label for="nascimento">Data de Nascimento</label>
-        <input type="date" class="form-control col-sm-4" id="nascimento" name="nascimento" placeholder="Data de Nascimento">
+        <input type="date" value="{{$animal->data_nascimento}}" class="form-control col-sm-4" id="nascimento" name="nascimento" placeholder="Data de Nascimento">
     </div>
 
     <div class="form-group">
