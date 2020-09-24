@@ -86,7 +86,7 @@ function ConfirmDelete() {
                             <tbody>
                                 @foreach($animais as $animal)                
                                 <tr>
-                                    <td>{{ $animal->nome_animal }}</td>
+                                    <td>{{ $animal->nome }}</td>
                                     <td>{{ $animal->sexo }}</td>
                                     <td>{{ $animal->raca }}</td>
 
