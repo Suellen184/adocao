@@ -58,9 +58,9 @@ class AnimalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Animal $animal)
     {
-        //
+        return view('admin.animal.show', ['animal'=>$animal]);
     }
 
     /**
@@ -71,7 +71,7 @@ class AnimalController extends Controller
      */
     public function edit($animal)
     {
-        $animal=Animal::where('id',$animal)->get();
+        $animal=Animal::where('id',$animal)->first();
         return view('admin.animal.edit',['animal'=>$animal]);
     }
 
@@ -82,9 +82,20 @@ class AnimalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Animal $animal)
     {
-        //
+        $animal->nome=$request->nome;
+        $animal->cor=$request->cor;
+        $animal->raca=$request->raca;
+        $animal->data_nascimento=$request->nascimento;
+        $animal->tipo=$request->tipo;
+        $animal->sexo=$request->sexo;
+        $animal->status=$request->status;
+        $animal->imagem='imagem';
+
+        $animal->save();
+
+        return redirect()->route('admin.animal.index');
     }
 
     /**

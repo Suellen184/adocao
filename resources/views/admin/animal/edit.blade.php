@@ -15,15 +15,13 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-@php()
-$animal=$animal[0];
-var_dump($animal);
-die();
-@endphp
-<form>
+
+<form action="{{route('admin.animal.update',['animal'=>$animal->id])}}" method="post" >
+    @csrf
+    @method('put')
     <div class="form-group">
       <label for="nome">Nome</label>
-      <input type="text"  class="form-control col-sm-6" id="nome" name="nome" aria-describedby="Nome" placeholder="Nome do animal">
+      <input type="text"  value="{{$animal->nome}}" class="form-control col-sm-6" id="nome" name="nome" aria-describedby="Nome" placeholder="Nome do animal">
     </div>
 
     <div class="form-group">
@@ -44,25 +42,24 @@ die();
 
     <div class="form-group">
         <label for="tipo">Tipo</label>
-        <select class="form-control col-sm-2" id="tipo">
-          <option>Cachorro</option>
-          <option>Gato</option>
+        <select class="form-control col-sm-2" id="tipo" name="tipo">
+          <option value="cachorro">Cachorro</option>
+          <option value="gato">Gato</option>
         </select>
     </div>
 
     <div class="form-group">
         <label for="sexo">Sexo</label>
-        <select class="form-control col-sm-2" id="sexo">
-          <option>Fêmea</option>
-          <option>Macho</option>
+        <select class="form-control col-sm-2" id="sexo" name="sexo">
+          <option value="femea">Fêmea</option>
+          <option value="macho">Macho</option>
         </select>
     </div>
     <div class="form-group">
         <label for="status">Status</label>
-        <select class="form-control col-sm-2" id="status">
-          <option>1</option>
-          <option>Inativo</option>
-          <option>Ativo</option>
+        <select class="form-control col-sm-2" id="status" name="status">
+          <option value="inativo">Inativo</option>
+          <option value="ativo">Ativo</option>
         </select>
     </div>
     <button type="submit" class="btn btn-success">Enviar</button>
