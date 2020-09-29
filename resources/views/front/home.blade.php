@@ -273,7 +273,7 @@ $('document').ready(() => {$('a[href^="#"]').on('click', function(e) {
             <div class="col-lg-8">
                 <div class="contact_text text-center">
                     <div class="section_title text-center">
-                        <h3>Está com alguma duvida? Fale conosco :)</h3>
+                        <h3>Está com alguma dúvida? Fale conosco :)</h3>
                         <p>Caso precise de mais informaçoes <br> Nosso suporte está aberto de Seg - Sex das 10h - 19h</p>
                     </div>
                     <div class="contact_btn d-flex align-items-center justify-content-center">

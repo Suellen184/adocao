@@ -27,11 +27,15 @@ class WebController extends Controller
     }
 
     public function service(){
-        return view('front.service');
+        return view('front.animais');
     }
 
     public function contato(){
         return view('front.contato');
+    }
+    
+    public function animal(){
+        return view('front.animal');
     }
 
 

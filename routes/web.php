@@ -24,7 +24,7 @@ Route::get('/article', 'WebController@article')->name('front.article');
 Route::get('/blog', 'WebController@blog')->name('front.blog');
 Route::get('/service', 'WebController@service')->name('front.service');
 Route::get('/contato', 'WebController@contato')->name('front.contato');
-
+Route::get('/animal', 'WebController@animal')->name('front.animal');
 
 //ADMIN
 Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.'], function () {
