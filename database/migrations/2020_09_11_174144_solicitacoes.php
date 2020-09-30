@@ -25,6 +25,7 @@ class Solicitacoes extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('telefone');
             $table->string('cpf');
+            $table->string('idade');
             $table->string('cep');
             $table->text('texto');
             $table->text('observacao');

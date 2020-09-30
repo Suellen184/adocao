@@ -26,11 +26,18 @@ Route::get('/service', 'WebController@service')->name('front.service');
 Route::get('/contato', 'WebController@contato')->name('front.contato');
 
 
-//ADMIN
+//ADMIN 
 Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.'], function () {
 
     // animais
     Route::resource('animal', 'Admin\AnimalController');
+
+    //Depoimentos
+    Route::resource('depoimentos','Admin\DepoimentoController');
+
+    //Solicitacao
+    Route::resource('solicitacao','Admin\SolicitacaoController');
+
 });
 
 

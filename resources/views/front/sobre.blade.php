@@ -24,7 +24,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
                     <div class="pet_thumb">
-                        <img src="img/about/pet_care.png" alt="">
+                        <img src="front/assets/img/about/pet_care.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 col-md-6">
