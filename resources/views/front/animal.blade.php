@@ -70,14 +70,17 @@
     <!-- ================ contact section start ================= -->
     <section class="contact-section">
             <div class="container">
-                <div class="d-none d-sm-block mb-5 pb-4">
-                    
-                </div>
+                <div class="d-none d-sm-block mb-5 pb-4"></div>
     
     
                 <div class="row">
-                    <div class="col-12">
-                        <h2 class="contact-title">Get in Touch</h2>
+                    <div class="col-12 mb-5">
+                        <h2 class="contact-title text-center">Quero Adotar!</h2>
+		<p class="sample-text text-center">
+		Para a adoção ser feita, primeiramente preencha as informações solicitadas nos campos abaixo, sua solicitação será avaliada e entraremos em contato.
+        </p>
+        <div class="d-none d-sm-block mb-5 pb-4"></div>
+
                     </div>
                     <div class="col-lg-8">
                         <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
@@ -128,24 +131,21 @@
                     </div>
                     <div class="col-lg-3 offset-lg-1">
                         <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                            <span class="contact-info__icon"><i class="fa fa-venus-mars"></i></span>
                             <div class="media-body">
-                                <h3>DADOS GERAIS</h3>
-                                <p>Rosemead, CA 91770</p>
+                                <h3>Sexo</h3>
+                                <p>Macho</p>
                             </div>
                         </div>
                         <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <span class="contact-info__icon"><i class="fa fa-calendar"></i></span>
                             <div class="media-body">
-                                <h3>+1 253 565 2365</h3>
-                                <p>Mon to Fri 9am to 6pm</p>
+                                <h3>Idade</h3>
+                                <p>Aproximadamente 1 ano</p>
                             </div>
                         </div>
                         <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-email"></i></span>
-                            <div class="media-body">
-                                <h3>support@colorlib.com</h3>
-                                <p>Send us your query anytime!</p>
+                           
                             </div>
                         </div>
                     </div>
