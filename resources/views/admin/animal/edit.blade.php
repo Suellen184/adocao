@@ -41,6 +41,15 @@
     </div>
 
     <div class="form-group">
+      <label for="status">Tamanho</label>
+      <select class="form-control col-sm-2"  name="tamanho"  id="tamanho">
+        <option value="pequeno">Pequeno</option>
+        <option value="medio">Médio</option>
+        <option value="grande">Grande</option>
+      </select>
+  </div>
+
+    <div class="form-group">
         <label for="tipo">Tipo</label>
         <select class="form-control col-sm-2" id="tipo" name="tipo">
           <option value="cachorro">Cachorro</option>

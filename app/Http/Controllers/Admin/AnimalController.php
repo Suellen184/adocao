@@ -90,6 +90,7 @@ class AnimalController extends Controller
         $animal->data_nascimento=$request->nascimento;
         $animal->tipo=$request->tipo;
         $animal->sexo=$request->sexo;
+        $animal->tamanho=$request->tamanho;
         $animal->status=$request->status;
         $animal->imagem='imagem';
 

@@ -22,6 +22,8 @@
                 <strong>Data de Nascimento:</strong> {{ $animal->data_nascimento }}<br>
                 <strong>Raça:</strong> {{ $animal->raca }}
                 <strong>Sexo:</strong> {{ $animal->sexo }}
+                <strong>Tamanho:</strong> {{ $animal->tamanho }}
+
 
             </div>
             <!-- /.box-body -->

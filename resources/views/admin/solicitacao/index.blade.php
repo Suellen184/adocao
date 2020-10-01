@@ -12,7 +12,6 @@
     </a>
 
     <br>
-    
     <h4>Vizualizar Solicitação</h4>
      <br>
     <div class="container">
