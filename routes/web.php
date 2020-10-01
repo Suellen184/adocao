@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('nomedarota', 'NomeDoController@funcao');
+// Route::get('nomedarota', 'NomeDoController@funcao');
 
 
 //CLIENTE
@@ -32,17 +32,10 @@ Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.'], f
     // animais
     Route::resource('animal', 'Admin\AnimalController');
 
-    //Depoimentos
+    // depoimentos
     Route::resource('depoimentos','Admin\DepoimentoController');
-
-    //Solicitacao
-    Route::resource('solicitacao','Admin\SolicitacaoController');
-
 });
 
 
-//DEPOIMENTOS
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
