@@ -17,6 +17,7 @@
 
 <form action="{{route('admin.animal.store')}}" method="post" autocomplete="off">
     @csrf
+    
     <div class="form-group">
       <label for="nome">Nome</label>
       <input type="text" class="form-control col-sm-6" id="nome" name="nome" aria-describedby="Nome" placeholder="Nome do animal">

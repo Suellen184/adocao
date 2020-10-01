@@ -20,6 +20,7 @@ class Animais extends Migration
             $table->string('cor');
             $table->string('sexo');
             $table->string('raca');
+            $table->string('tamanho');
             $table->string('imagem');
             $table->string('tipo');
             $table->string('status');

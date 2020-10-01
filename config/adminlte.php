@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Anpet',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Administração</b>',
+    'logo' => '<b>Anpet</b>',
     'logo_img' => 'vendor/adminlte/dist/img/logo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -208,73 +208,39 @@ return [
     */
 
     'menu' => [
+        ['header' => 'Notificações'],
         [
-            'text' => 'search',
-            'search' => true,
-            'topnav' => true,
-        ],
-        [
-            'text' => 'Adoção',
-            'url'  => 'admin/blog',
-            //'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'Notificação',
+            'text'        => 'Solicitações',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
         [
-            'text' => 'profile',
+            'text'        => 'Depoimentos',
+            'url'         => 'admin/pages',
+            'icon'        => 'far fa-fw fa-file',
+            'label'       => 4,
+            'label_color' => 'warning',
+        ],
+        ['header' => 'Animal'],
+        [
+            'text' => 'Ver todos',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'icon_color' => 'cyan',
+            'url'         => 'admin/animal',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Cadastrar',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon_color' => 'green',
+            'url'         => 'admin/animal/create',
+
+
         ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
+    
+        
+        ['header' => 'Blog'],
         [
             'text'       => 'important',
             'icon_color' => 'red',

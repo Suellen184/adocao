@@ -61,10 +61,9 @@
     <div class="container">
         {{-- @permission('item-create') --}}
         <a href="{{ route('admin.animal.create') }}">
-            <button type="button" class="btn btn-success"><i class="fa fa-plus"></i> Adicionar animal</button>
+            <button type="button" class="btn btn-success"> <strong>+</strong> Adicionar animal</button>
         </a>
         {{-- @endpermission --}}
-        <p></p>
 
         <div class="row">
             <div class="col-lg-12 col-xs-12">
@@ -95,12 +94,12 @@
                                         <td>
                                             <div class="btn-group">
                                                 <a href="{{route('admin.animal.show',['animal'=>$animal->id])}}">
-                                                    <button type="button" class="btn btn-info"><i
+                                                    <button type="button" style="margin-right: 5px;" class="btn btn-info"><i
                                                             class="fa fa-search"></i> Visualizar
                                                     </button>
                                                 </a>
                                                 {{-- @permission('item-edit') --}}
-                                                <a href="{{route('admin.animal.edit',['animal'=>$animal->id])}}">
+                                                <a href="{{route('admin.animal.edit',['animal'=>$animal->id])}}" style="margin-right: 5px;">
                                                     <button type="button" class="btn btn-warning"><i
                                                             class="fa fa-edit"></i> Editar
                                                     </button>
@@ -108,7 +107,7 @@
                                                 {{-- @endpermission --}}
                                             </div>
                                             <div class="btn-group">
-                                                <form action="{{route('admin.animal.destroy',['animal'=>$animal->id])}}" method="post">
+                                                <form action="{{route('admin.animal.destroy',['animal'=>$animal->id])}}" method="post" style="margin-right: 5px;">
                                                     @csrf
                                                     @method('delete')
                                                     <button type="submit" class="btn btn-danger"><i class="fa fa-close"></i>
