@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f61c332d-efe5-4f36-bf43-0de87478c6f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/solicitacao/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/solicitacao/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/solicitacao/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/solicitacao/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +150,9 @@
       <updated>1600906527327</updated>
       <workItem from="1600906531178" duration="11334000" />
       <workItem from="1601075180730" duration="2211000" />
-      <workItem from="1601518716263" duration="218000" />
+      <workItem from="1601518716263" duration="827000" />
+      <workItem from="1601520211463" duration="1304000" />
+      <workItem from="1601598435049" duration="8369000" />
     </task>
     <servers />
   </component>
@@ -176,5 +180,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1286" height="155" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600918053031" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/database/migrations/2020_09_11_174144_solicitacoes.php</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

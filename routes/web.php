@@ -26,12 +26,12 @@ Route::get('/service', 'WebController@service')->name('front.service');
 Route::get('/contato', 'WebController@contato')->name('front.contato');
 Route::get('/animal', 'WebController@animal')->name('front.animal');
 
-//ADMIN 
+//ADMIN
 Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.'], function () {
 
     // animais
     Route::resource('animal', 'Admin\AnimalController');
-
+    Route::resource('solicitacao', 'Admin\SolicitacaoController');
     // depoimentos
     Route::resource('depoimentos','Admin\DepoimentoController');
 });

@@ -7,8 +7,8 @@
 @section('content_header')
 @section('content')
 
-    <a href="">
-        <button type="button" class="btn btn-success"> <strong>+</strong> Adicionar animal</button>
+    <a href="{{route('admin.solicitacao.create')}}">
+        <button type="button" class="btn btn-success"> <strong>+</strong> Adicionar solicitacao</button>
     </a>
 
     <br>
@@ -27,11 +27,12 @@
               </tr>
             </thead>
             <tbody>
+                @foreach($solicitacoes as $s);
                 <tr>
-                    <td scope="row">1234</td>
-                    <td>oi</td>
-                    <td>oi</td>
-                    <td>oi</td>
+                    <td scope="row">{{$s->codigo}}</td>
+                    <td>{{$s->nome}}</td>
+                    <td>{{$s->sobrenome}}</td>
+                    <td>{{$s->cep}}</td>
 
                     <td>
                         <div class="btn-group">
@@ -57,6 +58,9 @@
                                 </button>
                             </form>
                         </div>
+                    </td>
+                </tr>
+                    @endforeach
             </tbody>
           </table>
 
