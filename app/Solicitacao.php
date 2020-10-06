@@ -6,7 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Solicitacao extends Model
 {
-    protected $table='solicitacoes';
-    protected $fillable=['codigo', 'limite', 'nome', 'sobrenome', 'email', 'telefone', 'cpf', 'idade', 'cep', 'texto', 'observacao', 'status', 'id_animal' ];
-    public $timestamps=true;
+    protected $table = 'adocao_solicitacoes';
+    protected $primaryKey = 'id';
+
+    public $timestamps = true;
+
+    protected $fillable=[
+        'codigo',
+        'status',
+        'id_animal',
+        'limit',
+        'mensagem',
+        'nome',
+        'sobrenome',
+        'cpf',
+        'idade',
+        'cep',
+        'email',
+        'telefone',
+        'observacao_by_admin'
+    ];
 }

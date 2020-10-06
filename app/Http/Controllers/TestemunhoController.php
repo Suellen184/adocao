@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Testemunho;
+use App\Depoimento;
 
 
 class TestemunhoController extends Controller
 {
     private $testemunho;
 
-    public function __construct(Testemunho $testemunho)
+    public function __construct(Depoimento $testemunho)
     {
         $this->testemunho = $testemunho;
     }
@@ -44,7 +44,7 @@ class TestemunhoController extends Controller
         $testemunho->titulo = $request->texto;
         $testemunho->imagem = $request->imagem;
         $testemunho->save();
-        return redirect()->route('testemunho')->with('message', 'Testemunho enviado com sucesso criado com sucesso!');
+        return redirect()->route('testemunho')->with('message', 'Depoimento enviado com sucesso criado com sucesso!');
 
     }
 }

@@ -3,14 +3,27 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Animal extends Model
 {
     protected $table = 'animais';
+    protected $primaryKey = 'id';
 
-    protected $fillable = ['imagem', 'nome','tamanho','cor','sexo', 'data_nascimento', 'raca', 'tipo', 'status'];
-
-    protected $primaryKey ='id';
-
+    use SoftDeletes;
     public $timestamps = true;
+
+    protected $fillable = [
+        'tipo',
+        'raca',
+        'sexo',
+        'tamanho',
+        'data_nascimento',
+        'cor',
+        'nome',
+        'imagem',
+        'observacao',
+        'status',
+        'created_by'
+    ];
 }

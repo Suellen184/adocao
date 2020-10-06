@@ -16,12 +16,15 @@ class CreateAdocaoDepoimentosTable extends Migration
         Schema::create('adocao_depoimentos', function (Blueprint $table) {
             $table->increments('id');
 
+            $table->unsignedInteger('codigo_solicitacao');
             $table->boolean('status')->default(0);
 
             $table->string('mensagem');
             $table->string('imagem');
 
             $table->timestamps();
+
+            $table->foreign('codigo_solicitacao')->references('id')->on('adocao_solicitacoes');
         });
     }
 
