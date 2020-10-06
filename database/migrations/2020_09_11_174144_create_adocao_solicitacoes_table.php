@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Solicitacoes extends Migration
+class CreateAdocaoSolicitacoesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,24 +13,31 @@ class Solicitacoes extends Migration
      */
     public function up()
     {
-        Schema::create('solicitacoes', function (Blueprint $table) {
-            $table->id();
+        Schema::create('adocao_solicitacoes', function (Blueprint $table) {
+            $table->increments('id');
+
             $table->string('codigo')->unique();
+            $table->string('status')->default('Solicitação Realizada');
             $table->unsignedInteger('id_animal');
-            $table->foreign('id_animal')->references('id')->on('animais')->onDelete('cascade');
-            $table->integer('limit');
+            $table->integer('limit')->nullable();
+
+            $table->text('mensagem');
+
             $table->string('nome');
             $table->string('sobrenome');
-            $table->string('email');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('telefone');
             $table->string('cpf');
             $table->string('idade');
+
             $table->string('cep');
-            $table->text('texto');
-            $table->text('observacao');
-            $table->string('status')->default('Solicitação Realizada');
+
+            $table->string('email');
+            $table->string('telefone');
+
+            $table->text('observacao_by_admin');
+
             $table->timestamps();
+
+            $table->foreign('id_animal')->references('id')->on('animais')->onDelete('cascade');
         });
     }
 
@@ -41,7 +48,7 @@ class Solicitacoes extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('solicitacoes');
+        Schema::dropIfExists('adocao_solicitacoes');
 
     }
 }

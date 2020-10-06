@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Contatos extends Migration
+class CreateContatosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,13 @@ class Contatos extends Migration
     public function up()
     {
         Schema::create('contatos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+
             $table->string('nome');
             $table->string('email');
-            $table->text('texto');
+            $table->string('telefone');
+            $table->text('mensagem');
+
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ class InsertUserAdmin extends Migration
     public function up()
     {
         DB::table('users')->insert([
-            'name' => 'admin',
+            'nome' => 'admin',
             'email' => 'adocao@admin.com',
             'password' => bcrypt('1234'),
             'created_at' => now()
