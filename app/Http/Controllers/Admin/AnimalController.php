@@ -15,8 +15,8 @@ class AnimalController extends Controller
      */
     public function index()
     {
-        $animais=Animal::all();
-        return view('admin.animal.index',['animais'=>$animais]);
+        $animais = Animal::all();
+        return view('admin.animal.index', ['animais' => $animais]);
     }
 
     /**
@@ -32,21 +32,22 @@ class AnimalController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $animal=new Animal();
-        $animal->nome=$request->nome;
-        $animal->cor=$request->cor;
-        $animal->raca=$request->raca;
-        $animal->data_nascimento=$request->nascimento;
-        $animal->tipo=$request->tipo;
-        $animal->sexo=$request->sexo;
-        $animal->tamanho=$request->tamanho;
-        $animal->status=$request->status;
-        $animal->imagem='imagem';
+        $animal = new Animal();
+
+        $animal->nome = $request->nome;
+        $animal->cor = $request->cor;
+        $animal->raca = $request->raca;
+        $animal->data_nascimento = $request->nascimento;
+        $animal->tipo = $request->tipo;
+        $animal->sexo = $request->sexo;
+        $animal->tamanho = $request->tamanho;
+        $animal->status = $request->status;
+        $animal->imagem = 'imagem';
 
         $animal->save();
 
@@ -56,44 +57,44 @@ class AnimalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show(Animal $animal)
     {
-        return view('admin.animal.show', ['animal'=>$animal]);
+        return view('admin.animal.show', ['animal' => $animal]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($animal)
     {
-        $animal=Animal::where('id',$animal)->first();
-        return view('admin.animal.edit',['animal'=>$animal]);
+        $animal = Animal::where('id', $animal)->first();
+        return view('admin.animal.edit', ['animal' => $animal]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Animal $animal)
     {
-        $animal->nome=$request->nome;
-        $animal->cor=$request->cor;
-        $animal->raca=$request->raca;
-        $animal->data_nascimento=$request->nascimento;
-        $animal->tipo=$request->tipo;
-        $animal->sexo=$request->sexo;
-        $animal->tamanho=$request->tamanho;
-        $animal->status=$request->status;
-        $animal->imagem='imagem';
+        $animal->nome = $request->nome;
+        $animal->cor = $request->cor;
+        $animal->raca = $request->raca;
+        $animal->data_nascimento = $request->nascimento;
+        $animal->tipo = $request->tipo;
+        $animal->sexo = $request->sexo;
+        $animal->tamanho = $request->tamanho;
+        $animal->status = $request->status;
+        $animal->imagem = 'imagem';
 
         $animal->save();
 
@@ -103,12 +104,12 @@ class AnimalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         Animal::destroy($id);
-            return redirect()->route('admin.animal.index');
+        return redirect()->route('admin.animal.index');
     }
 }

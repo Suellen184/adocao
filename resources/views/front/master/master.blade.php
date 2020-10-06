@@ -72,9 +72,9 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a  href="{{ route('front.home')}}">INICIO</a></li>
+                                        <li><a href="{{ route('front.animais.index')}}">ANIMAIS</a></li>
                                         <li><a href="{{ route('front.sobre')}}">SOBRE</a></li>
-                                        <li><a href="{{ route('front.blog')}}">BLOG</a></li>
-                                        <li><a href="{{ route('front.service')}}">ANIMAIS</a></li>
+                                        <li><a href="{{ route('front.blog.index')}}">BLOG</a></li>
                                         <li><a href="{{ route('front.contato')}}">CONTATO</a></li>
                                     </ul>
                                 </nav>

@@ -4,38 +4,57 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Rotas desprotegidas - Front || Site || Página do cliente
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
 */
+Route::group(['prefix' => '/', 'as' => 'front.', 'namespace' => 'Front'], function () {
+    // Index e demais páginas
+    Route::get('', 'WebController@home')->name('home');
 
-// Route::get('nomedarota', 'NomeDoController@funcao');
+    Route::get('sobre', 'WebController@sobre')->name('sobre');
+
+    Route::get('contato', 'WebController@contato')->name('contato');
+    Route::post('contato', 'WebController@contatoDo')->name('contato.do');
+
+    // Animais
+    Route::get('bichinhos', 'WebController@animais')->name('animais.index');
+    Route::get('bichinho/{id}', 'WebController@animalShow')->name('animais.show');
+    Route::post('bichinho/{id}', 'WebController@animalGet')->name('animais.get');
+
+    // Solicitações
+    Route::get('solicitacao', 'WebController@solicitacao')->name('solicitacoes.index');
+    Route::get('solicitacao/{cod}', 'WebController@solicitacaoShow')->name('solicitacoes.show');
+    Route::post('solicitacoes', 'WebController@solicitacaoDo')->name('solicitacoes.do');
+
+    // Depoimentos
+    Route::get('depoimento', 'WebController@depoimento')->name('depoimentos.index');
+    Route::get('depoimento/obrigado', 'WebController@depoimentoObrigado')->name('depoimentos.obrigado');
+    Route::post('depoimento', 'WebController@depoimentoDo')->name('depoimentos.do');
+
+    // Blog
+    Route::get('blog', 'WebController@blog')->name('blog.index');
+    Route::get('blog/{uri}', 'WebController@blogShow')->name('blog.article');
 
 
-//CLIENTE
-Route::get('', 'WebController@home')->name('front.home');
-Route::get('/elemento', 'WebController@elemento')->name('front.elemento');
-Route::get('/sobre', 'WebController@sobre')->name('front.sobre');
-Route::get('/article', 'WebController@article')->name('front.article');
-Route::get('/blog', 'WebController@blog')->name('front.blog');
-Route::get('/service', 'WebController@service')->name('front.service');
-Route::get('/contato', 'WebController@contato')->name('front.contato');
-Route::get('/animal', 'WebController@animal')->name('front.animal');
-
-//ADMIN
-Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.'], function () {
-
-    // animais
-    Route::resource('animal', 'Admin\AnimalController');
-    Route::resource('solicitacao', 'Admin\SolicitacaoController');
-    // depoimentos
-    Route::resource('depoimentos','Admin\DepoimentoController');
+    Route::get('elemento', 'WebController@elemento')->name('elemento');
 });
 
+
+/*
+|--------------------------------------------------------------------------
+| Rotas protegidas - Back || Dashboard || Painel administrativo
+|--------------------------------------------------------------------------
+*/
+Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.', 'namespace' => 'Admin'], function () {
+    // CRUD de animais
+    Route::resource('animal', 'AnimalController');
+
+    // CRUD de solicitações
+    Route::resource('solicitacao', 'SolicitacaoController');
+
+    // CRUD de depoimentos
+    Route::resource('depoimento','DepoimentoController');
+});
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
