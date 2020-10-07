@@ -17,15 +17,17 @@
             <div class="box-header with-border">
             </div>
             <div class="box-body">
-                <img src="{{ $animal->imagem_animal }}" alt=""><br>
+                <img src="{{Storage::url($animal->imagem)}}" alt=""   class="img-fluid"><br>
                 <strong>Nome:</strong> {{ $animal->nome }}<br>
                 <strong>Data de Nascimento:</strong> {{ $animal->data_nascimento }}<br>
                 <strong>Raça:</strong> {{ $animal->raca }}
                 <strong>Sexo:</strong> {{ $animal->sexo }}
                 <strong>Tamanho:</strong> {{ $animal->tamanho }}
+            
 
 
             </div>
+
             <!-- /.box-body -->
             <div class="box-footer">
                 <div class="btn-group">

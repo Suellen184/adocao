@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 Use App\Animal;
+use Illuminate\Auth;
 
 class AnimalController extends Controller
 {
@@ -46,8 +47,10 @@ class AnimalController extends Controller
         $animal->tipo = $request->tipo;
         $animal->sexo = $request->sexo;
         $animal->tamanho = $request->tamanho;
-        $animal->status = $request->status;
-        $animal->imagem = 'imagem';
+        $animal->observacao = $request->observacao;
+        $animal->created_by = 1;
+        $animal->status = 1;
+        $animal->imagem = $request->file('imagem')->store('animais');
 
         $animal->save();
 

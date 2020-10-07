@@ -15,12 +15,12 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-<form action="{{route('admin.animal.store')}}" method="post" autocomplete="off">
+<form action="{{route('admin.animal.store')}}" method="post" autocomplete="off" enctype="multipart/form-data">
     @csrf
     
     <div class="form-group">
       <label for="nome">Nome</label>
-      <input type="text" class="form-control col-sm-6" id="nome" name="nome" aria-describedby="Nome" placeholder="Nome do animal">
+      <input type="text" class="form-control col-sm-6" id="nome" name="nome" aria-describediby="Nome" placeholder="Nome do animal">
     </div>
 
     <div class="form-group">
@@ -70,6 +70,13 @@
           <option value="ativo">Ativo</option>
         </select>
     </div>
+
+    <div class="form-group">
+    <label for="exampleFormControlTextarea1">Observação Administrador</label>
+    <textarea class="form-control" name="observacao" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <input type="file" class="form-control col-sm-6" id="imagem" name="imagem">
+
     <button type="submit" class="btn btn-success">Enviar</button>
   </form>
 
