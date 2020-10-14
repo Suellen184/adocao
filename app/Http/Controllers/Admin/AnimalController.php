@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 Use App\Animal;
-use Illuminate\Auth;
+use App\Http\Requests\Admin\AnimalRequest;
+
 
 class AnimalController extends Controller
 {
@@ -36,7 +37,7 @@ class AnimalController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AnimalRequest $request)
     {
         $animal = new Animal();
 
