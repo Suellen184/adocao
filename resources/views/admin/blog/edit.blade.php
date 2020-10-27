@@ -2,25 +2,16 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Editar')
+@section('title', 'Criar')
 
 @section('content_header')
 @section('content')
-<h4 class="text-center font-weight-bold mb-5">Editar Depoimento</h4>
 
+
+<h4 class="text-center font-weight-bold mb-5">Editar Artigo</h4>
 <form>
     <input type="file" name="imagem" id="imagem"  value="">
-    <div class="row">
-        <div class="form-group col-sm-2">
-            <label for="codigo">Código</label>
-            <input type="text" class="form-control" id="codigo" name="codigo">
-        </div>
-    </div>
         <div class="row">
-            <div class="form-group col-sm-4">
-                <label for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome">
-            </div>
 
             <div class="form-group col-sm-4">
                 <label for="titulo">Título</label>
@@ -34,13 +25,20 @@
                 <option>2</option>
                 </select>
             </div>
-        </div>  
+        </div> 
+
             <div class="form-group">
-                <label for="">Mensagem</label>
-                <textarea class="form-control col-sm-11" name="mensagem" id="mensagem" rows="3"></textarea>
+                <label for="">Primeiro Texto (Obrigatório)</label>
+                <textarea class="form-control col-sm-11" name="primeiro_texto" id="mensagem" rows="3"></textarea>
            </div>
 
+           <div class="form-group">
+            <label for="">Segundo Texto (Opicional)</label>
+            <textarea class="form-control col-sm-11" name="segundo_texto" id="mensagem" rows="3"></textarea>
+       </div>
+
                 <button type="submit" class="btn btn-success">Enviar</button>
+
 </form>
 
 

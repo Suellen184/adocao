@@ -2,10 +2,10 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Solicitação')
+@section('title', 'Criar Solicitação')
 
 @section('content_header')
-    <h4>Cadastrando Solicitação</h4>
+ 
 @stop
 
 @section('content')
@@ -15,10 +15,10 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+<h4 class="text-center font-weight-bold mb-5">Criar Solicitação</h4>
+
 <form action="{{route('admin.solicitacao.store')}}" class="needs-validation" novalidate method="post" autocomplete="off">
     @csrf
-
-
           <div class="form-row">
             <div class="col-md-2 mb-3">
               <label for="validationCustom01">Código</label>

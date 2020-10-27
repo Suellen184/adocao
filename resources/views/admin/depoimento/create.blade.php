@@ -5,8 +5,9 @@
 @section('title', 'Criar')
 
 @section('content_header')
-@section('content')
 
+@section('content')
+ <h4 class="text-center font-weight-bold mb-5">Criar Depoimento</h4>
 <form>
 
 

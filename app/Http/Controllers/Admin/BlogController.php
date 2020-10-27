@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class DepoimentoController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class DepoimentoController extends Controller
      */
     public function index()
     {
-        return view('admin.depoimento.index');
+        return view('admin.blog.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class DepoimentoController extends Controller
      */
     public function create()
     {
-        return view('admin.depoimento.create');
+        return view('admin.blog.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class DepoimentoController extends Controller
      */
     public function show()
     {
-        return view('admin.depoimento.show');
+        return view('admin.blog.show');
     }
 
     /**
@@ -57,7 +57,7 @@ class DepoimentoController extends Controller
      */
     public function edit()
     {
-        return view('admin.depoimento.edit');
+        return view('admin.blog.edit');
     }
 
     /**

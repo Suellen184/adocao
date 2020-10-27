@@ -2,18 +2,19 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Vizualizar')
+@section('title', 'Visualizar Solicitações')
 
 @section('content_header')
 @section('content')
 
-    <a href="{{route('admin.solicitacao.create')}}">
-        <button type="button" class="btn btn-success"> <strong>+</strong> Adicionar solicitacao</button>
-    </a>
 
-    <br>
-    <h4>Vizualizar Solicitação</h4>
-     <br>
+<h4 class="text-center font-weight-bold mb-5">Solicitaçães</h4>
+
+
+    <a href="{{route('admin.solicitacao.create')}}">
+        <button type="button" class="btn btn-success"> <strong>+</strong> Criar Solicitação</button>
+    </a>
+    
     <div class="container">
 
         <table class="table">

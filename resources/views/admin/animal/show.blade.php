@@ -2,18 +2,18 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Vizualizar')
+@section('title', 'Visualizar')
 
 @section('content_header')
 @section('content')
 
-    <h4>Vizualizar Animal</h4>
 
+<h4 class="text-center font-weight-bold mb-5">Animal</h4>
 
 
 <div class="container">
 
-<img src="{{Storage::url($animal->imagem)}}" alt=""  style="width: 200px; height: 200px;" class="img-fluid"><br>
+<img src="{{Storage::url($animal->imagem)}}" alt=""   style="width: 200px; height: 200px;" class=" rounded float-right"><br>
   <div class="row">
        <p class="col-sm-4">  <strong>Nome:</strong> {{ $animal->nome }}<br></p>
        <p class="col-sm-4"> <strong>Data de Nascimento:</strong> {{ $animal->data_nascimento }}<br></p>

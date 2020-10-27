@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Painel Administrador')
+@section('title', 'Visualizar Animais')
 
 @section('content_header')
 
@@ -59,18 +59,18 @@
     </script>
 
     <div class="container">
+
+
+        <h4 class="text-center font-weight-bold mb-5">Animais</h4>
         {{-- @permission('item-create') --}}
         <a href="{{ route('admin.animal.create') }}">
-            <button type="button" class="btn btn-success"> <strong>+</strong> Adicionar animal</button>
+            <button type="button" class="btn btn-success mb-3"> <strong>+</strong> Adicionar animal</button>
         </a>
         {{-- @endpermission --}}
 
         <div class="row">
             <div class="col-lg-12 col-xs-12">
                 <div class="box box-info">
-                    <div class="box-header with-border">
-                        <p>Aqui você pode editar, deletar e visualizar os animais.</p>
-                    </div>
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="table-responsive">

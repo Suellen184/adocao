@@ -2,19 +2,18 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Vizualizar')
+@section('title', 'Visualizar Solicitação')
 
 @section('content_header')
 @section('content')
 
-    <h4>Vizualizar Solicitação</h4>
-     </br>
+<h4 class="text-center font-weight-bold mb-5">Solicitação</h4>     </br>
     <div class="container">
         <div class="box">
             <div class="box-header with-border">
             </div>
             <div class="box-body">
-                <img src="" alt=""  style="width: 200px; height: 200px;" class="img-fluid"><br>
+                <img src="" alt=""  style="width: 200px; height: 200px;"  class="img-thumbnail  rounded float-right" class="img-fluid"><br>
 
 
              
@@ -25,7 +24,6 @@
                     <p class="col-sm-4">  <strong>Nome:</strong> <br></p>
                     <p class="col-sm-4"> <strong>Sobrenome:</strong> <br></p>
                     <p class="col-sm-4"> <strong>CPF:</strong> </p>
-             
                </div>
              <div class="row">
                  <p class="col-sm-4"> <strong>Telefone:</strong></p>

@@ -5,12 +5,14 @@
 @section('content_header')
 @section('content')
 
+<h4 class="text-center font-weight-bold mb-5">Depoimentos</h4>
+
     <a href="">
-        <button type="button" class="btn btn-success"> <strong>+</strong> Adicionar Depoimentos</button>
+        <button type="button" class="btn btn-success"> <strong>+</strong> Adicionar Depoimento</button>
     </a>
 
     <br>
-    <h4>Vizualizar Depoimentos</h4>
+   
      <br>
     <div class="container">
 

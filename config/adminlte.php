@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Anpet</b>',
+    'logo' => '<b>Anipet</b>',
     'logo_img' => 'vendor/adminlte/dist/img/logo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -210,18 +210,11 @@ return [
     'menu' => [
         ['header' => 'Notificações'],
         [
-            'text'        => 'Solicitações',
+            'text'        => 'Notificações',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
-        ],
-        [
-            'text'        => 'Depoimentos',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'warning',
         ],
         ['header' => 'Animal'],
         [
@@ -238,20 +231,52 @@ return [
 
 
         ],
+
+        ['header' => 'Solicitação'],
+        [
+            'text' => 'Ver todos',
+            'url'  => 'admin/settings',
+            'icon_color' => 'red',
+            'url'         => 'admin/solicitacao',
+        ],
+        [
+            'text' => 'Criar',
+            'url'  => 'admin/settings',
+            'icon_color' => 'yellow',
+            'url'         => 'admin/solicitacao/create',
+
+
+        ],
+
+        ['header' => 'Depoimento'],
+        [
+            'text' => 'Ver todos',
+            'url'  => 'admin/settings',
+            'icon_color' => 'purple',
+            'url'         => 'admin/depoimento',
+        ],
+        [
+            'text' => 'Criar',
+            'url'  => 'admin/settings',
+            'icon_color' => 'blue',
+            'url'         => 'admin/depoimento/create',
+
+
+        ],
     
         
         ['header' => 'Blog'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
+            'text'       => 'Ver todos',
+            'icon_color' => 'orange',
+            'url'         => 'admin/blog/',
+
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
+            'text'       => 'Criar artigo',
+            'icon_color' => 'pink',
+            'url'         => 'admin/depoimento/create',
+
         ],
     ],
 

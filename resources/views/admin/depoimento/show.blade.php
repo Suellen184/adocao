@@ -7,14 +7,14 @@
 @section('content_header')
 @section('content')
 
-    <h4>Vizualizar Solicitação</h4>
-     </br>
+<h4 class="text-center font-weight-bold mb-5"">Depoimento</h4>
+</br>
     <div class="container">
         <div class="box">
             <div class="box-header with-border">
             </div>
             <div class="box-body">
-                <img src="" alt=""  style="width: 200px; height: 200px;" class="img-fluid"><br>
+                <img src="" alt=""  style="width: 200px; height: 200px;" class="img-thumbnail rounded float-right"><br>
 
 
              
