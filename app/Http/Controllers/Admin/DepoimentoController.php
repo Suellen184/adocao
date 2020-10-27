@@ -14,7 +14,7 @@ class DepoimentoController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.depoimento.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class DepoimentoController extends Controller
      */
     public function create()
     {
-    
+        return view('admin.depoimento.create');
     }
 
     /**

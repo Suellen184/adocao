@@ -63,7 +63,11 @@
                 </div>
               </div>
             </div>
-        <div class="col-md-4 mb-3">
+
+
+       
+
+        <div class="col-sm-3 mb-3">
           <label for="validationCustom01">Telefone</label>
           <input type="text" class="form-control" id="validationCustom01" name="telefone" placeholder="telefone" required>
           <div class="valid-feedback">
@@ -72,7 +76,7 @@
         </div>
 
 
-        <div class="col-md-4 mb-3">
+        <div class="col-sm-3 mb-3">
           <label for="validationCustom02">E-mail</label>
           <input type="text" class="form-control" id="validationCustom02" name="email" placeholder="email" required>
           <div class="valid-feedback">
@@ -80,15 +84,18 @@
           </div>
         </div>
       </div>
-      <div class="form-row">
-        <div class="col-md-3 mb-3">
+      <div class="form-row col-sm-3 mb-3">
           <label for="validationCustom05">CEP</label>
           <input type="text" class="form-control" id="validationCustom05" placeholder="CEP" name="cep" required>
           <div class="invalid-feedback">
             Por favor, informe um CEP válido.
           </div>
-        </div>
       </div>
+      
+    <div class="form-group col-sm-12">
+      <label for="exampleFormControlTextarea1">Observação do Administrador</label>
+      <textarea class="form-control " name="observacao" id="exampleFormControlTextarea1" rows="3">{{ old('observacao')   }}</textarea>
+    </div>
 
       <div class="form-group">
         <div class="form-check">

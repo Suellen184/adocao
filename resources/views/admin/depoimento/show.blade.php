@@ -25,19 +25,7 @@
                     <p class="col-sm-4">  <strong>Nome:</strong> <br></p>
                     <p class="col-sm-4"> <strong>Sobrenome:</strong> <br></p>
                     <p class="col-sm-4"> <strong>CPF:</strong> </p>
-             
-               </div>
-             <div class="row">
-                 <p class="col-sm-4"> <strong>Telefone:</strong></p>
-                 <p class="col-sm-4"> <strong>email:</strong> </p>
-                 <p class="col-sm-4"> <strong>Cidade:</strong></p>
-             </div>
-             
-             <div class="row">
-                 <p class="col-sm-4"> <strong>CEP:</strong> </p>
-                 <p class="col-sm-4"> <strong>Status:</strong> </p>
-                 <p class="col-sm-4"> <strong>Texto:</strong> </p>
-             </div>
+                </div>
              
              <div class="row">
                  <p class="col-sm-12"> <strong>Observação:</strong></p>

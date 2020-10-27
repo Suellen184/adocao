@@ -49,8 +49,8 @@ class SolicitacaoController extends Controller
         $solicitacao->cep = $request->cep;
         $solicitacao->id_animal = 1;
         $solicitacao->limit = 1;
-        $solicitacao->texto = 'texto';
-        $solicitacao->observacao = 'texto';
+        $solicitacao->mensagem = 'texto';
+        $solicitacao->observacao_by_admin = $request ->observacao;
 
         $solicitacao->save();
 
@@ -63,9 +63,9 @@ class SolicitacaoController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        return view('admin.solicitacao.show');
     }
 
     /**
