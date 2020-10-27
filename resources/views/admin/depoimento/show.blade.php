@@ -2,12 +2,12 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Vizualizar')
+@section('title', 'Visualizar Depoimento')
 
 @section('content_header')
 @section('content')
 
-<h4 class="text-center font-weight-bold mb-5"">Depoimento</h4>
+<h4 class="text-center font-weight-bold mb-5">Depoimento</h4>
 </br>
     <div class="container">
         <div class="box">
