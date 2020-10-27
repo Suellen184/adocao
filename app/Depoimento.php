@@ -14,7 +14,6 @@ class Depoimento extends Model
     protected $fillable = [
         'codigo_solicitacao',
         'status',
-        'titulo',
         'mensagem',
         'imagem'
     ];
