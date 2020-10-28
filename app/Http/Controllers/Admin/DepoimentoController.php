@@ -14,7 +14,7 @@ class DepoimentoController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.depoimento.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class DepoimentoController extends Controller
      */
     public function create()
     {
-    
+        return view('admin.depoimento.create');
     }
 
     /**
@@ -44,9 +44,9 @@ class DepoimentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        return view('admin.depoimento.show');
     }
 
     /**
@@ -55,9 +55,9 @@ class DepoimentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('admin.depoimento.edit');
     }
 
     /**

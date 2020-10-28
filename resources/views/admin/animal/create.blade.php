@@ -5,7 +5,7 @@
 @section('title', 'Adicionando Animal')
 
 @section('content_header')
-    <h1>Adicionando Animal</h1>
+
 @stop
 
 @section('content')
@@ -26,6 +26,8 @@
 @endforeach
 
 @endif
+
+<h4 class="text-center font-weight-bold mb-5">Adicionando Animal</h4>
 
 <form action="{{route('admin.animal.store')}}" method="post" autocomplete="off" enctype="multipart/form-data">
     @csrf

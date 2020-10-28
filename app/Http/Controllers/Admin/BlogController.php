@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Solicitacao;
 use Illuminate\Http\Request;
 
-class SolicitacaoController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class SolicitacaoController extends Controller
      */
     public function index()
     {
-        $solicitacoes = Solicitacao::all();
-        return view('admin.solicitacao.index', ['solicitacoes' => $solicitacoes]);
+        return view('admin.blog.index');
     }
 
     /**
@@ -26,64 +24,47 @@ class SolicitacaoController extends Controller
      */
     public function create()
     {
-        return view('admin.solicitacao.create');
+        return view('admin.blog.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $solicitacao = new Solicitacao();
-
-        $solicitacao->codigo = $request->codigo;
-        $solicitacao->nome = $request->nome;
-        $solicitacao->sobrenome = $request->sobrenome;
-        $solicitacao->idade = $request->idade;
-        $solicitacao->cpf = $request->cpf;
-        $solicitacao->telefone = $request->telefone;
-        $solicitacao->email = $request->email;
-        $solicitacao->cep = $request->cep;
-        $solicitacao->id_animal = 1;
-        $solicitacao->limit = 1;
-        $solicitacao->mensagem = 'texto';
-        $solicitacao->observacao_by_admin = $request ->observacao;
-
-        $solicitacao->save();
-
-        return redirect()->route('admin.solicitacao.index');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show()
-    {
-        return view('admin.solicitacao.show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
     {
         //
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show()
+    {
+        return view('admin.blog.show');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit()
+    {
+        return view('admin.blog.edit');
+    }
+
+    /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -94,7 +75,7 @@ class SolicitacaoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

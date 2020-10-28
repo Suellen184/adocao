@@ -2,31 +2,37 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Vizualizar')
+@section('title', 'Visualizar')
 
 @section('content_header')
 @section('content')
 
-    <h3>Vizualizar Animal</h3>
+
+<h4 class="text-center font-weight-bold mb-5">Animal</h4>
 
 
+<div class="container">
 
-    <div class="container">
+<img src="{{Storage::url($animal->imagem)}}" alt=""   style="width: 200px; height: 200px;" class=" rounded float-right"><br>
+  <div class="row">
+       <p class="col-sm-4">  <strong>Nome:</strong> {{ $animal->nome }}<br></p>
+       <p class="col-sm-4"> <strong>Data de Nascimento:</strong> {{ $animal->data_nascimento }}<br></p>
+       <p class="col-sm-4"> <strong>Status:</strong> {{ $animal->status }}</p>
 
-        <div class="box">
-            <div class="box-header with-border">
-            </div>
-            <div class="box-body">
-                <img src="{{Storage::url($animal->imagem)}}" alt=""   class="img-fluid"><br>
-                <strong>Nome:</strong> {{ $animal->nome }}<br>
-                <strong>Data de Nascimento:</strong> {{ $animal->data_nascimento }}<br>
-                <strong>Raça:</strong> {{ $animal->raca }}
-                <strong>Sexo:</strong> {{ $animal->sexo }}
-                <strong>Tamanho:</strong> {{ $animal->tamanho }}
-            
+  </div>
+<div class="row">
+    <p class="col-sm-4"> <strong>Raça:</strong> {{ $animal->raca }}</p>
+    <p class="col-sm-4"> <strong>Sexo:</strong> {{ $animal->sexo }}</p>
+    <p class="col-sm-4"> <strong>Tamanho:</strong> {{ $animal->tamanho }}</p>
+</div>
 
+<div class="row">
+    <p class="col-sm-4"> <strong>Tipo:</strong> {{ $animal->tipo }}</p>
+</div>
 
-            </div>
+<div class="row">
+    <p class="col-sm-12"> <strong>Observação:</strong> {{ $animal->mensagem }}</p>
+</div>
 
             <!-- /.box-body -->
             <div class="box-footer">
@@ -51,11 +57,7 @@
             <!-- /.box-footer-->
         </div>
 
-
     </div>
-
-
-
 @stop
 
 @section('css')

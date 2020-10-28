@@ -5,7 +5,6 @@
 @section('title', 'Adicionando Animal')
 
 @section('content_header')
-    <h1>Atualizar Animal</h1>
 @stop
 
 @section('content')
@@ -15,7 +14,7 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-
+<h4 class="text-center font-weight-bold mb-5">Atualizar Animal</h4>
 <form action="{{route('admin.animal.update',['animal'=>$animal->id])}}" method="post" >
     @csrf
     @method('put')

@@ -1,20 +1,19 @@
-{{-- resources/views/admin/dashboard.blade.php --}}
-
 @extends('adminlte::page')
 
-@section('title', 'Visualizar Solicitações')
+@section('title', 'Visualizar Depoimentos')
 
 @section('content_header')
 @section('content')
 
+<h4 class="text-center font-weight-bold mb-5">Depoimentos</h4>
 
-<h4 class="text-center font-weight-bold mb-5">Solicitaçães</h4>
-
-
-    <a href="{{route('admin.solicitacao.create')}}">
-        <button type="button" class="btn btn-success"> <strong>+</strong> Criar Solicitação</button>
+    <a href="">
+        <button type="button" class="btn btn-success"> <strong>+</strong> Adicionar Depoimento</button>
     </a>
-    
+
+    <br>
+   
+     <br>
     <div class="container">
 
         <table class="table">
@@ -22,19 +21,16 @@
               <tr>
                 <th scope="col">Código</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Sobrenome</th>
-                <th scope="col">Cep</th>
+                <th scope="col">Mensagem</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-                @foreach($solicitacoes as $s);
+              
                 <tr>
-                    <td scope="row">{{$s->codigo}}</td>
-                    <td>{{$s->nome}}</td>
-                    <td>{{$s->sobrenome}}</td>
-                    <td>{{$s->cep}}</td>
-
+                    <td scope="row"></td>
+                    <td></td>
+                    <td></td>
                     <td>
                         <div class="btn-group">
                             <a href="">
@@ -61,7 +57,6 @@
                         </div>
                     </td>
                 </tr>
-                    @endforeach
             </tbody>
           </table>
 

@@ -2,18 +2,19 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Visualizar Solicitação')
+@section('title', 'Visualizar Depoimento')
 
 @section('content_header')
 @section('content')
 
-<h4 class="text-center font-weight-bold mb-5">Solicitação</h4>     </br>
+<h4 class="text-center font-weight-bold mb-5">Depoimento</h4>
+</br>
     <div class="container">
         <div class="box">
             <div class="box-header with-border">
             </div>
             <div class="box-body">
-                <img src="" alt=""  style="width: 200px; height: 200px;"  class="img-thumbnail  rounded float-right" class="img-fluid"><br>
+                <img src="" alt=""  style="width: 200px; height: 200px;" class="img-thumbnail rounded float-right"><br>
 
 
              
@@ -24,18 +25,7 @@
                     <p class="col-sm-4">  <strong>Nome:</strong> <br></p>
                     <p class="col-sm-4"> <strong>Sobrenome:</strong> <br></p>
                     <p class="col-sm-4"> <strong>CPF:</strong> </p>
-               </div>
-             <div class="row">
-                 <p class="col-sm-4"> <strong>Telefone:</strong></p>
-                 <p class="col-sm-4"> <strong>email:</strong> </p>
-                 <p class="col-sm-4"> <strong>Cidade:</strong></p>
-             </div>
-             
-             <div class="row">
-                 <p class="col-sm-4"> <strong>CEP:</strong> </p>
-                 <p class="col-sm-4"> <strong>Status:</strong> </p>
-                 <p class="col-sm-4"> <strong>Texto:</strong> </p>
-             </div>
+                </div>
              
              <div class="row">
                  <p class="col-sm-12"> <strong>Observação:</strong></p>

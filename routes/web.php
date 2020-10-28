@@ -54,6 +54,9 @@ Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.', 'n
 
     // CRUD de depoimentos
     Route::resource('depoimento','DepoimentoController');
+
+     // CRUD de blog
+     Route::resource('blog','BlogController');
 });
 
 Auth::routes();
