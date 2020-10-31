@@ -45,13 +45,8 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'logo' => '<b>Anpet</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/favicon.png',
-=======
-    'logo' => '<b>Anipet</b>',
     'logo_img' => 'vendor/adminlte/dist/img/logo.png',
->>>>>>> master
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -213,13 +208,13 @@ return [
     */
 
     'menu' => [
-        ['header' => 'Notificações'],
+        ['header' => 'Menu'],
         [
-            'text'        => 'Notificações',
+            'text'        => 'Início',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'url'         => 'admin/painel',
+
         ],
         ['header' => 'Animal'],
         [
