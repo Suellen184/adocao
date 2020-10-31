@@ -92,7 +92,7 @@
 
   </div>
 
-    <div class="form-group col-sm-12">
+  <div class="form-group col-sm-12">
     <label for="exampleFormControlTextarea1">Observação Administrador</label>
     <textarea class="form-control " name="observacao" id="exampleFormControlTextarea1" rows="3">{{ old('observacao')   }}</textarea>
   </div>
