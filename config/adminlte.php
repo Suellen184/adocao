@@ -45,13 +45,8 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'logo' => '<b>Anpet</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/favicon.png',
-=======
-    'logo' => '<b>Anipet</b>',
     'logo_img' => 'vendor/adminlte/dist/img/logo.png',
->>>>>>> master
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -280,7 +275,7 @@ return [
         [
             'text'       => 'Criar artigo',
             'icon_color' => 'pink',
-            'url'         => 'admin/depoimento/create',
+            'url'         => 'admin/blog/create',
 
         ],
     ],
