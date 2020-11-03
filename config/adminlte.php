@@ -275,7 +275,7 @@ return [
         [
             'text'       => 'Criar artigo',
             'icon_color' => 'pink',
-            'url'         => 'admin/depoimento/create',
+            'url'         => 'admin/blog/create',
 
         ],
     ],

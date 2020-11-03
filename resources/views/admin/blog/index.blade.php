@@ -19,16 +19,24 @@
 <div class="container">
 
     <h4 class="text-center font-weight-bold mb-5">Vizualizar todos os Artigos</h4>
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://cdn.pixabay.com/photo/2018/01/09/11/04/dog-3071334_960_720.jpg" alt="Imagem de capa do card">
-        <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
-        <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
-        <a href="#" class="btn btn-primary">Ver tudo</a>
-        <a href="#" class="btn btn-danger">Excluir</a>
+    @foreach($blogs as $blog)
 
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{Storage::url($blog->imagem)}}" alt="Imagem de capa do card">
+        <div class="card-body">
+        <h5 class="card-title">{{$blog->titulo}}</h5>
+        <p class="card-text">{{$blog->mensagem}}</p>
+        <a href="{{route('admin.blog.show',['blog'=>$blog->id])}}">Ver tudo</a>
+<form action="{{route('admin.blog.destroy',['blog'=>$blog->id])}}" method="post" style="margin-right: 5px;">
+@csrf
+@method('delete')
+<button type="submit" class="btn btn-danger"><i class="fa fa-close"></i>
+    Excluir
+</button>
+</form>
         </div>
     </div>
+    @endforeach
 </div>
 
 @stop

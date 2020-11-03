@@ -9,7 +9,8 @@
 
 <h4 class="text-center font-weight-bold mb-5">Criar Artigo</h4>
 
-<form>
+<form action="{{route('admin.blog.store')}}" method="post" enctype="multipart/form-data">
+@csrf
 
 
     <input type="file" name="imagem" id="imagem"  value="">
@@ -31,7 +32,7 @@
 
             <div class="form-group">
                 <label for="">Texto</label>
-                <textarea class="form-control col-sm-11" name="primeiro_texto" id="mensagem" rows="3"></textarea>
+                <textarea class="form-control col-sm-11" name="mensagem" id="mensagem" rows="3"></textarea>
            </div>
 
                 <button type="submit" class="btn btn-success">Enviar</button>
