@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Solicitacao;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SolicitacaoController extends Controller
 {
@@ -15,7 +16,10 @@ class SolicitacaoController extends Controller
      */
     public function index()
     {
-        $solicitacoes = Solicitacao::all();
+        $solicitacoes = DB::table('adocao_solicitacoes')
+                                    ->join('animais', 'adocao_solicitacoes.id_animal', '=', 'animais.id')
+                                    ->select('adocao_solicitacoes.*', 'animais.nome as nome_animal')
+                                    ->get();
         return view('admin.solicitacao.index', ['solicitacoes' => $solicitacoes]);
     }
 
@@ -24,6 +28,29 @@ class SolicitacaoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function verify()
+    {
+        return view('admin.solicitacao.verify');
+    }
+
+    public function verifyDone(Request $request)
+    {
+        $cpf = $request->cpf;
+
+        $verificaCPF = DB::table('adocao_solicitacoes')
+                        ->where([
+                            ['cpf', '=', $cpf],
+                            ['status', '=', 'Aprovado'],
+                        ])
+                        ->count('status');
+
+        if ($verificaCPF < 2){
+            return redirect()->action('Admin\SolicitacaoController@create');
+        } else {
+            return redirect()->action('Admin\SolicitacaoController@verify');
+        }
+    }
+
     public function create()
     {
         return view('admin.solicitacao.create');
@@ -37,24 +64,37 @@ class SolicitacaoController extends Controller
      */
     public function store(Request $request)
     {
-        $solicitacao = new Solicitacao();
+        $cpf = $request->cpf;
 
-        $solicitacao->codigo = $request->codigo;
-        $solicitacao->nome = $request->nome;
-        $solicitacao->sobrenome = $request->sobrenome;
-        $solicitacao->idade = $request->idade;
-        $solicitacao->cpf = $request->cpf;
-        $solicitacao->telefone = $request->telefone;
-        $solicitacao->email = $request->email;
-        $solicitacao->cep = $request->cep;
-        $solicitacao->id_animal = 1;
-        $solicitacao->limit = 1;
-        $solicitacao->mensagem = 'texto';
-        $solicitacao->observacao_by_admin = $request ->observacao;
+        $verificaCPF = DB::table('adocao_solicitacoes')
+            ->where([
+                ['cpf', '=', $cpf],
+                ['status', '=', 'Aprovado'],
+            ])
+            ->count('status');
 
-        $solicitacao->save();
+        if ($verificaCPF < 2){
+            $solicitacao = new Solicitacao();
 
-        return redirect()->route('admin.solicitacao.index');
+            $solicitacao->codigo = "A" . substr(uniqid(rand()), 0, 5);
+            $solicitacao->status = $request->status;
+
+            $solicitacao->nome = $request->nome;
+            $solicitacao->sobrenome = $request->sobrenome;
+            $solicitacao->idade = $request->idade;
+            $solicitacao->cpf = $request->cpf;
+            $solicitacao->telefone = $request->telefone;
+            $solicitacao->email = $request->email;
+            $solicitacao->cep = $request->cep;
+            $solicitacao->id_animal = 1;
+            $solicitacao->mensagem = 'texto';
+            $solicitacao->observacao_by_admin = $request ->observacao;
+
+            $solicitacao->save();
+
+            return redirect()->route('admin.solicitacao.index');
+        }
+
     }
 
     /**

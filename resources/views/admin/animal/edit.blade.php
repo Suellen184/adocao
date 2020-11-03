@@ -21,7 +21,7 @@
     <div class="row">
       <div class="form-group col-sm-8">
       <label for="nome">Nome</label>
-      <input type="text"  value="{{$animal->nome}}" class="form-control" id="nome" name="nome" aria-describedby="Nome" placeholder="Nome do animal">
+          <input type="text" value="{{$animal->nome}}" class="form-control" id="nome" name="nome" aria-describedby="Nome" placeholder="Nome do animal">
     </div>
 
     <div class="form-group col-sm-4">
