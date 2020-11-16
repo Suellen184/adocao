@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Anpet',
+    'title' => 'Anipet',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -220,13 +220,13 @@ return [
         [
             'text' => 'Ver todos',
             'url'  => 'admin/settings',
-            'icon_color' => 'cyan',
+            'icon_color' => 'orange',
             'url'         => 'admin/animal',
         ],
         [
             'text' => 'Cadastrar',
             'url'  => 'admin/settings',
-            'icon_color' => 'green',
+            'icon_color' => 'orange',
             'url'         => 'admin/animal/create',
 
 
@@ -242,7 +242,7 @@ return [
         [
             'text' => 'Criar',
             'url'  => 'admin/settings',
-            'icon_color' => 'yellow',
+            'icon_color' => 'red',
             'url'         => 'admin/solicitacao/create',
 
 
@@ -252,13 +252,13 @@ return [
         [
             'text' => 'Ver todos',
             'url'  => 'admin/settings',
-            'icon_color' => 'purple',
+            'icon_color' => 'green',
             'url'         => 'admin/depoimento',
         ],
         [
             'text' => 'Criar',
             'url'  => 'admin/settings',
-            'icon_color' => 'blue',
+            'icon_color' => 'green',
             'url'         => 'admin/depoimento/create',
 
 
@@ -268,14 +268,14 @@ return [
         ['header' => 'Blog'],
         [
             'text'       => 'Ver todos',
-            'icon_color' => 'orange',
+            'icon_color' => 'pink',
             'url'         => 'admin/blog/',
 
         ],
         [
             'text'       => 'Criar artigo',
             'icon_color' => 'pink',
-            'url'         => 'admin/depoimento/create',
+            'url'         => 'admin/blog/create',
 
         ],
     ],
