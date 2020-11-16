@@ -26,4 +26,9 @@ class Animal extends Model
         'status',
         'created_by'
     ];
+
+    public function solicitacoes()
+    {
+        return $this->hasMany('App\Solicitacao');
+    }
 }

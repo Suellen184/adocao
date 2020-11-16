@@ -19,7 +19,6 @@ class CreateAdocaoSolicitacoesTable extends Migration
             $table->string('codigo')->unique();
             $table->string('status')->default('Solicitação Realizada');
             $table->unsignedInteger('id_animal');
-            $table->integer('limit')->nullable();
 
             $table->text('mensagem');
 

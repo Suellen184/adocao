@@ -22,9 +22,9 @@ Route::group(['prefix' => '/', 'as' => 'front.', 'namespace' => 'Front'], functi
     Route::post('bichinho/{id}', 'WebController@animalGet')->name('animais.get');
 
     // Solicitações
-    Route::get('solicitacao', 'WebController@solicitacao')->name('solicitacoes.index');
-    Route::get('solicitacao/{cod}', 'WebController@solicitacaoShow')->name('solicitacoes.show');
-    Route::post('solicitacoes', 'WebController@solicitacaoDo')->name('solicitacoes.do');
+    Route::get('pedido', 'WebController@solicitacao')->name('solicitacoes.index');
+    Route::get('pedido/{cod}', 'WebController@solicitacaoShow')->name('solicitacoes.show');
+    Route::post('pedido', 'WebController@solicitacaoDo')->name('solicitacoes.do');
 
     // Depoimentos
     Route::get('depoimento', 'WebController@depoimento')->name('depoimentos.index');
@@ -50,7 +50,9 @@ Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.', 'n
     Route::resource('animal', 'AnimalController');
 
     // CRUD de solicitações
-    Route::resource('solicitacao', 'SolicitacaoController');
+    Route::get('/animal/{animal}/pedido', 'SolicitacaoController@verify')->name('solicitacao.verify');
+    Route::post('/pedido/verificar', 'SolicitacaoController@verifyDone')->name('solicitacao.verify.done');
+    Route::resource('pedido', 'SolicitacaoController');
 
     // CRUD de depoimentos
     Route::resource('depoimento','DepoimentoController');
