@@ -15,6 +15,7 @@ class Solicitacao extends Model
         'codigo',
         'status',
         'id_animal',
+        'limit',
         'mensagem',
         'nome',
         'sobrenome',
@@ -25,14 +26,4 @@ class Solicitacao extends Model
         'telefone',
         'observacao_by_admin'
     ];
-
-    public function user()
-    {
-        return $this->belongsTo('App\User');
-    }
-
-    public function animal()
-    {
-        return $this->belongsTo('App\Animal');
-    }
 }

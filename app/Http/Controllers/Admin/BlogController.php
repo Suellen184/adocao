@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Blog;
 
 class BlogController extends Controller
 {
@@ -15,8 +14,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all();
-        return view('admin.blog.index', ['blogs' => $blogs]);
+        return view('admin.blog.index');
     }
 
     /**
@@ -37,17 +35,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        $blog = new Blog();
-
-        $blog->imagem = $request->file('imagem')->store('blog');
-        $blog->titulo = $request->titulo;
-        $blog->status = 1;
-        $blog->mensagem = $request->mensagem;
-
-        $blog->save();
-
-        return redirect()->route('admin.blog.index');
-
+        //
     }
 
     /**
@@ -56,9 +44,9 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(blog $blog )
+    public function show()
     {
-        return view('admin.blog.show', ['blog' => $blog]);
+        return view('admin.blog.show');
     }
 
     /**
@@ -67,10 +55,9 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($blog)
+    public function edit()
     {
-        $blog = Blog::where('id', $blog)->first();
-        return view('admin.blog.edit', ['blog' => $blog]);
+        return view('admin.blog.edit');
     }
 
     /**
@@ -80,17 +67,9 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, blog $blog)
+    public function update(Request $request, $id)
     {
-       
-        $blog->imagem = $request->file('imagem')->store('blog');
-        $blog->titulo = $request->titulo;
-        $blog->status = $request->status;
-        $blog->mensagem = $request->mensagem;
-
-        $blog->save();
-
-        return redirect()->route('admin.blog.index');
+        //
     }
 
     /**
@@ -101,7 +80,6 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        Blog::destroy($id);
-        return redirect()->route('admin.blog.index');
+        //
     }
 }

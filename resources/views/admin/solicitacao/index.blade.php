@@ -11,29 +11,29 @@
 <h4 class="text-center font-weight-bold mb-5">Solicitaçães</h4>
 
 
-    <a href="{{route('admin.animal.index')}}">
-        <button type="button" class="btn btn-success"><strong>+ </strong>Pedido de Adoção</button>
+    <a href="{{route('admin.solicitacao.create')}}">
+        <button type="button" class="btn btn-success"> <strong>+</strong> Criar Solicitação</button>
     </a>
     
     <div class="container">
 
         <table class="table">
             <thead class="table table-striped table-bordered">
-            <tr>
+              <tr>
                 <th scope="col">Código</th>
-                <th scope="col">Status</th>
-                <th scope="col">Animal</th>
                 <th scope="col">Nome</th>
+                <th scope="col">Sobrenome</th>
+                <th scope="col">Cep</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-                @foreach($solicitacoes as $s)
+                @foreach($solicitacoes as $s);
                 <tr>
                     <td scope="row">{{$s->codigo}}</td>
-                    <td>{{$s->status}}</td>
-                    <td>{{$s->id_animal}}</td>
                     <td>{{$s->nome}}</td>
+                    <td>{{$s->sobrenome}}</td>
+                    <td>{{$s->cep}}</td>
 
                     <td>
                         <div class="btn-group">
