@@ -53,7 +53,7 @@ Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.', 'n
     Route::get('/animal/{animal}/pedido', 'SolicitacaoController@verify')->name('solicitacao.verify');
     Route::post('/pedido/verificar', 'SolicitacaoController@verifyDone')->name('solicitacao.verify.done');
     Route::resource('pedido', 'SolicitacaoController');
-
+ 
     // CRUD de depoimentos
     Route::resource('depoimento','DepoimentoController');
 
