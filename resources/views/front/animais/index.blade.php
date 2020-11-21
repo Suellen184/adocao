@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="bradcam_text text-center">
-                    <h3>Services</h3>
+                    <h3>Nossos animais</h3>
                 </div>
             </div>
         </div>
@@ -23,51 +23,34 @@
         <div class="row justify-content-center ">
             <div class="col-lg-7 col-md-10">
                 <div class="section_title text-center mb-95">
-                    <h3>Services for every dog</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <h3>Quem pode adotar?</h3>
+                    <p>Para adotar um animal você precisa ser maior de 18 anos, ter uma residência, ter meios de contato. Tudo isso será avaliado
+                        no momento em que fizermos o contato com o futuro adotante por email.  Caso sua solicitação seja aceita ou não lhes avisaremos também.
+                    </p>
+                    
                 </div>
             </div>
         </div>
         <div class="row justify-content-center">
+
+            @foreach ($animais as $animal)    
+          
             <div class="col-lg-4 col-md-6">
                 <div class="single_service">
-                     <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-                         <div class="service_icon">
-                             <img src="front/assets/img/service/service_icon_1.png" alt="">
+                     <div class="service_thumb d-flex align-items-center justify-content-center">
+                         <div class="">
+                             <img src="{{Storage::url($animal->imagem)}}" alt="">
                          </div>
                      </div>
                      <div class="service_content text-center">
-                        <h3>Pet Boarding</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                        <h3>{{ $animal->nome }}</h3>
+                        <p> {{ $animal->raca }} | {{ $animal->sexo }} | {{ $animal->tamanho }}</p>
+                        <a href="" class="boxed-btn3">Adotar</a>
                      </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_service active">
-                     <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-                         <div class="service_icon">
-                             <img src="front/assets/img/service/service_icon_2.png" alt="">
-                         </div>
-                     </div>
-                     <div class="service_content text-center">
-                        <h3>Healthy Meals</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_service">
-                     <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-                         <div class="service_icon">
-                             <img src="front/assets/img/service/service_icon_3.png" alt="">
-                         </div>
-                     </div>
-                     <div class="service_content text-center">
-                        <h3>Pet Spa</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                     </div>
-                </div>
-            </div>
+            @endforeach
+         
         </div>
     </div>
 </div>
@@ -123,81 +106,26 @@
 </div>
 <!-- testmonial_area_end  -->
 
-<!-- team_area_start  -->
-<div class="team_area">
-    <div class="container">
-        <div class="row justify-content-center ">
-            <div class="col-lg-6 col-md-10">
-                <div class="section_title text-center mb-95">
-                    <h3>Our Team</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="single_team">
-                    <div class="thumb">
-                        <img src="front/assets/img/team/1.png" alt="">
-                    </div>
-                    <div class="member_name text-center">
-                        <div class="mamber_inner">
-                            <h4>Rala Emaia</h4>
-                            <p>Senior Director</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_team">
-                    <div class="thumb">
-                        <img src="front/assets/img/team/2.png" alt="">
-                    </div>
-                    <div class="member_name text-center">
-                        <div class="mamber_inner">
-                            <h4>jhon Smith</h4>
-                            <p>Senior Director</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_team">
-                    <div class="thumb">
-                        <img src="front/assets/img/team/3.png" alt="">
-                    </div>
-                    <div class="member_name text-center">
-                        <div class="mamber_inner">
-                            <h4>Rala Emaia</h4>
-                            <p>Senior Director</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- team_area_start  -->
 
-<!-- contact_anipat_start  -->
+
 <div class="contact_anipat anipat_bg_1">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="contact_text text-center">
                     <div class="section_title text-center">
-                        <h3>Why go with Anipat?</h3>
-                        <p>Because we know that even the best technology is only as good as the people behind it. 24/7 tech support.</p>
-                    </div>
+                        <h3>Gostou? Quer ajudar?</h3>
+                        <p> Nossa ONG fica localizada no endereço, Rua dos Alperes, 550 - Jardim Botânico.</p>
+                    </div> 
                     <div class="contact_btn d-flex align-items-center justify-content-center">
-                        <a href="contact.html" class="boxed-btn4">Contact Us</a>
-                        <p>Or  <a href="#"> +880 4664 216</a></p>
+                        <a href="{{ route('front.ajuda')}}" class="boxed-btn4">Quero ajudar</a>
+                        <p>Ou  <a href="#"> +880 4664 216</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- contact_anipat_end  -->    
+   
 
 @endsection

@@ -31,7 +31,7 @@
 </div>
 
 <div class="row">
-    <p class="col-sm-12"> <strong>Observação:</strong> {{ $animal->mensagem }}</p>
+    <p class="col-sm-12"> <strong>Observação:</strong> {{ $animal->observacao }}</p>
 </div>
 
             <!-- /.box-body -->
