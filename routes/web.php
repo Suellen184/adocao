@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+ 
 /*
 |--------------------------------------------------------------------------
 | Rotas desprotegidas - Front || Site || Página do cliente
@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => '/', 'as' => 'front.', 'namespace' => 'Front'], function () {
     // Index e demais páginas
     Route::get('', 'WebController@home')->name('home');
+
+    Route::get('ajuda', 'WebController@ajuda')->name('ajuda');
 
     Route::get('sobre', 'WebController@sobre')->name('sobre');
 
