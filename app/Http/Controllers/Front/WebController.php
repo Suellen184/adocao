@@ -38,7 +38,7 @@ class WebController extends Controller
     // Solicitações
     public function solicitacao()
     {
-        //
+        return view('front.solicitacao');
     }
 
     public function solicitacaoShow()
