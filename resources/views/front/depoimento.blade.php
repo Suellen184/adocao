@@ -23,16 +23,64 @@
 <section class="sample-text-area">
 	<div class="container box_1170">
     <div>
-		<h3 class="text-heading">Quem pode enviar?</h3>
-		<p class="sample-text">
+		<h3 class="text-heading text-center">Quem pode enviar?</h3>
+		<p class="sample-text text-center">
             Você que adotou um dos nossos animais? Nos envie um depoimento falando o como está sendo esse momento pra você.
             Colocaremos em nosso site durante um mês. <b> O que é necessário para enviar o testemunho? </b>  Código da adoção, 
             Uma imagem, Um título, Uma mensagem, eu nome
         </p>
+
+        <div style="height:100px" class="col-sm-12"> </div>
+
+        <div class="col-lg-30 ">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="row">
+                                
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="nome" id="nome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'" placeholder="Nome">
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="codigo" id="codigo" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Codigo'" placeholder="Codigo">
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="titulo" id="titulo" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Titulo'" placeholder="Titulo">
+                                    </div>
+                                    
+                                </div>
+                                
+
+                                
+
+                                    <div class="col-12">
+                                    <div class="form-group ">
+                                        <textarea class="form-control w-100" name="mensagem" id="mensagem" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sua Mensagem'" placeholder="Sua Mensagem"></textarea>
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn btn-default btn-lg btn-block">Enviar Foto</button>
+                            <div style="height:50px" class="col-sm-12"> </div>
+                            <div class="form-group mt-3 text-center">
+                                <button type="submit" class="button button-contactForm boxed-btn">Enviar Depoimento</button>
+                            </div>
+                        </form>
+                    </div>
     </div>
 	</div>
+    
 </section>
 <!-- End Sample Area -->
+
+
 
   <!-- testmonial_area_start  -->
   <div class="testmonial_area">
