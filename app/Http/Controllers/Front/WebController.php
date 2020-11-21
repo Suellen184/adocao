@@ -54,7 +54,7 @@ class WebController extends Controller
     // Depoimentos
     public function depoimento()
     {
-        //
+        return view('front.depoimento');
     }
 
     public function depoimentoObrigado()

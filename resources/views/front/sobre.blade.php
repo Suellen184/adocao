@@ -141,7 +141,7 @@
                             <p>Você pode nos visitar para interagir com os animais. Nossa ONG fica localizada no endereço, Rua dos Alperes, 550 - Jardim Botânico.</p>
                         </div> 
                         <div class="contact_btn d-flex align-items-center justify-content-center">
-                            <a href="" class="boxed-btn4">Envie-nos um email</a>
+                            <a href="{{ route('front.contato')}}" class="boxed-btn4">Envie-nos um email</a>
                             <p>Ou  <a href="#"> +880 4664 216</a></p>
                         </div>
                     </div>

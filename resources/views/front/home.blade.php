@@ -16,7 +16,7 @@
                                 <p class="text-light">Eles estão esperando o seu carinho!<br></p>
                             </div>
                             <div class="col-12" style="z-index: 2;">
-                                <a href="" class="boxed-btn4">Adotar</a>
+                                <a href="{{ route('front.animais.index')}}" class="boxed-btn4">Adotar</a>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                         <div class="section_title">
                             <h3>Precisamos da sua ajuda!</h3>
                             <p>Contribua com algum valor ou com sua ajuda no nosso abrigo. Nosssos animais precisam de cuidado!</p>
-                            <a href="" class="boxed-btn3">Eu quero ajudar</a>
+                            <a href="{{ route('front.ajuda')}}" class="boxed-btn3">Eu quero ajudar</a>
                          
                         </div>
                     </div>
