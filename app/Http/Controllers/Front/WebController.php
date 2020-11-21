@@ -29,6 +29,12 @@ class WebController extends Controller
         //
     }
 
+
+    public function ajuda()
+    {
+        return view('front.ajuda');
+    }
+
     // Solicitações
     public function solicitacao()
     {

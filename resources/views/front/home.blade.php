@@ -16,8 +16,7 @@
                                 <p class="text-light">Eles estão esperando o seu carinho!<br></p>
                             </div>
                             <div class="col-12" style="z-index: 2;">
-                                <a href="#!" class="btn btn-light btn-rounded text-black btn-lg col-6 col-lg-4">Adotar</a>
-                                <a href="#!" class="btn btn-light btn-rounded text-black btn-lg col-6 col-lg-4 mt-2 mt-lg-0">Doar</a>
+                                <a href="" class="boxed-btn4">Adotar</a>
                             </div>
                         </div>
                     </div>
@@ -46,7 +45,8 @@
                         <div class="section_title">
                             <h3>Precisamos da sua ajuda!</h3>
                             <p>Contribua com algum valor ou com sua ajuda no nosso abrigo. Nosssos animais precisam de cuidado!</p>
-                            <a href="#!" class="btn btn- btn-rounded text-light btn-lg col-12 col-lg-8" style="background-color:orangered;">Eu quero ajudar</a>
+                            <a href="" class="boxed-btn3">Eu quero ajudar</a>
+                         
                         </div>
                     </div>
                 </div>
@@ -94,10 +94,9 @@
                 <div class="col-lg-5 text-center">
                     <div class="adapt_help">
                         <div class="section_title text-left">
-                            <h3 class="">Juntos somos mais fortes!</h3>
-                            <p>Estamos trabalhando diariamente para ajudar nossos animais!</p>
-                            <a href="#!" class="btn btn- btn-rounded text-light btn-lg col-lg-4" style="background-color:orangered;">Gatos</a>
-                            <a href="#!" class="btn btn-  btn-rounded text-light btn-lg  col-lg-4 mt-2 mt-lg-0" style="background-color:orangered;">Cachorros</a>
+                            <h3 class="">Já adotou um animal?</h3>
+                            <p>Nos envie seu testemunho! Queremos saber como está sendo pra você esse tempo.</p>
+                            <a href="about.html" class="boxed-btn3">Enviar</a>
                         </div>
                     </div>
                 </div>
