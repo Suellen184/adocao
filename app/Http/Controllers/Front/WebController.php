@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+Use App\Animal;
 
 class WebController extends Controller
 {
@@ -16,12 +17,13 @@ class WebController extends Controller
     // Animais
     public function animais()
     {
-        return view('front.animais.index');
+        $animais = Animal::all();
+        return view('front.animais.index', ['animais' => $animais]); 
     }
 
-    public function animalShow()
+    public function animalShow(Animal $animal)
     {
-        return view('front.animais.show');
+       // return view('front.animais.show', ['animal' => $animal]);
     }
 
     public function animalGet()
