@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="bradcam_text text-center">
-                        <h3>contact</h3>
+                    <h3>Oi Humano! <br> Gostou de mim?</h3>
                     </div>
                 </div>
             </div>
@@ -85,9 +85,9 @@
         </p>
      </div>
        
-        <div style="height:100px"> </div>
+        <div style="height:100px" class="col-sm-12"> </div>
 
-                    <div class="col-lg-8">
+                    <div class="col-lg-8" style="float:left">
                         <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                             <div class="row">
                                 
@@ -115,25 +115,40 @@
                                     </div>
                                     
                                 </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="cep" id="cep" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'CEP'" placeholder="CEP">
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="telefone" id="telefone" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'telefone'" placeholder="telefone">
+                                    </div>
+                                    
+                                </div>
+
+                                
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                                        <input class="form-control" name="email" id="email" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" placeholder="Email">
                                     </div>
 
-                                    <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Name"></textarea>
+                                    <div class="col-13">
+                                    <div class="form-group ">
+                                        <textarea class="form-control w-100" name="mensagem" id="mensagem" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sua Mensagem'" placeholder="Sua Mensagem"></textarea>
                                     </div>
                                 </div>
 
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                                <button type="submit" class="button button-contactForm boxed-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-3 offset-lg-1">
+                    <div class="col-lg-3 offset-lg-1" style="float:right">
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">
@@ -160,5 +175,5 @@
             </div>
         </section>
     <!-- ================ contact section end ================= -->
-    
+    <div style="height:580px" class="col-sm-12"> </div>
 @endsection
