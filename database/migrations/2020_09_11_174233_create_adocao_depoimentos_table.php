@@ -18,7 +18,8 @@ class CreateAdocaoDepoimentosTable extends Migration
 
             $table->unsignedInteger('codigo_solicitacao');
             $table->boolean('status')->default(0);
-
+            $table->string('nome');
+            $table->string('titulo');
             $table->string('mensagem');
             $table->string('imagem');
 

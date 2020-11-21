@@ -32,8 +32,8 @@
             <div class="form-group col-sm-3">
                 <label for="status">Status</label>
                 <select class="form-control " id="status">
-                <option>1</option>
-                <option>2</option>
+                <option value="1">1</option>
+                <option>0</option>
                 </select>
             </div>
         </div>  

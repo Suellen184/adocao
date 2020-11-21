@@ -13,8 +13,11 @@ class DepoimentoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
-        return view('admin.depoimento.index');
+        $depoimento = Depoimento::all();
+        
+        //return view('admin.depoimento' , ['depoimento' => $depoimentos]);
     }
 
     /**

@@ -31,7 +31,7 @@
                 <label for="status">Status</label>
                 <select class="form-control " id="status">
                 <option>1</option>
-                <option>2</option>
+                <option>0</option>
                 </select>
             </div>
         </div>  
