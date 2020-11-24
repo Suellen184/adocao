@@ -67,8 +67,16 @@
                                 </div>
                             </div>
                             
-                            <button type="button" class="btn btn-default btn-lg btn-block">Enviar Foto</button>
-                            <div style="height:50px" class="col-sm-12"> </div>
+                            
+                            <div class="custom-file pmd-custom-file-filled">
+	                        <input type="file" class="custom-file-input" id="customfilledFile">
+	                         <label class="custom-file-label" for="customfilledFile">Enviar Foto</label>
+                              </div>
+
+
+
+                            
+                            <div style="height:40px" class="col-sm-12"> </div>
                             <div class="form-group mt-3 text-center">
                                 <button type="submit" class="button button-contactForm boxed-btn">Enviar Depoimento</button>
                             </div>
