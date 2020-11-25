@@ -22,7 +22,7 @@
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="https://cdn.pixabay.com/photo/2018/01/09/11/04/dog-3071334_960_720.jpg" alt="Imagem de capa do card">
         <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
+        <h5 class="card-title">Título do card adocao</h5>
         <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
         <a href="#" class="btn btn-primary">Ver tudo</a>
         <a href="#" class="btn btn-danger">Excluir</a>

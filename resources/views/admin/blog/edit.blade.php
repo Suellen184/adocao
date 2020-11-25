@@ -8,7 +8,7 @@
 @section('content')
 
 
-<h4 class="text-center font-weight-bold mb-5">Editar Artigo</h4>
+<h4 class="text-center font-weight-bold mb-5">Editar Artigo adocao</h4>
 <form>
     <img src="{{Storage::url($blog->imagem)}}" alt=""   style="width: 200px; height: 200px;" class=" rounded float-right"><br>
     <input type="file" name="imagem" id="imagem"  value="">

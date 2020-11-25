@@ -7,7 +7,7 @@
 @section('content_header')
 @section('content')
 
-<h4 class="text-center font-weight-bold mb-5">Criar Artigo</h4>
+<h4 class="text-center font-weight-bold mb-5">Criar Artigo adocao</h4>
 
 <form>
 

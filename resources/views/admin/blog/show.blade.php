@@ -11,7 +11,7 @@
 
 <div class="container">
 
-    <h4 class="text-center font-weight-bold mb-5">Artigo</h4>
+    <h4 class="text-center font-weight-bold mb-5">Artigo adocao</h4>
     <img class="img-thumbnail rounded mx-auto d-block" style="width: 30%; height: 40%;"src="https://cdn.pixabay.com/photo/2018/01/09/11/04/dog-3071334_960_720.jpg" alt="Third slide">
   
         <h4 class="mb-3 mt-3">Esse será o título</h4>
