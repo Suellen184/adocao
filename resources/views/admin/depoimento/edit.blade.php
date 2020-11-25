@@ -7,37 +7,40 @@
 @section('content_header')
 @section('content')
 <h4 class="text-center font-weight-bold mb-5">Editar Depoimento</h4>
-
-<form>
-    <input type="file" name="imagem" id="imagem"  value="">
+ 
+<form action="{{route('admin.depoimento.update',['depoimento'=>$depoimento->id])}}" method="post" >
+    @csrf
+    @method('put')
+    <img src="{{Storage::url($depoimento->imagem)}}" alt=""   style="width: 200px; height: 200px;" class=" rounded float-right"><br>
+    <input type="file" name="imagem" id="imagem"  value="{{$depoimento->imagem}}">
     <div class="row">
         <div class="form-group col-sm-2">
             <label for="codigo">Código</label>
-            <input type="text" class="form-control" id="codigo" name="codigo">
+            <input type="text" class="form-control" id="codigo" name="codigo" value="{{$depoimento->codigo}}">
         </div>
     </div>
         <div class="row">
             <div class="form-group col-sm-4">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome">
+                <input type="text" class="form-control" id="nome" name="nome" value="{{$depoimento->nome}}">
             </div>
 
             <div class="form-group col-sm-4">
                 <label for="titulo">Título</label>
-                <input type="text" class="form-control" id="titulo" name="titulo">
+                <input type="text" class="form-control" id="titulo" name="titulo" value="{{$depoimento->titulo}}">
             </div>
 
             <div class="form-group col-sm-3">
                 <label for="status">Status</label>
                 <select class="form-control " id="status">
-                <option>1</option>
-                <option>0</option>
+                <option value="1">1</option>
+                <option value="0">0</option>
                 </select>
             </div>
         </div>  
             <div class="form-group">
                 <label for="">Mensagem</label>
-                <textarea class="form-control col-sm-11" name="mensagem" id="mensagem" rows="3"></textarea>
+                <textarea class="form-control col-sm-11" name="mensagem" id="mensagem" rows="3">{{ old('mensagem')   }}</textarea>
            </div>
 
                 <button type="submit" class="btn btn-success">Enviar</button>

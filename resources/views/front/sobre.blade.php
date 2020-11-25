@@ -35,7 +35,7 @@
                             <h3><span>Somos uma equipe </span> <br>
                              Compromissada</h3>
                             <p>Somos uma equipe de 5 amigos que nos reunimos para criar um sistema de adoção de animais. Com isso esperamos
-                                facilitar a forma de adoção de animais e tornar esse cntato mais humano.
+                                facilitar a forma de adoção de animais e tornar esse contato mais humano.
                             </p>
                             <a href="about.html" class="boxed-btn3">Entre em contato</a>
                         </div>

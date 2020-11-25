@@ -98,7 +98,7 @@ class AnimalController extends Controller
         $animal->sexo = $request->sexo;
         $animal->tamanho = $request->tamanho;
         $animal->status = $request->status;
-        $animal->imagem = 'imagem';
+        $animal->imagem = $request->file('imagem')->store('animais');
 
         $animal->save();
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+Use App\Depoimento;
+use App\Http\Requests\Admin\DepoimentoRequest;
 
 class DepoimentoController extends Controller
 {
@@ -15,9 +17,9 @@ class DepoimentoController extends Controller
     public function index()
 
     {
-        $depoimento = Depoimento::all();
-        
-        //return view('admin.depoimento' , ['depoimento' => $depoimentos]);
+        $depoimentos = Depoimento::all();
+        return view('admin.depoimento.index', ['depoimento' => $depoimentos]);
+
     }
 
     /**
@@ -36,9 +38,20 @@ class DepoimentoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DepoimentoRequest $request)
     {
-        //
+        $depoimento = new Depoimento();
+
+        $depoimento->nome = $request->nome;;
+        $depoimento->titulo = $request->titulo;
+        $depoimento->mensagem = $request->mensagem;
+        $depoimento->tipo = $request->tipo;
+        $depoimento->status = $request->status;
+        $depoimento->imagem = $request->file('imagem')->store('depoimentos');
+
+        $depoimento->save();
+
+        return redirect()->route('admin.depoimento.index');
     }
 
     /**
@@ -47,9 +60,9 @@ class DepoimentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Depoimento $depoimento)
     {
-        return view('admin.depoimento.show');
+        return view('admin.depoimento.show', ['depoimento' => $depoimento]);
     }
 
     /**
@@ -58,9 +71,10 @@ class DepoimentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($depoimento)
     {
-        return view('admin.depoimento.edit');
+        $depoimento = Depoimento::where('id', $depoimento)->first();
+        return view('admin.depoimento.edit', ['depoimento' => $depoimento]);
     }
 
     /**
@@ -70,9 +84,19 @@ class DepoimentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Depoimento $depoimento)
     {
-        //
+        $depoimento->nome = $request->nome;;
+        $depoimento->titulo = $request->titulo;
+        $depoimento->mensagem = $request->mensagem;
+        $depoimento->tipo = $request->tipo;
+        $depoimento->created_by = 1;
+        $depoimento->status = $request->status;
+        $depoimento->imagem = $request->file('imagem')->store('depoimentos');
+
+        $depoimento->save();
+
+        return redirect()->route('admin.depoimento.index');
     }
 
     /**
@@ -83,6 +107,7 @@ class DepoimentoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Depoimento::destroy($id);
+        return redirect()->route('admin.depoimento.index');
     }
 }

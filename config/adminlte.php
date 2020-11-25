@@ -251,13 +251,11 @@ return [
         ['header' => 'Depoimento'],
         [
             'text' => 'Ver todos',
-            'url'  => 'admin/settings',
             'icon_color' => 'purple',
             'url'         => 'admin/depoimento',
         ],
         [
             'text' => 'Criar',
-            'url'  => 'admin/settings',
             'icon_color' => 'blue',
             'url'         => 'admin/depoimento/create',
 
@@ -269,13 +267,13 @@ return [
         [
             'text'       => 'Ver todos',
             'icon_color' => 'orange',
-            'url'         => 'admin/blog/',
+            'url'         => 'admin/blog',
 
         ],
         [
             'text'       => 'Criar artigo',
             'icon_color' => 'pink',
-            'url'         => 'admin/depoimento/create',
+            'url'         => 'admin/blog/create',
 
         ],
     ],

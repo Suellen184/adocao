@@ -6,7 +6,7 @@
 
 @section('content_header')
 @stop
-
+ 
 @section('content')
 
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -18,6 +18,8 @@
 <form action="{{route('admin.animal.update',['animal'=>$animal->id])}}" method="post" >
     @csrf
     @method('put')
+    <img src="{{Storage::url($animal->imagem)}}" alt=""   style="width: 200px; height: 200px;" class=" rounded float-right">
+    <input type="file" name="imagem" id="imagem"  value="{{$animal->imagem}}">
     <div class="row">
       <div class="form-group col-sm-8">
       <label for="nome">Nome</label>
