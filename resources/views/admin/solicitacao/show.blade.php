@@ -18,27 +18,27 @@
 
              
             <div class="row">   
-                <p class="col-sm-4">  <strong>Código:</strong> <br></p>
+                <p class="col-sm-4">  <strong>Código:</strong> {{$solicitacao->codigo}}<br></p>
             </div>    
                 <div class="row">
-                    <p class="col-sm-4">  <strong>Nome:</strong> <br></p>
-                    <p class="col-sm-4"> <strong>Sobrenome:</strong> <br></p>
-                    <p class="col-sm-4"> <strong>CPF:</strong> </p>
+                    <p class="col-sm-4">  <strong>Nome:</strong>{{$solicitacao->nome}} <br></p>
+                    <p class="col-sm-4"> <strong>Sobrenome:</strong>{{$solicitacao->sobrenome}} <br></p>
+                    <p class="col-sm-4"> <strong>CPF:</strong> {{$solicitacao->cpf}}</p>
                </div>
              <div class="row">
-                 <p class="col-sm-4"> <strong>Telefone:</strong></p>
-                 <p class="col-sm-4"> <strong>email:</strong> </p>
-                 <p class="col-sm-4"> <strong>Cidade:</strong></p>
+                 <p class="col-sm-4"> <strong>Telefone:</strong>{{$solicitacao->telefone}}</p>
+                 <p class="col-sm-4"> <strong>email:</strong>{{$solicitacao->email}} </p>
+                 <p class="col-sm-4"> <strong>Cidade:</strong>{{$solicitacao->cidade}}</p>
              </div>
              
              <div class="row">
-                 <p class="col-sm-4"> <strong>CEP:</strong> </p>
-                 <p class="col-sm-4"> <strong>Status:</strong> </p>
-                 <p class="col-sm-4"> <strong>Texto:</strong> </p>
+                 <p class="col-sm-4"> <strong>CEP:</strong>{{$solicitacao->cep}} </p>
+                 <p class="col-sm-4"> <strong>Status:</strong>{{$solicitacao->status}} </p>
+                 <p class="col-sm-4"> <strong>Texto:</strong>{{$solicitacao->texto}} </p>
              </div>
              
              <div class="row">
-                 <p class="col-sm-12"> <strong>Observação:</strong></p>
+                 <p class="col-sm-12"> <strong>Observação:</strong>{{$solicitacao->observacao}}</p>
              </div>
                 <img src="" alt=""><br>
     
@@ -47,13 +47,13 @@
             <div class="box-footer">
                 <div class="btn-group">
                     {{-- @permission('item-edit') --}}
-                    <a href="">
+                    <a href="{{route('admin.animal.edit',['animal'=>$animal->id])}}">
                         <button type="button" class="btn btn-warning"><i class="fa fa-edit"></i> Editar</button>
                     </a>
                     {{-- @endpermission --}}
                 </div>
                 <div class="btn-group">
-                    <form action="" method="post">
+                <form action="{{route('admin.animal.destroy',['animal'=>$animal->id])}}" method="post">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn btn-danger"><i class="fa fa-close"></i> Excluir</button>

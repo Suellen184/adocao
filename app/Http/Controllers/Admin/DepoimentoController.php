@@ -90,7 +90,6 @@ class DepoimentoController extends Controller
         $depoimento->titulo = $request->titulo;
         $depoimento->mensagem = $request->mensagem;
         $depoimento->tipo = $request->tipo;
-        $depoimento->created_by = 1;
         $depoimento->status = $request->status;
         $depoimento->imagem = $request->file('imagem')->store('depoimentos');
 

@@ -76,7 +76,8 @@ class SolicitacaoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $solicitacao = Solicitacao::where('id', $solicitacao)->first();
+        return view('admin.solicitacao.edit', ['solicitacao' => $solicitacao]);
     }
 
     /**
@@ -88,7 +89,20 @@ class SolicitacaoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $solicitacao->codigo = $request->codigo;
+        $solicitacao->nome = $request->nome;
+        $solicitacao->sobrenome = $request->sobrenome;
+        $solicitacao->cpf = $request->cpf;
+        $solicitacao->idade = $request->idade;
+        $solicitacao->cep = $request->cep;
+        $solicitacao->email = $request->email;
+        $solicitacao->telefone = $request->telefone;
+        $solicitacao->mensagem = $request->mensagem;
+        $solicitacao->observacao_by_admin = $request->observacao_by_admin;
+
+        $solicitacao->save();
+
+        return redirect()->route('admin.solicitacao.index');
     }
 
     /**
@@ -99,6 +113,7 @@ class SolicitacaoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Solicitacao::destroy($id);
+        return redirect()->route('admin.solicitacao.index');
     }
 }

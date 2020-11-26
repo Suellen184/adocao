@@ -37,27 +37,27 @@
 
                     <td>
                         <div class="btn-group">
-                            <a href="">
-                                <button type="button" style="margin-right: 5px;" class="btn btn-info"><i
-                                        class="fa fa-search"></i> Visualizar
-                                </button>
-                            </a>
+                        <a href="{{route('admin.solicitacao.show',['solicitacao'=>$solicitacao->id])}}">
+                                                    <button type="button" style="margin-right: 5px;" class="btn btn-info"><i
+                                                            class="fa fa-search"></i> Visualizar
+                                                    </button>
+                                                </a>
                             {{-- @permission('item-edit') --}}
-                            <a href="" style="margin-right: 5px;">
-                                <button type="button" class="btn btn-warning"><i
-                                        class="fa fa-edit"></i> Editar
-                                </button>
-                            </a>
+                            <a href="{{route('admin.solicitacao.edit',['solicitacao'=>$solicitacao->id])}}" style="margin-right: 5px;">
+                                                    <button type="button" class="btn btn-warning"><i
+                                                            class="fa fa-edit"></i> Editar
+                                                    </button>
+                                                </a>
                             {{-- @endpermission --}}
                         </div>
                         <div class="btn-group">
-                            <form action="" method="post" style="margin-right: 5px;">
-                                @csrf
-                                @method('delete')
-                                <button type="submit" class="btn btn-danger"><i class="fa fa-close"></i>
-                                    Excluir
-                                </button>
-                            </form>
+                        <form action="{{route('admin.solicitacao.destroy',['solicitacao'=>$solicitacao->id])}}" method="post" style="margin-right: 5px;">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-danger"><i class="fa fa-close"></i>
+                                                        Excluir
+                                                    </button>
+                                                </form>
                         </div>
                     </td>
                 </tr>
