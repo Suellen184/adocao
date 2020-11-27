@@ -14,6 +14,7 @@
     <a href="{{ route('admin.animal.index') }}">
         <button type="button" class="btn btn-success"> <strong>+</strong> Solicitar animal</button>
     </a>
+
     
     <div class="container">
 
@@ -22,7 +23,6 @@
               <tr>
                 <th scope="col">Código</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Sobrenome</th>
                 <th scope="col">Cep</th>
                 <th></th>
               </tr>
@@ -32,7 +32,6 @@
                 <tr>
                     <td scope="row">{{$s->codigo}}</td>
                     <td>{{$s->nome}}</td>
-                    <td>{{$s->sobrenome}}</td>
                     <td>{{$s->cep}}</td>
 
                     <td>

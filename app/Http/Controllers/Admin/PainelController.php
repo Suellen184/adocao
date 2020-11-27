@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+Use App\Animal;
+Use App\Depoimento;
+use App\Solicitacao;
 
 class PainelController extends Controller
 {
@@ -20,11 +23,14 @@ class PainelController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response 
      */
-    public function create()
+    public function animaisAtivos()
     {
-        //
+
+        
+        $dado = DB::table('animal')->where('status', '0')->count();   
+        return view("admin.painel.index", ['dado' => $dados]);
     }
 
     /**

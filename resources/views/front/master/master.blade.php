@@ -61,7 +61,6 @@
                                         <li><a  href="{{ route('front.home')}}">HOME</a></li>
                                         <li><a href="{{ route('front.sobre')}}">SOBRE NÓS</a></li>
                                         <li><a href="{{ route('front.contato')}}">FALE CONOSCO</a></li>
-                                        <li><a href="{{ route('front.blog.index')}}">BLOG</a></li>
                                         <li><a href="{{ route('front.animais.index')}}">ANIMAIS</a></li>
                                         <a href="{{ route('front.contato')}}" class="ml-0 ml-lg-3 btn btn- btn-rounded text-light" style="background-color:orangered;">QUERO AJUDAR</a>
                                     </ul>
