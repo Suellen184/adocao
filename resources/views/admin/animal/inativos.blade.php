@@ -17,7 +17,8 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Animais</li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.animal.index') }}">Animais</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Inativos ou removidos</li>
         </ol>
     </nav>
 
@@ -83,10 +84,10 @@
                                         <a href="{{ route('admin.animal.create') }}" class="btn btn-outline-success btn-sm">
                                             Cadastrar
                                         </a>
-                                        <a href="{{ route('admin.animal.adotados') }}" class="btn btn-outline-info btn-sm">
+                                        <a href="#" class="btn btn-outline-info btn-sm">
                                             Adotados
                                         </a>
-                                        <a href="{{ route('admin.animal.inativos') }}" class="btn btn-outline-danger btn-sm">
+                                        <a href="#" class="btn btn-outline-danger btn-sm">
                                             Inativos
                                         </a>
                                     </th>
@@ -118,7 +119,7 @@
 
                                                 <a href="{{route('admin.solicitacao.create', ['animal'=>$animal->id])}}" style="margin-right: 5px;">
                                                     <button type="button" class="btn btn-success btn-sm"><i
-                                                                class="fa fa-plus-square mr-1"></i> Solicitar
+                                                                class="fa fa-plus-square mr-1"></i> Recuperar
                                                     </button>
                                                 </a>
 

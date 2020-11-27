@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Animais | Anipet')
+@section('title', 'Animais - Adotados | Anipet')
 
 @section('content_header')
 
@@ -86,7 +86,7 @@
                                         <a href="{{ route('admin.animal.adotados') }}" class="btn btn-outline-info btn-sm">
                                             Adotados
                                         </a>
-                                        <a href="{{ route('admin.animal.inativos') }}" class="btn btn-outline-danger btn-sm">
+                                        <a href="#" class="btn btn-outline-danger btn-sm">
                                             Inativos
                                         </a>
                                     </th>

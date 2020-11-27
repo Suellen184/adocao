@@ -98,12 +98,14 @@
   </div>
 
   <div class="form-group col-sm-12">
-    <label for="exampleFormControlTextarea1">Observação Administrador</label>
+    <label for="exampleFormControlTextarea1">Observação administrativa</label>
     <textarea class="form-control " name="observacao" id="exampleFormControlTextarea1" rows="3">{{ old('observacao')   }}</textarea>
   </div>
 
 
-    <button type="submit" class="btn btn-success">Enviar</button>
+    <div class="text-right">
+        <button type="submit" class="btn btn-success col-4 my-3">Cadastrar</button>
+    </div>
   </form>
 
 @stop

@@ -49,6 +49,8 @@ Route::group(['prefix' => '/', 'as' => 'front.', 'namespace' => 'Front'], functi
 */
 Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.', 'namespace' => 'Admin'], function () {
     // CRUD de animais
+    Route::get('animal/adotados', 'AnimalController@adotados')->name('animal.adotados');
+    Route::get('animal/inativos', 'AnimalController@inativos')->name('animal.inativos');
     Route::resource('animal', 'AnimalController');
 
     // CRUD de solicitações

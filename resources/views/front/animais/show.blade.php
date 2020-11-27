@@ -111,7 +111,6 @@
                                     </div>
 
                                 </div>
-
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <input class="form-control " name="cep" id="cep" type="text" placeholder="CEP">
@@ -120,12 +119,10 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input class="form-control " name="telefone" id="telefone" type="text" placeholder="telefone">
+                                        <input class="form-control " name="telefone" id="telefone" type="tel" placeholder="Telefone">
                                     </div>
 
                                 </div>
-
-
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <input class="form-control" name="email" id="email" type="text" placeholder="Email">
@@ -136,8 +133,9 @@
                                         <textarea class="form-control w-100" name="mensagem" id="mensagem" cols="30" rows="9" placeholder="Sua Mensagem"></textarea>
                                     </div>
                                 </div>
-                            </div>
                                 <button type="submit">enviar</button>
+                            </div>
+
                         </form>
                     </div>
                     <div class="col-lg-3 offset-lg-1" style="float:right">

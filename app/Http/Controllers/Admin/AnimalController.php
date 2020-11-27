@@ -11,6 +11,25 @@ use Illuminate\Support\Facades\DB;
 
 class AnimalController extends Controller
 {
+    public function adotados()
+    {
+        $animais = DB::table('animais')
+            ->where([
+                ['status', '=', 'adotado'],
+                ['deleted_at', '=', null]
+            ])
+            ->get();
+        return view('admin.animal.adotados', ['animais' => $animais]);
+    }
+
+    public function inativos()
+    {
+        $animais = DB::table('animais')
+            ->where('status', '=', 'inativo')
+            ->orWhere('deleted_at', '!=', null)
+            ->get();
+        return view('admin.animal.inativos', ['animais' => $animais]);
+    }
     /**
      * Display a listing of the resource.
      *
