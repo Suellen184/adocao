@@ -16,27 +16,26 @@ class CreateAdocaoSolicitacoesTable extends Migration
         Schema::create('adocao_solicitacoes', function (Blueprint $table) {
             $table->increments('id');
 
+            // codigo para rastreio
             $table->string('codigo')->unique();
-            $table->string('status')->default('Solicitação Realizada');
-            $table->unsignedInteger('id_animal');
-            $table->integer('limit')->nullable();
 
-            $table->text('mensagem');
-
+            // informações sobre o solicitante
+            $table->string('cpf');
             $table->string('nome');
             $table->string('sobrenome');
-            $table->string('cpf');
-            $table->string('idade');
-
-            $table->string('cep');
-
             $table->string('email');
             $table->string('telefone');
+            $table->string('cep');
 
-            $table->text('observacao_by_admin');
+            // mensagem e observação
+            $table->text('mensagem');
+            $table->text('observacao_by_admin')->nullable();
+
+            // informações sobre o animal e o status de adoção
+            $table->unsignedInteger('id_animal');
+            $table->string('status')->default('realizada');
 
             $table->timestamps();
-
             $table->foreign('id_animal')->references('id')->on('animais')->onDelete('cascade');
         });
     }

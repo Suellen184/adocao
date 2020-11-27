@@ -45,7 +45,7 @@
                      <div class="service_content text-center">
                         <h3>{{ $animal->nome }}</h3>
                         <p> {{ $animal->raca }} | {{ $animal->sexo }} | {{ $animal->tamanho }}</p>
-                        <a href="" class="boxed-btn3">Adotar</a>
+                        <a href="{{ route('front.animais.show', ['id' => $animal->id]) }}" class="boxed-btn3">Adotar</a>
                      </div>
                 </div>
             </div>

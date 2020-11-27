@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Solicitacao;
 use Illuminate\Http\Request;
-Use App\Animal;
+use App\Animal;
+use Illuminate\Support\Facades\DB;
 
 class WebController extends Controller
 {
@@ -17,18 +19,53 @@ class WebController extends Controller
     // Animais
     public function animais()
     {
-        $animais = Animal::all();
+        $animais = DB::table('animais')
+            ->where([
+                ['status', '=', 'disponivel'],
+            ])
+            ->get();
         return view('front.animais.index', ['animais' => $animais]); 
     }
 
-    public function animalShow(Animal $animal)
+    public function animalShow($animal)
     {
-       // return view('front.animais.show', ['animal' => $animal]);
+        $animal = Animal::where('id', $animal)->first();
+        return view('front.animais.show', ['animal' => $animal]);
     }
 
-    public function animalGet()
+    public function animalGet(Request $request)
     {
-        //
+        $verificaCPF = DB::table('adocao_solicitacoes')
+            ->where([
+                ['cpf', '=', $request->cpf],
+                ['status', '=', 'adotado'],
+            ])
+            ->count('status');
+
+        if ($verificaCPF >= 2) {
+            $error = "Você já atingiu o limite máximo permitido para adoções de animais";
+            return redirect()->route('admin.solicitacao.create', ['animal' => $request->animal]);
+        }
+
+        $solicitacao = new Solicitacao();
+
+        $solicitacao->codigo = "A" . substr(uniqid(rand()), 0, 5);
+        $solicitacao->id_animal = $request->animal;
+
+        $solicitacao->nome = $request->nome;
+        $solicitacao->sobrenome = $request->sobrenome;
+        $solicitacao->cpf = $request->cpf;
+        $solicitacao->telefone = $request->telefone;
+        $solicitacao->email = $request->email;
+        $solicitacao->cep = $request->cep;
+
+        $solicitacao->mensagem = $request->mensagem;
+
+        $solicitacao->status = 'realizada';
+
+        $solicitacao->save();
+
+        return redirect()->route('front.home');
     }
 
 

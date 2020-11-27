@@ -85,8 +85,8 @@
     <div class="form-group col-sm-4">
         <label for="status">Status</label>
         <select class="form-control"  name="status"  id="status">
-          <option value="inativo"{{ (old('status') == 'inativo' ? 'selected' : '') }}>Inativo</option>
-          <option value="ativo"{{ (old('status') == 'ativo' ? 'selected' : '') }}>Ativo</option>
+          <option value="0">Inativo</option>
+          <option value="1">Ativo</option>
         </select>
     </div>
 

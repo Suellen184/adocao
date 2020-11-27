@@ -88,64 +88,56 @@
         <div style="height:100px" class="col-sm-12"> </div>
 
                     <div class="col-lg-8" style="float:left">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form action="{{ route('front.animais.get', ['id' => $animal->id]) }}" method="post">
+                            @csrf
+
                             <div class="row">
-                                
-                                <div class="col-sm-6">
+
+                                <input type="hidden" name="animal" value="{{ $animal->id }}">
+                                <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="nome" id="nome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'" placeholder="Nome">
+                                        <input class="form-control " name="nome" id="nome" type="text" placeholder="Nome">
                                     </div>
-                                    
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="sobrenome" id="sobrenome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sobrenome'" placeholder="Sobrenome">
+                                        <input class="form-control " name="sobrenome" id="sobrenome" type="text" placeholder="Sobrenome">
                                     </div>
-                                    
+
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="cpf" id="cpf" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'CPF'" placeholder="CPF">
+                                        <input class="form-control " name="cpf" id="cpf" type="text" placeholder="CPF">
                                     </div>
-                                    
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="idade" id="idade" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Idade'" placeholder="Idade">
-                                    </div>
-                                    
+
                                 </div>
 
-                                <div class="col-sm-6">
+                                <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="cep" id="cep" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'CEP'" placeholder="CEP">
+                                        <input class="form-control " name="cep" id="cep" type="text" placeholder="CEP">
                                     </div>
-                                    
+
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="telefone" id="telefone" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'telefone'" placeholder="telefone">
+                                        <input class="form-control " name="telefone" id="telefone" type="text" placeholder="telefone">
                                     </div>
-                                    
+
                                 </div>
 
-                                
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="email" id="email" type="text" placeholder="Email">
+                                    </div>
+                                </div>
                                 <div class="col-12">
-                                    <div class="form-group">
-                                        <input class="form-control" name="email" id="email" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" placeholder="Email">
-                                    </div>
-
-                                    <div class="col-13">
                                     <div class="form-group ">
-                                        <textarea class="form-control w-100" name="mensagem" id="mensagem" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sua Mensagem'" placeholder="Sua Mensagem"></textarea>
+                                        <textarea class="form-control w-100" name="mensagem" id="mensagem" cols="30" rows="9" placeholder="Sua Mensagem"></textarea>
                                     </div>
                                 </div>
-
-                                </div>
                             </div>
-                            <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Enviar</button>
-                            </div>
+                                <button type="submit">enviar</button>
                         </form>
                     </div>
                     <div class="col-lg-3 offset-lg-1" style="float:right">

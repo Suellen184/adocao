@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Animal;
 use App\Http\Controllers\Controller;
 use App\Solicitacao;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SolicitacaoController extends Controller
 {
@@ -24,9 +26,10 @@ class SolicitacaoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($animal)
     {
-        return view('admin.solicitacao.create');
+        $animal = Animal::where('id', $animal)->first();
+        return view('admin.solicitacao.create', ['animal' => $animal]);
     }
 
     /**
@@ -37,20 +40,34 @@ class SolicitacaoController extends Controller
      */
     public function store(Request $request)
     {
+        $verificaCPF = DB::table('adocao_solicitacoes')
+            ->where([
+                ['cpf', '=', $request->cpf],
+                ['status', '=', 'adotado'],
+            ])
+            ->count('status');
+
+        if ($verificaCPF >= 2) {
+            $error = "Você já atingiu o limite máximo permitido para adoções de animais";
+            return redirect()->route('admin.solicitacao.create', ['animal' => $request->animal]);
+        }
+
         $solicitacao = new Solicitacao();
 
-        $solicitacao->codigo = $request->codigo;
+        $solicitacao->codigo = "A" . substr(uniqid(rand()), 0, 5);
+        $solicitacao->id_animal = $request->animal;
+
         $solicitacao->nome = $request->nome;
         $solicitacao->sobrenome = $request->sobrenome;
-        $solicitacao->idade = $request->idade;
         $solicitacao->cpf = $request->cpf;
-        $solicitacao->telefone = $request->telefone;
+        $solicitacao->telefone = 'tel';
         $solicitacao->email = $request->email;
         $solicitacao->cep = $request->cep;
-        $solicitacao->id_animal = 1;
-        $solicitacao->limit = 1;
-        $solicitacao->mensagem = 'texto';
+
+        $solicitacao->mensagem = $request->mensagem;
         $solicitacao->observacao_by_admin = $request ->observacao;
+
+        $solicitacao->status = 'realizada';
 
         $solicitacao->save();
 
@@ -76,7 +93,7 @@ class SolicitacaoController extends Controller
      */
     public function edit($id)
     {
-        $solicitacao = Solicitacao::where('id', $solicitacao)->first();
+        $solicitacao = Solicitacao::where('id', $id)->first();
         return view('admin.solicitacao.edit', ['solicitacao' => $solicitacao]);
     }
 

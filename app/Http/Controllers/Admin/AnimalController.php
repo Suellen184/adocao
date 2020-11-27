@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 Use App\Animal;
 use App\Http\Requests\Admin\AnimalRequest;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AnimalController extends Controller
 {
@@ -17,7 +18,11 @@ class AnimalController extends Controller
      */
     public function index()
     {
-        $animais = Animal::all();
+        $animais = DB::table('animais')
+            ->where([
+                ['status', '=', 'disponivel'],
+            ])
+            ->get();
         return view('admin.animal.index', ['animais' => $animais]);
     }
 
@@ -49,8 +54,8 @@ class AnimalController extends Controller
         $animal->sexo = $request->sexo;
         $animal->tamanho = $request->tamanho;
         $animal->observacao = $request->observacao;
-        $animal->created_by = 1;
-        $animal->status = 1;
+        $animal->created_by = Auth::user()->id;
+        $animal->status = $request->status;
         $animal->imagem = $request->file('imagem')->store('animais');
 
         $animal->save();
@@ -98,7 +103,9 @@ class AnimalController extends Controller
         $animal->sexo = $request->sexo;
         $animal->tamanho = $request->tamanho;
         $animal->status = $request->status;
-        $animal->imagem = $request->file('imagem')->store('animais');
+        if (!($request->imagem == null)){
+            $animal->imagem = $request->file('imagem')->store('animais');
+        }
 
         $animal->save();
 

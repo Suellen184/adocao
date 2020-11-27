@@ -27,3 +27,5 @@ class Animal extends Model
         'created_by'
     ];
 }
+
+// 1 animal pode ter N solicitações, uma solicitação pode ter 1 animal

@@ -29,7 +29,7 @@ class CreateAnimaisTable extends Migration
             $table->string('imagem');
             $table->text('observacao');
 
-            $table->boolean('status')->default(0);
+            $table->string('status');
             $table->unsignedInteger('created_by');
 
             $table->timestamps();

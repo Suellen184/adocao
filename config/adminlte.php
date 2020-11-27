@@ -239,14 +239,6 @@ return [
             'icon_color' => 'red',
             'url'         => 'admin/solicitacao',
         ],
-        [
-            'text' => 'Criar',
-            'url'  => 'admin/settings',
-            'icon_color' => 'yellow',
-            'url'         => 'admin/solicitacao/create',
-
-
-        ],
 
         ['header' => 'Depoimento'],
         [

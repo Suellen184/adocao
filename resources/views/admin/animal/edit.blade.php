@@ -73,8 +73,8 @@
     <div class="form-group col-sm-4">
         <label for="status">Status</label>
         <select class="form-control" id="status" name="status">
-          <option value="inativo">Inativo</option>
-          <option value="ativo">Ativo</option>
+          <option value="0">Inativo</option>
+          <option value="1">Ativo</option>
         </select>
     </div>
   </div>

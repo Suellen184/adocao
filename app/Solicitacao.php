@@ -12,18 +12,25 @@ class Solicitacao extends Model
     public $timestamps = true;
 
     protected $fillable=[
+        // codigo para rastreio
         'codigo',
-        'status',
-        'id_animal',
-        'limit',
-        'mensagem',
+
+        // informações sobre o solicitante
+        'cpf',
         'nome',
         'sobrenome',
-        'cpf',
-        'idade',
-        'cep',
         'email',
         'telefone',
-        'observacao_by_admin'
+        'cep',
+
+        // mensagem e observação
+        'mensagem',
+        'observacao_by_admin',
+
+        // informações sobre o animal e o status de adoção
+        'id_animal',
+        'status'
     ];
 }
+
+// uma solicitação pode ter 1 animal, 1 animal pode ter N solicitações

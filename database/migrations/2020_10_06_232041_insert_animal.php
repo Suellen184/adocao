@@ -20,7 +20,7 @@ class InsertAnimal extends Migration
             'cor' =>'preto',
             'imagem' =>'imagem',
             'observacao' => 'descricao',
-            'status' =>1,
+            'status' =>'disponivel',
             'created_by'=>1
         ]);
 
@@ -30,7 +30,7 @@ class InsertAnimal extends Migration
             'cor' =>'branco',
             'imagem' =>'imagem',
             'observacao' => 'descricao',
-            'status' =>1,
+            'status' =>'disponivel',
             'created_by'=>1
         ]);
 }

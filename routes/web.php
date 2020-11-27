@@ -53,6 +53,7 @@ Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.', 'n
 
     // CRUD de solicitações
     Route::resource('solicitacao', 'SolicitacaoController');
+    Route::get('/animal/{animal}/solicitacao', 'SolicitacaoController@create')->name('solicitacao.create');
 
     // CRUD de depoimentos
     Route::resource('depoimento','DepoimentoController');

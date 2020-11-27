@@ -95,18 +95,23 @@
                                             <div class="btn-group">
                                                 <a href="{{route('admin.animal.show',['animal'=>$animal->id])}}">
                                                     <button type="button" style="margin-right: 5px;" class="btn btn-info"><i
-                                                            class="fa fa-search"></i> Visualizar
+                                                                class="fa fa-search"></i> Visualizar
                                                     </button>
                                                 </a>
                                                 {{-- @permission('item-edit') --}}
                                                 <a href="{{route('admin.animal.edit',['animal'=>$animal->id])}}" style="margin-right: 5px;">
                                                     <button type="button" class="btn btn-warning"><i
-                                                            class="fa fa-edit"></i> Editar
+                                                                class="fa fa-edit"></i> Editar
                                                     </button>
                                                 </a>
                                                 {{-- @endpermission --}}
-                                            </div>
-                                            <div class="btn-group">
+
+                                                <a href="{{route('admin.solicitacao.create', ['animal'=>$animal->id])}}" style="margin-right: 5px;">
+                                                    <button type="button" class="btn btn-success"><i
+                                                                class="fa fa-plus-square mr-1"></i> Solicitar
+                                                    </button>
+                                                </a>
+
                                                 <form action="{{route('admin.animal.destroy',['animal'=>$animal->id])}}" method="post" style="margin-right: 5px;">
                                                     @csrf
                                                     @method('delete')
