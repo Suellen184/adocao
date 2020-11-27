@@ -262,20 +262,6 @@ return [
 
         ],
     
-        
-        ['header' => 'Blog'],
-        [
-            'text'       => 'Ver todos',
-            'icon_color' => 'orange',
-            'url'         => 'admin/blog',
-
-        ],
-        [
-            'text'       => 'Criar artigo',
-            'icon_color' => 'pink',
-            'url'         => 'admin/blog/create',
-
-        ],
     ],
 
     /*

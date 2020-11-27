@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Adicionando Animal')
+@section('title', 'Atualizando Animal')
 
 @section('content_header')
 @stop
@@ -15,7 +15,7 @@
 <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 <h4 class="text-center font-weight-bold mb-5">Atualizar Animal</h4>
-<form action="{{route('admin.animal.update',['animal'=>$animal->id])}}" method="post" >
+<form action="{{route('admin.animal.update',['animal'=>$animal->id])}}" method="post" enctype="multipart/form-data" >
     @csrf
     @method('put')
     <img src="{{Storage::url($animal->imagem)}}" alt=""   style="width: 200px; height: 200px;" class=" rounded float-right">
@@ -73,15 +73,15 @@
     <div class="form-group col-sm-4">
         <label for="status">Status</label>
         <select class="form-control" id="status" name="status">
-          <option value="inativo">Inativo</option>
-          <option value="ativo">Ativo</option>
+          <option value="0">1</option>
+          <option value="1">0</option>
         </select>
     </div>
   </div>
 
   <div class="form-group col-sm-12">
     <label for="exampleFormControlTextarea1">Observação Administrador</label>
-    <textarea class="form-control " name="observacao" id="exampleFormControlTextarea1" rows="3">{{ old('observacao')   }}</textarea>
+    <textarea class="form-control " name="observacao" id="exampleFormControlTextarea1" rows="3">{{$animal->observacao}}</textarea>
   </div>
 
     <button type="submit" class="btn btn-success">Enviar</button>

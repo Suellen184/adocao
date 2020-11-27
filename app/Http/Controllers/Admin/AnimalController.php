@@ -50,7 +50,7 @@ class AnimalController extends Controller
         $animal->tamanho = $request->tamanho;
         $animal->observacao = $request->observacao;
         $animal->created_by = 1;
-        $animal->status = 1;
+        $animal->status = $request->status;
         $animal->imagem = $request->file('imagem')->store('animais');
 
         $animal->save();
