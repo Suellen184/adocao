@@ -45,11 +45,11 @@
     </div>
 
     <div class="form-group col-sm-4">
-      <label for="status">Tamanho</label>
+      <label for="tamanho">Tamanho</label>
       <select class="form-control"  name="tamanho"  id="tamanho">
-        <option value="pequeno">Pequeno</option>
-        <option value="medio">Médio</option>
-        <option value="grande">Grande</option>
+        <option value="pequeno" {{ (old('tamanho') == 'pequeno' || $animal->tamanho == 'pequeno' ? 'selected' : '') }}>Pequeno</option>
+        <option value="medio" {{ (old('tamanho') == 'medio' || $animal->tamanho == 'medio' ? 'selected' : '') }}>Médio</option>
+        <option value="grande" {{ (old('tamanho') == 'grande' || $animal->tamanho == 'grande' ? 'selected' : '') }}>Grande</option>
       </select>
   </div>
 </div>
@@ -58,23 +58,23 @@
   <div class="form-group col-sm-4">
       <label for="tipo">Tipo</label>
         <select class="form-control" id="tipo" name="tipo">
-          <option value="cachorro">Cachorro</option>
-          <option value="gato">Gato</option>
+          <option value="cachorro" {{ (old('tipo') == 'cachorro' || $animal->tipo == 'cachorro' ? 'selected' : '') }}>Cachorro</option>
+          <option value="gato" {{ (old('tipo') == 'gato' || $animal->tipo == 'gato' ? 'selected' : '') }}>Gato</option>
         </select>
     </div>
 
     <div class="form-group col-sm-4">
         <label for="sexo">Sexo</label>
         <select class="form-control" id="sexo" name="sexo">
-          <option value="femea">Fêmea</option>
-          <option value="macho">Macho</option>
+          <option value="femea" {{ (old('sexo') == 'femea' || $animal->sexo == 'femea' ? 'selected' : '') }}>Fêmea</option>
+          <option value="macho" {{ (old('sexo') == 'macho' || $animal->sexo == 'macho' ? 'selected' : '') }}>Macho</option>
         </select>
     </div>
     <div class="form-group col-sm-4">
         <label for="status">Status</label>
         <select class="form-control" id="status" name="status">
-          <option value="0">Inativo</option>
-          <option value="1">Ativo</option>
+          <option value="inativo" {{ (old('status') == 'inativo' || $animal->status == 'inativo' ? 'selected' : '') }}>Inativo</option>
+          <option value="disponivel" {{ (old('status') == 'disponivel' || $animal->status == 'disponivel' ? 'selected' : '') }}>Ativo</option>
         </select>
     </div>
   </div>

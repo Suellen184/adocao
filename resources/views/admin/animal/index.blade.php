@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Visualizar Animais')
+@section('title', 'Animais | Anipet')
 
 @section('content_header')
 
@@ -14,6 +14,12 @@
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Animais</li>
+        </ol>
+    </nav>
 
     <!-- will be used to show any messages -->
     @if (Session::has('message'))
@@ -60,14 +66,6 @@
 
     <div class="container">
 
-
-        <h4 class="text-center font-weight-bold mb-5">Animais</h4>
-        {{-- @permission('item-create') --}}
-        <a href="{{ route('admin.animal.create') }}">
-            <button type="button" class="btn btn-success mb-3"> <strong>+</strong> Adicionar animal</button>
-        </a>
-        {{-- @endpermission --}}
-
         <div class="row">
             <div class="col-lg-12 col-xs-12">
                 <div class="box box-info">
@@ -75,39 +73,51 @@
                     <div class="box-body">
                         <div class="table-responsive">
                             <!--<table class="table no-margin">-->
-                            <table id="tabela" class="table table-striped table-bordered" style="width:100%">
+                            <table id="tabela" class="table table-bordered" style="width:100%">
                                 <thead>
                                 <tr>
+                                    <th>Tipo</th>
                                     <th>Nome</th>
-                                    <th>Sexo</th>
-                                    <th>Raça</th>
-                                    <th></th>
+                                    <th>Status</th>
+                                    <th>
+                                        <a href="{{ route('admin.animal.create') }}" class="btn btn-outline-success btn-sm">
+                                            Cadastrar
+                                        </a>
+                                        <a href="#" class="btn btn-outline-info btn-sm">
+                                            Adotados
+                                        </a>
+                                        <a href="#" class="btn btn-outline-danger btn-sm">
+                                            Inativos
+                                        </a>
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($animais as $animal)
                                     <tr>
-                                        <td>{{$animal->nome}}</td>
-                                        <td>{{$animal->sexo}}</td>
-                                        <td>{{$animal->raca}}</td>
+                                        <td class="text-capitalize">{{ $animal->tipo }}</td>
+                                        <td class="text-capitalize">{{$animal->nome}}</td>
+                                        <td class="text-capitalize @if($animal->status == 'disponivel') text-success @elseif($animal->status == 'negociacao') text-warning @elseif($animal->status == 'adotado') text-info @elseif($animal->status == 'inativo') text-danger @endif">
+                                            <b>{{ $animal->status }}</b>
+                                        </td>
 
                                         <td>
                                             <div class="btn-group">
-                                                <a href="{{route('admin.animal.show',['animal'=>$animal->id])}}">
-                                                    <button type="button" style="margin-right: 5px;" class="btn btn-info"><i
+                                                <a href="{{ route('admin.animal.show', ['animal' => $animal->id]) }}">
+                                                    <button type="button" style="margin-right: 5px;" class="btn btn-info btn-sm"><i
                                                                 class="fa fa-search"></i> Visualizar
                                                     </button>
                                                 </a>
                                                 {{-- @permission('item-edit') --}}
                                                 <a href="{{route('admin.animal.edit',['animal'=>$animal->id])}}" style="margin-right: 5px;">
-                                                    <button type="button" class="btn btn-warning"><i
+                                                    <button type="button" class="btn btn-warning btn-sm"><i
                                                                 class="fa fa-edit"></i> Editar
                                                     </button>
                                                 </a>
                                                 {{-- @endpermission --}}
 
                                                 <a href="{{route('admin.solicitacao.create', ['animal'=>$animal->id])}}" style="margin-right: 5px;">
-                                                    <button type="button" class="btn btn-success"><i
+                                                    <button type="button" class="btn btn-success btn-sm"><i
                                                                 class="fa fa-plus-square mr-1"></i> Solicitar
                                                     </button>
                                                 </a>
@@ -115,7 +125,7 @@
                                                 <form action="{{route('admin.animal.destroy',['animal'=>$animal->id])}}" method="post" style="margin-right: 5px;">
                                                     @csrf
                                                     @method('delete')
-                                                    <button type="submit" class="btn btn-danger"><i class="fa fa-close"></i>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-close"></i>
                                                         Excluir
                                                     </button>
                                                 </form>

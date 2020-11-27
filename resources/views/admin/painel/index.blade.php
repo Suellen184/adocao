@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Painel de Administrador')
+@section('title', 'Administrativo | Anipet')
 
 @section('content_header')
 @stop

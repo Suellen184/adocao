@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Anpet',
+    'title' => 'Anipet',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Anipet</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/logo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo' => '<b>Administrativo</b>',
+    'logo_img' => 'front/assets/img/favicon.png',
+    'logo_img_class' => 'brand-image',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Administração Adoção',
+    'logo_img_alt' => 'Anipet',
 
     /*
     |--------------------------------------------------------------------------
@@ -82,11 +82,11 @@ return [
     |
     */
 
-    'layout_topnav' => null,
-    'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
-    'layout_fixed_footer' => null,
+    'layout_topnav' => false,
+    'layout_boxed' => false,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => false,
+    'layout_fixed_footer' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -105,10 +105,10 @@ return [
     'classes_brand_text' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-danger',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
-    'classes_topnav_nav' => 'navbar-expand-md',
+    'classes_topnav_nav' => '',
     'classes_topnav_container' => 'container',
 
     /*
@@ -127,11 +127,11 @@ return [
     'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
-    'sidebar_collapse_remember_no_transition' => true,
+    'sidebar_collapse_remember_no_transition' => false,
     'sidebar_scrollbar_theme' => 'os-theme-light',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
-    'sidebar_nav_animation_speed' => 300,
+    'sidebar_nav_animation_speed' => 800,
 
     /*
     |--------------------------------------------------------------------------
@@ -167,7 +167,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin/painel',
 
     'logout_url' => 'logout',
 
@@ -208,47 +208,57 @@ return [
     */
 
     'menu' => [
-        ['header' => 'Menu'],
+        ['header' => 'Navegação'],
         [
             'text'        => 'Início',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fa fa-home',
+            'icon_color' => 'white mr-1',
             'url'         => 'admin/painel',
 
         ],
-        ['header' => 'Animal'],
+        [
+            'text'        => 'Ver site',
+            'icon'        => 'fa fa-arrow-left',
+            'icon_color' => 'white mr-1',
+            'url'         => '/',
+
+        ],
+
+        ['header' => 'Animais'],
         [
             'text' => 'Ver todos',
-            'url'  => 'admin/settings',
-            'icon_color' => 'cyan',
+            'icon' => 'far fa-eye',
+            'icon_color' => 'white mr-1',
             'url'         => 'admin/animal',
         ],
         [
             'text' => 'Cadastrar',
-            'url'  => 'admin/settings',
-            'icon_color' => 'green',
+            'icon' => 'fa fa-plus',
+            'icon_color' => 'white mr-2',
             'url'         => 'admin/animal/create',
 
 
         ],
 
-        ['header' => 'Solicitação'],
+        ['header' => 'Solicitações'],
         [
-            'text' => 'Ver todos',
-            'url'  => 'admin/settings',
-            'icon_color' => 'red',
+            'text' => 'Ver todas',
+            'icon' => 'far fa-eye',
+            'icon_color' => 'white mr-1',
             'url'         => 'admin/solicitacao',
         ],
 
-        ['header' => 'Depoimento'],
+        ['header' => 'Depoimentos'],
         [
             'text' => 'Ver todos',
-            'icon_color' => 'purple',
+            'icon' => 'far fa-eye',
+            'icon_color' => 'white mr-1',
             'url'         => 'admin/depoimento',
         ],
         [
-            'text' => 'Criar',
-            'icon_color' => 'blue',
+            'text' => 'Cadastrar',
+            'icon' => 'fa fa-plus',
+            'icon_color' => 'white mr-2',
             'url'         => 'admin/depoimento/create',
 
 

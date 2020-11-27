@@ -21,6 +21,7 @@ class AnimalController extends Controller
         $animais = DB::table('animais')
             ->where([
                 ['status', '=', 'disponivel'],
+                ['deleted_at', '=', null]
             ])
             ->get();
         return view('admin.animal.index', ['animais' => $animais]);
