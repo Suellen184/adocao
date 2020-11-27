@@ -15,11 +15,11 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-<h4 class="text-center font-weight-bold mb-5">Criar Solicitação</h4>
+<h4 class="text-center font-weight-bold mb-5">Criar Solicitação</h4><br>
 
 <form action="{{route('admin.solicitacao.store')}}" class="needs-validation" novalidate method="post" autocomplete="off">
     @csrf
-          <div class="form-row">
+         <div class="form-row">
             <div class="col-md-2 mb-3">
               <label for="validationCustom01">Código</label>
               <input value="{{ old('codigo') }}" type="text" class="form-control" id="validationCustom01" name="codigo" placeholder="Código" required>
@@ -65,9 +65,9 @@
             </div>
 
 
-       
+       <div class="row col-sm-12">
 
-        <div class="col-sm-3 mb-3">
+        <div class="col-sm-4 mb-3">
           <label for="validationCustom01">Telefone</label>
           <input value="{{ old('telefone') }}" type="text" class="form-control" id="validationCustom01" name="telefone" placeholder="telefone" required>
           <div class="valid-feedback">
@@ -76,25 +76,25 @@
         </div>
 
 
-        <div class="col-sm-3 mb-3">
+        <div class="col-sm-4 mb-3">
           <label for="validationCustom02">E-mail</label>
           <input value="{{ old('email') }}" type="text" class="form-control" id="validationCustom02" name="email" placeholder="email" required>
           <div class="valid-feedback">
             Tudo certo!
           </div>
         </div>
-      </div>
-      <div class="form-row col-sm-3 mb-3">
+   
+      <div class="form-row col-sm-4 mb-3">
           <label for="validationCustom05">CEP</label>
           <input  value="{{ old('cep') }}" type="text" class="form-control" id="validationCustom05" placeholder="CEP" name="cep" required>
           <div class="invalid-feedback">
             Por favor, informe um CEP válido.
           </div>
       </div>
-
+</div>
       <div class="form-group col-sm-12">
       <label for="exampleFormControlTextarea1">mensagem</label>
-      <textarea  value="{{ old('mensagem') }}" form-control " name="mensagem" id="exampleFormControlTextarea1" rows="3">{{ old('observacao')   }}</textarea>
+      <textarea  value="{{ old('mensagem') }}"class="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
 
 
@@ -102,7 +102,7 @@
       
     <div class="form-group col-sm-12">
       <label for="exampleFormControlTextarea1">Observação do Administrador</label>
-      <textarea  value="{{ old('observacao_by_admin') }}" form-control " name="observacao_by_admin" id="exampleFormControlTextarea1" rows="3">{{ old('mensagem')   }}</textarea>
+      <textarea  value="{{ old('observacao_by_admin') }}" class="form-control" name="observacao_by_admin" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
 
       <div class="form-group">
@@ -116,6 +116,7 @@
           </div>
         </div>
       </div>
+
       <button class="btn btn-primary" type="submit">Enviar</button>
 
     </form>

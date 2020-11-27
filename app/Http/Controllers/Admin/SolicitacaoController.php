@@ -49,8 +49,8 @@ class SolicitacaoController extends Controller
         $solicitacao->cep = $request->cep;
         $solicitacao->id_animal = 1;
         $solicitacao->limit = 1;
-        $solicitacao->mensagem = 'texto';
-        $solicitacao->observacao_by_admin = $request ->observacao;
+        $solicitacao->mensagem = $request->mensagem;
+        $solicitacao->observacao_by_admin = $request ->observacao_by_admin;
 
         $solicitacao->save();
 
