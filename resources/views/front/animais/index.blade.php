@@ -1,6 +1,6 @@
 @extends('front.master.master')
 
-
+@section('title', 'Animais')
 
 @section('content')
  <!-- bradcam_area_start -->

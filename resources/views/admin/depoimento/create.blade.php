@@ -17,12 +17,6 @@
 
 
     <input type="file" name="imagem" id="imagem" value="{{ old('imagem') }}">
-    <div class="row">
-        <div class="form-group col-sm-2">
-            <label for="codigo">Código</label>
-            <input type="text" class="form-control" id="codigo" name="codigo" value="{{ old('codigo') }}" >
-        </div>
-    </div>
         <div class="row">
             <div class="form-group col-sm-4">
                 <label for="nome">Nome</label>
