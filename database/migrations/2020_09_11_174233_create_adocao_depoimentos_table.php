@@ -16,7 +16,7 @@ class CreateAdocaoDepoimentosTable extends Migration
         Schema::create('adocao_depoimentos', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->unsignedInteger('codigo_solicitacao');
+            //$table->unsignedInteger('codigo_solicitacao');
             $table->string('status')->default('inativo');
             $table->string('nome');
             $table->string('titulo');
@@ -25,7 +25,7 @@ class CreateAdocaoDepoimentosTable extends Migration
 
             $table->timestamps();
 
-            $table->foreign('codigo_solicitacao')->references('id')->on('adocao_solicitacoes');
+            //$table->foreign('codigo_solicitacao')->references('id')->on('adocao_solicitacoes');
         });
     }
 

@@ -133,10 +133,11 @@ function showFileName( event ) {
         <div style="height:100px" class="col-sm-12"> </div>
 
         <div class="col-lg-30 ">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="row">
+            <form action="{{route('admin.depoimento.store')}}" method="post" autocomplete="off" enctype="multipart/form-data">
+                @csrf
+                                        <div class="row">
                                 
-                                <div class="col-sm-6">
+                                <div class="col-sm-6"> 
                                     <div class="form-group">
                                         <input class="form-control valid" name="nome" id="nome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'" placeholder="Nome">
                                     </div>
@@ -154,10 +155,7 @@ function showFileName( event ) {
                                     </div>
                                     
                                 </div>
-                                
-
-                                
-
+                        
                                     <div class="col-12">
                                     <div class="form-group ">
                                         <textarea class="form-control w-100" name="mensagem" id="mensagem" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sua Mensagem'" placeholder="Sua Mensagem"></textarea>

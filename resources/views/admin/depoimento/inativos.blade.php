@@ -17,7 +17,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ route('admin.animal.index') }}">Animais</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.animal.index') }}">Depoiemento</a></li>
             <li class="breadcrumb-item active" aria-current="page">Inativos ou removidos</li>
         </ol>
     </nav>
