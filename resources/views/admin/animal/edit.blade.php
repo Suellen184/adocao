@@ -15,7 +15,7 @@
 <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 <h4 class="text-center font-weight-bold mb-5">Atualizar Animal</h4>
-<form action="{{route('admin.animal.update',['animal'=>$animal->id])}}" method="post" enctype="multipart/form-data" >
+<form action="{{route('admin.animal.edit',['animal'=>$animal->id])}}" method="post" enctype="multipart/form-data" >
     @csrf
     @method('put')
     <img src="{{Storage::url($animal->imagem)}}" alt=""   style="width: 200px; height: 200px;" class=" rounded float-right">

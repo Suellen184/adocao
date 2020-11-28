@@ -18,9 +18,29 @@ class DepoimentoController extends Controller
 
     {
         $depoimentos = Depoimento::all();
-        return view('admin.depoimento.index', ['depoimento' => $depoimentos]);
+        return view('admin.depoimento.index', ['depoimentos' => $depoimentos]);
 
     }
+
+    public function inativos()
+    {
+        $depoimentos = DB::table('adocao_depoimentos')
+            ->where('status', '=', 'inativo')
+            ->orWhere('deleted_at', '!=', null)
+            ->get();
+        return view('admin.depoimento.inativos', ['depoimentos' => $depoimentos]);
+    }
+
+    public function ativos()
+    {
+        $depoimentos = DB::table('adocao_depoimentos')
+            ->where('status', '=', 'ativo')
+            ->orWhere('deleted_at', '!=', null)
+            ->get();
+        return view('admin.depoimento.ativos', ['depoimentos' => $depoimentos]);
+    }
+
+
 
     /**
      * Show the form for creating a new resource.

@@ -58,6 +58,8 @@ Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.', 'n
     Route::get('/animal/{animal}/solicitacao', 'SolicitacaoController@create')->name('solicitacao.create');
 
     // CRUD de depoimentos
+    Route::get('depoimento/inativos','DepoimentoController@inativos')->name('depoimento.ativos');
+    Route::get('depoimento/ativos','DepoimentoController@ativos')->name('depoimento.inativos');
     Route::resource('depoimento','DepoimentoController');
 
      // CRUD de blog
