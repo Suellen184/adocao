@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Depoimento | Anipet')
+@section('title', 'Animais | Anipet')
 
 @section('content_header')
 
@@ -17,7 +17,8 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Depoimento</li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.animal.index') }}">Animais</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Inativos ou removidos</li>
         </ol>
     </nav>
 
@@ -83,10 +84,10 @@
                                         <a href="{{ route('admin.depoimento.create') }}" class="btn btn-outline-success btn-sm">
                                             Cadastrar
                                         </a>
-                                        <a href="{{ route('admin.depoimento.ativos') }}" class="btn btn-outline-info btn-sm">
+                                        <a href="#" class="btn btn-outline-info btn-sm">
                                             Ativos
                                         </a>
-                                        <a href="{{ route('admin.depoimento.inativos') }}" class="btn btn-outline-danger btn-sm">
+                                        <a href="#" class="btn btn-outline-danger btn-sm">
                                             Inativos
                                         </a>
                                     </th>
@@ -115,7 +116,6 @@
                                                     </button>
                                                 </a>
                                                 {{-- @endpermission --}}
-
 
                                                 <form action="{{route('admin.depoimento.destroy',['depoimento'=>$depoimento->id])}}" method="post" style="margin-right: 5px;">
                                                     @csrf

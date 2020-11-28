@@ -33,8 +33,8 @@
             <div class="form-group col-sm-3">
                 <label for="status">Status</label>
                 <select class="form-control " id="status">
-                <option value="1">1</option>
-                <option value="0">0</option>
+                <option value="{{$depoimento->status}}">ativo</option>
+                <option value="{{$depoimento->status}}">inativo</option>
                 </select>
             </div>
         </div>  

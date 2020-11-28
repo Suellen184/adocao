@@ -39,7 +39,7 @@
                 <div class="single_service">
                      <div class="service_thumb d-flex align-items-center justify-content-center">
                          <div class="">
-                             <img src="{{Storage::url($animal->imagem)}}" alt="">
+                             <img class="rounded img-thumbnail"src ="{{Storage::url($animal->imagem)}}" alt="" style="height: 170px; width: 200px;">
                          </div>
                      </div>
                      <div class="service_content text-center">
