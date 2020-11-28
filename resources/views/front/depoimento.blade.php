@@ -1,5 +1,5 @@
 @extends('front.master.master')
-@section('title', 'Quero ajudar')
+@section('title', 'Testemunho')
 @section('description', 'O maior site de adoção de animais da América Latina!')
 
 @section('content')
@@ -103,13 +103,14 @@ function showFileName( event ) {
 
 </script>
 
+  
      <!-- bradcam_area_start -->
      <div class="bradcam_area breadcam_bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="bradcam_text text-center">
-                        <h3>Envie um testemunho</h3>
+                        <h3>Envie um Depoimento</h3>
                     </div>
                 </div>
             </div>

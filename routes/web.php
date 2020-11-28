@@ -31,7 +31,7 @@ Route::group(['prefix' => '/', 'as' => 'front.', 'namespace' => 'Front'], functi
     // Depoimentos
     Route::get('depoimento', 'WebController@depoimento')->name('depoimentos.index');
     Route::get('depoimento/obrigado', 'WebController@depoimentoObrigado')->name('depoimentos.obrigado');
-    Route::post('depoimento', 'WebController@depoimentoDo')->name('depoimentos.do');
+    Route::post('depoimentoDo', 'WebController@depoimentoDo')->name('depoimentos.do');
 
     // Blog
     Route::get('blog', 'WebController@blog')->name('blog.index');

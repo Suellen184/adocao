@@ -133,7 +133,8 @@
                                         <textarea class="form-control w-100" name="mensagem" id="mensagem" cols="30" rows="9" placeholder="Sua Mensagem"></textarea>
                                     </div>
                                 </div>
-                                <button type="submit">enviar</button>
+                                <button type="submit" class="button button-contactForm boxed-btn ml-3">Enviar</button>
+
                             </div>
 
                         </form>

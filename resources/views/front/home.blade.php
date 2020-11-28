@@ -96,7 +96,7 @@
                         <div class="section_title text-left">
                             <h3 class="">Já adotou um animal?</h3>
                             <p>Nos envie seu testemunho! Queremos saber como está sendo pra você esse tempo.</p>
-                            <a href="about.html" class="boxed-btn3">Enviar</a>
+                            <a href="" class="boxed-btn3">Enviar</a>
                         </div>
                     </div>
                 </div>
