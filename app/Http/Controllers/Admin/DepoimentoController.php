@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 Use App\Depoimento;
-use App\Http\Requests\Admin\DepoimentoRequest;
+use DB;
 
 class DepoimentoController extends Controller
 {
@@ -26,7 +26,7 @@ class DepoimentoController extends Controller
     {
         $depoimentos = DB::table('adocao_depoimentos')
             ->where('status', '=', 'inativo')
-            ->orWhere('deleted_at', '!=', null)
+           // ->orWhere('deleted_at', '!=', null)
             ->get();
         return view('admin.depoimento.inativos', ['depoimentos' => $depoimentos]);
     }
@@ -35,7 +35,7 @@ class DepoimentoController extends Controller
     {
         $depoimentos = DB::table('adocao_depoimentos')
             ->where('status', '=', 'ativo')
-            ->orWhere('deleted_at', '!=', null)
+           // ->orWhere('deleted_at', '!=', null)
             ->get();
         return view('admin.depoimento.ativos', ['depoimentos' => $depoimentos]);
     }
@@ -58,14 +58,13 @@ class DepoimentoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(DepoimentoRequest $request)
+    public function store(Request $request)
     {
         $depoimento = new Depoimento();
-
+        $depoimento->codigo_solicitacao = $request->codigo_solicitacao;;
         $depoimento->nome = $request->nome;;
         $depoimento->titulo = $request->titulo;
         $depoimento->mensagem = $request->mensagem;
-        $depoimento->tipo = $request->tipo;
         $depoimento->status = $request->status;
         $depoimento->imagem = $request->file('imagem')->store('depoimentos');
 
@@ -105,7 +104,8 @@ class DepoimentoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Depoimento $depoimento)
-    {
+    {           
+        $depoimento->codigo_solicitacao = $request->codigo_solicitacao;;
         $depoimento->nome = $request->nome;;
         $depoimento->titulo = $request->titulo;
         $depoimento->mensagem = $request->mensagem;
