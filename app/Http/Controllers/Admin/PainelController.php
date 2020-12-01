@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 Use App\Animal;
 Use App\Depoimento;
+use DB;
 use App\Solicitacao;
 
 class PainelController extends Controller
@@ -19,20 +20,21 @@ class PainelController extends Controller
     {
         return view('admin.painel.index');
     }
-
+ 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response 
      */
-    public function animaisAtivos()
+ public function novosDepoimentos()
     {
-
-        
-        $dado = DB::table('animal')->where('status', '0')->count();   
-        return view("admin.painel.index", ['dado' => $dados]);
+        $depoimentos = DB::table('adocao_depoimentos')
+            ->where('status', '=', 'inativo')
+           // ->orWhere('deleted_at', '!=', null)
+            ->get();
+        return view('admin.painel.index', ['depoimentos' => $depoimentos]);
     }
-
+ 
     /**
      * Store a newly created resource in storage.
      *

@@ -8,15 +8,15 @@
 @stop
 
 @section('content')
-
+ 
 <div class="container">
 
-
+ 
       <h3 class="mb-5 mt-3 text-center text-secondary">Painel Principal</h3>
   <div class="row col-sm-12 mt-3 center-block mb-3 ">
         
     <div class="bg-orange col-sm-2   mt-1 mb-1 rounded border"  style=" margin-left: auto; margin-right: auto;">
-        <h1 style="font-size: 30px;" class="text-center mt-3 text-light">50</h1>
+        <h1 style="font-size: 30px;" class="text-center mt-3 text-light"></h1>
         <h5  class="text-center text-light">Animais Ativos</h5>
     </div>
     <div class="bg-blue col-sm-2   mt-1 mb-1  rounded border"  style="margin-left: auto; margin-right: auto;">
@@ -49,17 +49,20 @@
               </tr>
             </thead>
             <tbody>
-              
-                <tr>
-                    <td scope="row">1231</td>
-                    <td>Rogério</td>
-                    <td>Oi eu sou o Rogério!...</td>
+              @foreach ($depoimentos as $depoimento)
+                  <tr>
+                    <td scope="row">{{$depoimento->codigo}}</td>
+                    <td>{{$depoimento->nome}}</td>
+                    <td>{{$depoimento->status}}</td>
                     <td>
                         <div class="btn-group-toggle">
-                          <button type="button" class="btn btn-success">Abrir</button>
+                          <a href="{{ route('admin.depoimento.show', ['depoimento' => $depoimento->id]) }}">
+                            <button type="button" class="btn btn-success">Abrir</button>
+                          </a>
                         </div>
                     </td>
                 </tr>
+               @endforeach 
             </tbody>
           </table>
 
