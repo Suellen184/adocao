@@ -100,9 +100,9 @@ class AnimalController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($animal)
+    public function edit($id)
     {
-        $animal = Animal::where('id', $animal)->first();
+        $animal = Animal::where([['id', $id],['deleted_at',null]])->first();
         return view('admin.animal.edit', ['animal' => $animal]);
     }
 

@@ -22,8 +22,10 @@ class WebController extends Controller
         $animais = DB::table('animais')
             ->where([
                 ['status', '=', 'disponivel'],
+                ['deleted_at', '=', null]
             ])
             ->get();
+            //dd($animais);
         return view('front.animais.index', ['animais' => $animais]); 
     }
 

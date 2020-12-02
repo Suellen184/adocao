@@ -14,6 +14,7 @@ class Animal extends Model
     public $timestamps = true;
 
     protected $fillable = [
+        //'id',
         'tipo',
         'raca',
         'sexo',
