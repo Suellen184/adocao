@@ -71,7 +71,7 @@ class SolicitacaoController extends Controller
 
         $solicitacao->save();
 
-        return redirect()->route('admin.solicitacao.index');
+        return redirect()->route('admin.solicitacao.index')->with('message', 'Registro criado com sucesso!');
     }
 
     /**
@@ -80,9 +80,13 @@ class SolicitacaoController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id) 
     {
-        return view('admin.solicitacao.show');
+        $solicitacao = solicitacao::find($id)->first();
+       // dd($solicitacao);
+       // dd($solicitacao->animal->nome);
+
+        return view('admin.solicitacao.show',compact('solicitacao'));
     }
 
     /**
@@ -119,7 +123,7 @@ class SolicitacaoController extends Controller
 
         $solicitacao->save();
 
-        return redirect()->route('admin.solicitacao.index');
+        return redirect()->route('admin.solicitacao.index')->with('message', 'Registro atualizado com sucesso!');
     }
 
     /**

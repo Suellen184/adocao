@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Solicitacao;
 use Illuminate\Http\Request;
 use App\Animal;
+use App\Depoimento;
 use Illuminate\Support\Facades\DB;
 
 class WebController extends Controller
@@ -98,12 +99,31 @@ class WebController extends Controller
 
     public function depoimentoObrigado()
     {
-        //
+        
     }
 
-    public function depoimentoDo()
+    public function depoimentoDo(Request $request)
     {
-        //
+        $depoimento = new Depoimento();
+        $depoimento->codigo_solicitacao = $request->codigo_solicitacao;;
+        $depoimento->nome = $request->nome;;
+        $depoimento->titulo = $request->titulo;
+        $depoimento->mensagem = $request->mensagem;
+        $depoimento->status = 0;
+
+      //  if (request()->hasFile('imagem')) {
+           // $file = request()->file('avator')->store('events');
+            //Events::Create($request->all() + ['image' => $file]);
+          //  dd('entrou');
+       // }
+
+
+      //  dd($request->file('imagem')->store('depoimentos'));
+        $depoimento->imagem = $request->file('imagem')->store('depoimentos');
+
+        $depoimento->save();
+
+        return redirect()->route('front.depoimentos.index')->with('message', 'Registro criado com sucesso!');
     }
 
     // Blog

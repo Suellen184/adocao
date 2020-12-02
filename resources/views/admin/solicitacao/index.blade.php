@@ -6,7 +6,9 @@
 
 @section('content_header')
 @section('content')
-
+@if (Session::has('message'))
+    <div class="alert alert-sucess bg-success">{{ Session::get('message') }}</div>
+@endif
 
 <h4 class="text-center font-weight-bold mb-5">Solicitaçães</h4>
 

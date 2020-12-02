@@ -31,6 +31,12 @@ class Solicitacao extends Model
         'id_animal',
         'status'
     ];
+
+
+    public function animal()
+    {
+        return $this->hasOne(Animal::class, 'id', 'id_animal');
+    }
 }
 
 // uma solicitação pode ter 1 animal, 1 animal pode ter N solicitações

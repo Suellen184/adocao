@@ -62,7 +62,7 @@ Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.', 'n
     Route::get('depoimento/ativos','DepoimentoController@ativos')->name('depoimento.ativos');
     Route::resource('depoimento','DepoimentoController');
 
-     // CRUD de blog
+     // CRUD de blog 
      Route::resource('blog','BlogController');
      
      // CRUD de blog

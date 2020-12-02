@@ -70,7 +70,7 @@ class DepoimentoController extends Controller
 
         $depoimento->save();
 
-        return redirect()->route('admin.depoimento.index');
+        return redirect()->route('admin.depoimento.index')->with('message', 'Registro criado com sucesso!');
     }
 
     /**

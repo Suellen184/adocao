@@ -4,6 +4,11 @@
 
 @section('content')
 
+<!-- will be used to show any messages -->
+@if (Session::has('message'))
+<div class="alert alert-sucess bg-success text-white">{{ Session::get('message') }}</div>
+@endif
+
 <style> 
 /*
 *
@@ -133,19 +138,18 @@ function showFileName( event ) {
         <div style="height:100px" class="col-sm-12"> </div>
 
         <div class="col-lg-30 ">
-            <form action="{{route('admin.depoimento.store')}}" method="post" autocomplete="off" enctype="multipart/form-data">
+            <form action="{{route('front.depoimentos.do')}}" method="post" autocomplete="off" enctype="multipart/form-data">
                 @csrf
-                                        <div class="row">
-                                
+                            <div class="row">    
                                 <div class="col-sm-6"> 
                                     <div class="form-group">
                                         <input class="form-control valid" name="nome" id="nome" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'" placeholder="Nome">
                                     </div>
-                                    
+                    
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="codigo" id="codigo" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Codigo'" placeholder="Codigo">
+                                        <input class="form-control valid" name="codigo_solicitacao" id="codigo_depoimento" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Codigo'" placeholder="Codigo">
                                     </div>
                                     
                                 </div>
@@ -174,13 +178,12 @@ function showFileName( event ) {
 
             <!-- Upload image input-->
             <div class="input-group mb-3 px-2 py-2 rounded-pill bg- shadow-sm border border-success"> 
-                <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                <input id="upload" name="imagem" type="file" onchange="readURL(this);" class="form-control border-0">
                 <label id="upload-label" for="upload" class="font-weight-light text-muted">Enviar Foto</label>
                 <div class="input-group-append">
-                    <label for="upload" class="btn  m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Enviar Foto</small></label>
+                    <label for="upload"  class="btn  m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Enviar Foto</small></label>
                 </div>
             </div>
-
             <!-- Uploaded image area-->
             <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
 

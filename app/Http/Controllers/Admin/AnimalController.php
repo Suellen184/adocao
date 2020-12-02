@@ -77,10 +77,10 @@ class AnimalController extends Controller
         $animal->created_by = Auth::user()->id;
         $animal->status = $request->status;
         $animal->imagem = $request->file('imagem')->store('animais');
-
         $animal->save();
 
-        return redirect()->route('admin.animal.index');
+        return redirect()->route('admin.animal.index')->with('message', 'Registro criado com sucesso!');
+
     }
 
     /**
@@ -89,7 +89,7 @@ class AnimalController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Animal $animal)
+    public function show(Animal $animal) 
     {
         return view('admin.animal.show', ['animal' => $animal]);
     }
@@ -129,7 +129,7 @@ class AnimalController extends Controller
 
         $animal->save();
 
-        return redirect()->route('admin.animal.index');
+        return redirect()->route('admin.animal.index')->with('message', 'Registro atualizado com sucesso!');
     }
 
     /**

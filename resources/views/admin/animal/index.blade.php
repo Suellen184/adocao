@@ -10,6 +10,10 @@
 
 @section('content')
 
+@if (Session::has('message'))
+<div class="alert alert-sucess bg-success">{{ Session::get('message') }}</div>
+@endif
+
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
@@ -20,11 +24,6 @@
             <li class="breadcrumb-item active" aria-current="page">Animais</li>
         </ol>
     </nav>
-
-    <!-- will be used to show any messages -->
-    @if (Session::has('message'))
-        <div class="alert alert-info">{{ Session::get('message') }}</div>
-    @endif
 
     <script>
         function ConfirmDelete() {
