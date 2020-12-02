@@ -97,7 +97,7 @@
                                     <tr>
                                         <td class="text-capitalize">{{ $depoimento->codigo_solicitacao }}</td>
                                         <td class="text-capitalize">{{$depoimento->nome}}</td>
-                                        <td class="text-capitalize @if($depoimento->status == 'disponivel') text-success @elseif($depoimento->status == 'negociacao') text-warning @elseif($depoimento->status == 'ativo') text-info @elseif($depoimento->status == 'inativo') text-danger @endif">
+                                        <td class="text-capitalize @if($depoimento->status == 'disponivel') text-success  @elseif($depoimento->status == 'ativo') text-info @elseif($depoimento->status == 'inativo') text-danger @endif">
                                             <b>{{ $depoimento->status }}</b>
                                         </td>
 
