@@ -80,13 +80,13 @@
                                     <th>Nome</th>
                                     <th>Status</th>
                                     <th>
-                                        <a href="{{ route('admin.animal.create') }}" class="btn btn-outline-success btn-sm">
+                                    <a href="{{ route('admin.animal.create') }}" class="btn btn-outline-success btn-sm">
                                             Cadastrar
                                         </a>
                                         <a href="{{ route('admin.animal.adotados') }}" class="btn btn-outline-info btn-sm">
                                             Adotados
                                         </a>
-                                        <a href="#" class="btn btn-outline-danger btn-sm">
+                                        <a href="{{ route('admin.animal.inativos') }}" class="btn btn-outline-danger btn-sm">
                                             Inativos
                                         </a>
                                     </th>

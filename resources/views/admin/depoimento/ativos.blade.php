@@ -81,13 +81,13 @@
                                     <th>Nome</th>
                                     <th>Status</th>
                                     <th>
-                                        <a href="{{ route('admin.depoimento.create') }}" class="btn btn-outline-success btn-sm">
+                                    <a href="{{ route('admin.depoimento.create') }}" class="btn btn-outline-success btn-sm">
                                             Cadastrar
                                         </a>
-                                        <a href="#" class="btn btn-outline-info btn-sm">
+                                        <a href="{{ route('admin.depoimento.ativos') }}" class="btn btn-outline-info btn-sm">
                                             Ativos
                                         </a>
-                                        <a href="#" class="btn btn-outline-danger btn-sm">
+                                        <a href="{{ route('admin.depoimento.inativos') }}" class="btn btn-outline-danger btn-sm">
                                             Inativos
                                         </a>
                                     </th>
