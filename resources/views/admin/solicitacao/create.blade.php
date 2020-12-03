@@ -119,6 +119,14 @@
                         Por favor, digite um CEP válido.
                     </div>
                 </div>
+                <div class="form-group col-sm-4">
+                    <label for="status">Status</label>
+                    <select class="form-control"  name="status"  id="status">
+                        <option value="realizada">Disponivel</option>
+                        <option value="adotados">Inativo</option>
+                    </select>
+                </div>
+                
 
                 <div class="form-group col-sm-12">
                     <label for="exampleFormControlTextarea1">Por que você deseja adotar @if($animal->sexo == 'macho')

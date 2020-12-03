@@ -27,13 +27,50 @@ class PainelController extends Controller
      * @return \Illuminate\Http\Response 
      */
  public function novosDepoimentos()
+
     {
+
+        
+        $qtdAnimaisAtivos = DB::table('animais')
+            ->where([
+                ['status', '=', 'disponivel'],
+            ])
+            ->count();
+
+         $qtdAnimaisAdotados = DB::table('animais')
+        ->where([
+            ['status', '=', 'adotados'],
+        ])
+        ->count();
+
+        $qtdDepoimentosRecebidos = DB::table('adocao_depoimentos')
+        ->where([
+            ['status', '=', '0'],
+        ])
+        ->count();
+
+        $qtdSolicitacoesPendentes = DB::table('adocao_solicitacoes')
+        ->where([
+            ['status', '=', 'realizada'],
+        ])
+        ->count();
+
         $depoimentos = DB::table('adocao_depoimentos')
-            ->where('status', '=', 'inativo')
+            ->where('status', '=', 0)
            // ->orWhere('deleted_at', '!=', null)
             ->get();
-        return view('admin.painel.index', ['depoimentos' => $depoimentos]);
+            
+            $solicitacoes = DB::table('adocao_solicitacoes')
+            ->where('status', '=', 'realizada')
+           // ->orWhere('deleted_at', '!=', null)
+            ->get(); 
+
+            //dd($depoimentos);
+        return view('admin.painel.index', compact('depoimentos', 'solicitacoes', 'qtdSolicitacoesPendentes','qtdAnimaisAtivos' , 'qtdDepoimentosRecebidos','qtdAnimaisAdotados')); 
+
+        
     }
+
  
     /**
      * Store a newly created resource in storage.

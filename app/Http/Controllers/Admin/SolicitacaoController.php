@@ -49,7 +49,7 @@ class SolicitacaoController extends Controller
 
         if ($verificaCPF >= 2) {
             $error = "Você já atingiu o limite máximo permitido para adoções de animais";
-            return redirect()->route('admin.solicitacao.create', ['animal' => $request->animal]);
+            return redirect()->route('admin.solicitacao.create', ['animal' => $request->animal])->with('message', 'Você não pode fazer mais de duas solicitações!');
         }
 
         $solicitacao = new Solicitacao();
@@ -60,7 +60,7 @@ class SolicitacaoController extends Controller
         $solicitacao->nome = $request->nome;
         $solicitacao->sobrenome = $request->sobrenome;
         $solicitacao->cpf = $request->cpf;
-        $solicitacao->telefone = 'tel';
+        $solicitacao->telefone = $resquest->telefone;
         $solicitacao->email = $request->email;
         $solicitacao->cep = $request->cep;
 

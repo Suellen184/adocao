@@ -2,7 +2,9 @@
 
 
 @section('content')
-
+@if (Session::has('message'))
+<div class="alert alert-sucess bg-success text-white">{{ Session::get('message') }}</div>
+@endif
      <!-- bradcam_area_start -->
      <div class="bradcam_area breadcam_bg">
         <div class="container">
