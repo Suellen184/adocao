@@ -88,10 +88,10 @@
         </select>
     </div>
     <div class="form-group col-sm-4">
-        <label for="status">Status</label>
-        <select class="form-control"  name="status"  id="status">
-            <option value="disponivel">Disponivel</option>
-            <option value="inativo">Inativo</option>
+    <label for="status">Status</label>
+        <select class="form-control" id="status" name="status">
+          <option value="inativo" {{ (old('status') == 'inativo' || $animal->status == 'inativo' ? 'selected' : '') }}>Inativo</option>
+          <option value="disponivel" {{ (old('status') == 'disponivel' || $animal->status == 'disponivel' ? 'selected' : '') }}>Ativo</option>
         </select>
     </div>
 

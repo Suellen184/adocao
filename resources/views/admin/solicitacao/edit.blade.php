@@ -22,7 +22,7 @@
          <div class="form-row">
             <div class="col-md-2 mb-3">
               <label for="validationCustom01">Código</label>
-              <input value="{{ old('codigo') }}" type="text" class="form-control" id="validationCustom01" name="codigo" placeholder="Código" required>
+              <input value="{{$solicitacao->codigo}}" type="text" class="form-control" id="validationCustom01" name="codigo" placeholder="Código" required>
               <div class="valid-feedback">
                 Tudo certo!
               </div>
@@ -33,14 +33,14 @@
           <div class="form-row">
             <div class="col-md-4 mb-3">
               <label for="validationCustom01">Primeiro nome</label>
-              <input value="{{ old('nome') }}" type="text" class="form-control" id="validationCustom01" name="nome" placeholder="Nome" required>
+              <input value="{{$solicitacao->nome}}" type="text" class="form-control" id="validationCustom01" name="nome" placeholder="Nome" required>
               <div class="valid-feedback">
                 Tudo certo!
               </div>
             </div>
             <div class="col-md-4 mb-3">
               <label for="validationCustom02">Sobrenome</label>
-              <input value="{{ old('sobrenome') }}" type="text" class="form-control" id="validationCustom02" name="sobrenome" placeholder="Sobrenome" required>
+              <input value="{{$solicitacao->sobrenome}}" type="text" class="form-control" id="validationCustom02" name="sobrenome" placeholder="Sobrenome" required>
               <div class="valid-feedback">
                 Tudo certo!
               </div>
@@ -48,7 +48,7 @@
             <div class="col-md-2 mb-3">
               <label for="validationCustomUsername">Idade</label>
               <div class="input-group">
-                <input value="{{ old('idade') }}" type="text" class="form-control" id="validationCustomTelefone" name="idade" placeholder="idade" aria-describedby="inputGroupPrepend" required>
+                <input value="{{$solicitacao->idade}}" type="text" class="form-control" id="validationCustomTelefone" name="idade" placeholder="idade" aria-describedby="inputGroupPrepend" required>
                 <div class="invalid-feedback">
                   Por favor, escolha uma Idade.
                 </div>
@@ -57,7 +57,7 @@
             <div class="col-md-2 mb-3">
               <label for="validationCustomUsername">CPF</label>
               <div class="input-group">
-                <input value="{{ old('cpf') }}" type="text" class="form-control" id="validationCustomTelefone" name="cpf" placeholder="cpf" aria-describedby="inputGroupPrepend" required>
+                <input value="{{$solicitacao->cpf}}" type="text" class="form-control" id="validationCustomTelefone" name="cpf" placeholder="cpf" aria-describedby="inputGroupPrepend" required>
                 <div class="invalid-feedback">
                   Por favor, escolha um CPF.
                 </div>
@@ -66,14 +66,14 @@
    
         <div class="col-md-4 mb-3">
           <label for="validationCustom01">Telefone</label>
-          <input value="{{ old('telefone') }}" type="text" class="form-control" id="validationCustom01" name="telefone" placeholder="telefone" required>
+          <input value="{{$solicitacao->telefone}}" type="text" class="form-control" id="validationCustom01" name="telefone" placeholder="telefone" required>
           <div class="valid-feedback">
             Tudo certo!
           </div>
         </div>
         <div class="col-md-4 mb-3">
           <label for="validationCustom02">E-mail</label>
-          <input value="{{ old('email') }}" type="text" class="form-control" id="validationCustom02" name="email" placeholder="email" required>
+          <input value="{{$solicitacao->email}}" type="text" class="form-control" id="validationCustom02" name="email" placeholder="email" required>
           <div class="valid-feedback">
             Tudo certo!
           </div>
@@ -81,7 +81,7 @@
         <div class="col-md-4 mb-3">
           <label for="validationCustomUseremail">Confirmar e-mail</label>
           <div class="input-group">
-            <input value="{{ old('email') }}" type="text" class="form-control" id="validationCustomEmail" name="email" placeholder="email" aria-describedby="inputGroupPrepend" required>
+            <input value="{{$solicitacao->email}}" type="text" class="form-control" id="validationCustomEmail" name="email" placeholder="email" aria-describedby="inputGroupPrepend" required>
             <div class="invalid-feedback">
               Por favor, escolha um e-mail.
             </div>
@@ -91,21 +91,21 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="validationCustom03">Cidade</label>
-          <input value="{{ old('cidade') }}" type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
+          <input value="{{$solicitacao->cidade}}" type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
           <div class="invalid-feedback">
             Por favor, informe uma cidade válida.
           </div>
         </div>
         <div class="col-md-3 mb-3">
           <label for="validationCustom04">Estado</label>
-          <input value="{{ old('estado') }}" type="text" class="form-control" id="validationCustom04" placeholder="Estado" required>
+          <input value="{{$solicitacao->estado}}" type="text" class="form-control" id="validationCustom04" placeholder="Estado" required>
           <div class="invalid-feedback">
             Por favor, informe um estado válido.
           </div>
         </div>
         <div class="col-md-3 mb-3">
           <label for="validationCustom05">CEP</label>
-          <input value="{{ old('cep') }}" type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
+          <input value="{{$solicitacao->cep}}" type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
           <div class="invalid-feedback">
             Por favor, informe um CEP válido.
           </div>
