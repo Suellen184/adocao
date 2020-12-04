@@ -66,8 +66,7 @@ Route::group(['middleware' => 'auth', 'prefix' => '/admin', 'as' => 'admin.', 'n
      Route::resource('blog','BlogController');
      
      // CRUD de blog
-     Route::resource('painel','PainelController');
-     Route::get('painelindex','PainelController@novosDepoimentos'); 
+     Route::get('painel','PainelController@novosDepoimentos'); 
 });
 
 Auth::routes();

@@ -178,14 +178,27 @@ function showFileName( event ) {
 
             <!-- Upload image input-->
             <div class="input-group mb-3 px-2 py-2 rounded-pill bg- shadow-sm border border-success"> 
-                <input id="upload" name="imagem" type="file" onchange="readURL(this);" class="form-control border-0">
-                <label id="upload-label" for="upload" class="font-weight-light text-muted">Enviar Foto</label>
+            <input id="upload" class="d-none" type="file" name="imagem"> 
                 <div class="input-group-append">
                     <label for="upload"  class="btn  m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Enviar Foto</small></label>
                 </div>
+                
             </div>
             <!-- Uploaded image area-->
-            <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+            
+            <div class="image-area mt-4"><img id="imageResult" src="" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+            <script>
+                                    function readImage() {
+                                        if (this.files && this.files[0]) {
+                                            var file = new FileReader();
+                                            file.onload = function(e) {
+                                                document.getElementById("imageResult").src = e.target.result;
+                                            };
+                                            file.readAsDataURL(this.files[0]);
+                                        }
+                                    }
+                                    document.getElementById("upload").addEventListener("change", readImage, false);
+                                </script>
 
         </div>
     </div>
