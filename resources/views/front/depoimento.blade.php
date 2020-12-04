@@ -1,5 +1,5 @@
 @extends('front.master.master')
-@section('title', 'Testemunho')
+@section('title', 'Depoimento')
 @section('description', 'O maior site de adoção de animais da América Latina!')
 
 @section('content')

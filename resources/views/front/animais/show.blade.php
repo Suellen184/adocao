@@ -1,5 +1,6 @@
 @extends('front.master.master')
 
+@section('title', 'Solicitações')
 
 @section('content')
 @if (Session::has('message'))
@@ -17,79 +18,40 @@
             </div>
         </div>
     </div>
-    <!-- bradcam_area_end -->
-
-    <!-- ================ contact section start ================= -->
-    <section class="contact-section">
-            <div class="container">
-                <div class="d-none d-sm-block mb-5 pb-4">
-                    
-                </div>
-
-
-                <div class="container box_1170">
-    <div class="section-top-border">
-			
-			<div class="row">
-				<div class="col-md-6">
-					
-
-              <!--   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-200" src="imagens/gato_exemplo_1.jpg" alt="Primeiro Slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-200" src="imagens/gato_exemplo_2.jpg" alt="Segundo Slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-200" src="imagens/gato_exemplo_3.jpg" alt="Terceiro Slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Anterior</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Próximo</span>
-  </a>
-</div>
-</div>  
----->      
-       <img src="">
-				<div class="col-md-6 mt-sm-20">
-                <h1 class="mb-30">{{ $animal->nome }}</h1>
-                <ul class="mb-3 unordered-list">
-							<li> <strong>Tipo:</strong> {{ $animal->tipo }}</li>
-							<li><strong>Cor:</strong> {{ $animal->cor }}</li>
-							<li> <strong>Sexo:</strong> {{ $animal->sexo }}</li>                           
-                            <li><strong>Tamanho:</strong> {{ $animal->tamanho }}</li>
-                            <li><strong>Data de Nasciemento:</strong> {{ $animal->data_nascimmento }}</li>
-				</ul> 
-				  <p> <li><strong>Oservação:</strong> {{ $animal->observacao }}</li></p>
+   <!-- bradcam_area_end -->
+  <div class="row justify-content-center col-sm-12" style="margin-top: 50px;"> 
+            <div class="col-sm-5"> 
+                <img class="rounded img-thumbnail" style="margin-left: 200px; width: 300px; height: 300px"src="{{Storage::url($animal->imagem)}}">
+            </div>   
+                <div class="col-sm-5">
+                        <h1 class="mb-30">{{ $animal->nome }}</h1>
+                        <ul class="mb-3 unordered-list">
+                                    <li> <strong>Tipo:</strong> {{ $animal->tipo }}</li>
+                                    <li><strong>Cor:</strong> {{ $animal->cor }}</li>
+                                    <li> <strong>Sexo:</strong> {{ $animal->sexo }}</li>                           
+                                    <li><strong>Tamanho:</strong> {{ $animal->tamanho }}</li>
+                                    <li><strong>Data de Nascimento:</strong> {{ $animal->data_nascimento }}</li>
+                        </ul> 
+                        <p> <li><strong>Oservação:</strong> {{ $animal->observacao }}</li></p>
 				</div>
-			</div>
-		</div>
-     </div>
+
+            </div>
+    <div>
+	
+     
 
      <div style="height:100px"> </div>
     
     
-     <div class="col-12 mb-5">
+     <div class="col-sm-12 mb-5">
                         <h2 class="contact-title text-center">Quero Adotar!</h2>
-		<p class="sample-text text-center">
-		Para a adoção ser feita, primeiramente preencha as informações solicitadas nos campos abaixo, sua solicitação será avaliada e entraremos em contato.
+		<p class="sample-text text-center"  style="padding-left: 30px; padding-right: 30px;">
+		Para a adoção ser feita, você precisa ser maior de 18 anos, ter uma residência e meios de contato. Preencha as informações solicitadas nos campos abaixo, sua solicitação será avaliada e entraremos em contato por email ou telefone.
         </p>
      </div>
        
         <div style="height:100px" class="col-sm-12"> </div>
-
+        <div class="container"> 
                     <div class="col-lg-8" style="float:left">
                         <form action="{{ route('front.animais.get', ['id' => $animal->id]) }}" method="post">
                             @csrf
@@ -168,6 +130,9 @@
                 </div>
             </div>
         </section>
+
+    </div>
+
     <!-- ================ contact section end ================= -->
     <div style="height:580px" class="col-sm-12"> </div>
 @endsection
