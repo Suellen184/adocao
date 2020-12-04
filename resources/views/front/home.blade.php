@@ -112,8 +112,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="textmonial_active owl-carousel">
-                        <div class="testmonial_wrap">
                         @foreach ($depoimentos as $item)
+
+                        <div class="testmonial_wrap">
                             <div class="single_testmonial d-flex align-items-center">
                                 <div class="test_thumb">
                                     <img style="width: 200px; height; 200px;"src="{{Storage::url($item->imagem)}}" alt="">
@@ -128,34 +129,7 @@
                         </div>
 
                 @endforeach
-                        <div class="testmonial_wrap">
-                            <div class="single_testmonial d-flex align-items-center">
-                                <div class="test_thumb">
-                                    <img src="front/assets/img/testmonial/1.png" alt="">
-                                </div>
-                                <div class="test_content">
-                                    <h4>Jhon Walker</h4>
-                                    <span>Head of web design</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exerci.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testmonial_wrap">
-                            <div class="single_testmonial d-flex align-items-center">
-                                <div class="test_thumb">
-                                    <img src="front/assets/img/testmonial/1.png" alt="">
-                                </div>
-                                <div class="test_content">
-                                    <h4>Jhon Walker</h4>
-                                    <span>Head of web design</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exerci.</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
