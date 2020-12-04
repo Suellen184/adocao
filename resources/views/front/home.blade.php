@@ -4,6 +4,10 @@
 @section('description', 'O maior site de adoção de animais da América Latina!')
 
 @section('content')
+
+@if (Session::has('message'))
+<div class="alert alert-sucess bg-success">{{ Session::get('message') }}</div>
+@endif
     <!-- slider_area_start -->
     <div class="slider_area">
         <div class="single_slider slider_bg_1 d-flex align-items-center">
@@ -96,7 +100,7 @@
                         <div class="section_title text-left">
                             <h3 class="">Já adotou um animal?</h3>
                             <p>Nos envie seu testemunho! Queremos saber como está sendo pra você esse tempo.</p>
-                            <a href="" class="boxed-btn3">Enviar</a>
+                            <a href="{{ route('front.depoimentos.index')}}" class="boxed-btn3">Enviar</a>
                         </div>
                     </div>
                 </div>

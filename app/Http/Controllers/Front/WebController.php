@@ -73,7 +73,7 @@ class WebController extends Controller
 
         $solicitacao->save();
 
-        return redirect()->route('front.home');
+        return redirect()->route('front.home')->with('message', 'Registro criado com sucesso!');
     }
 
 
@@ -101,7 +101,11 @@ class WebController extends Controller
     // Depoimentos
     public function depoimento()
     {
-        return view('front.depoimento');
+        $depoimentos = DB::table('adocao_depoimentos')
+        ->where('status', '=', 1)
+       // ->orWhere('deleted_at', '!=', null)
+        ->get();
+        return view('front.depoimento', ['depoimentos' => $depoimentos]);
     }
 
     public function depoimentoObrigado()

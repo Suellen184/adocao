@@ -208,61 +208,38 @@ function showFileName( event ) {
 
 
 
-  <!-- testmonial_area_start  -->
-  <div class="testmonial_area">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="textmonial_active owl-carousel">
-                    <div class="testmonial_wrap">
+ 
+    <!-- testmonial_area_start  -->
+    <div class="testmonial_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="textmonial_active owl-carousel">
+                        @foreach ($depoimentos as $item)
 
-                        <div class="single_testmonial d-flex align-items-center">
-                            <div class="test_thumb">
-                                <img style="width: 200px; height; 200px;"src="" alt="">
+                        <div class="testmonial_wrap">
+                            <div class="single_testmonial d-flex align-items-center">
+                                <div class="test_thumb">
+                                    <img style="width: 200px; height; 200px;"src="{{Storage::url($item->imagem)}}" alt="">
+                                </div>
+                                <div class="test_content">
+                                <h4>{{$item->nome}}</h4>
+                                <span>{{$item->titulo}}</span>
+                                <p>{{$item->mensagem}}</p>
+                                </div>
                             </div>
-                            <div class="test_content">
-                                <h4></h4>
-                                <span></span>
-                                <p></p>
-                            </div>
+    
                         </div>
 
-                    </div>
-                    <div class="testmonial_wrap">
-                        <div class="single_testmonial d-flex align-items-center">
-                            <div class="test_thumb">
-                                <img src="front/assets/img/testmonial/1.png" alt="">
-                            </div>
-                            <div class="test_content">
-                                <h4>Jhon Walker</h4>
-                                <span>Head of web design</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                    nostrud exerci.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testmonial_wrap">
-                        <div class="single_testmonial d-flex align-items-center">
-                            <div class="test_thumb">
-                                <img src="front/assets/img/testmonial/1.png" alt="">
-                            </div>
-                            <div class="test_content">
-                                <h4>Jhon Walker</h4>
-                                <span>Head of web design</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                    nostrud exerci.</p>
-                            </div>
-                        </div>
+                @endforeach
+                        
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
-</div>
-<!-- testmonial_area_end  -->
+    <!-- testmonial_area_end  -->
 
 
 
