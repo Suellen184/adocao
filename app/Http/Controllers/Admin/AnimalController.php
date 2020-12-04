@@ -11,6 +11,16 @@ use Illuminate\Support\Facades\DB;
 
 class AnimalController extends Controller
 {
+
+    private $tamanho;
+
+    public function __construct(Animal $animal)
+    {
+        $this->animal = $animal;
+        $this->tamanho = collect(['pequeno' => 'pequeno', 'medio' => 'medio', 'grande' => 'grande']);
+
+    }
+
     public function adotados()
     {
         $animais = DB::table('animais')
@@ -102,8 +112,14 @@ class AnimalController extends Controller
      */
     public function edit($id)
     {
-        $animal = Animal::where([['id', $id],['deleted_at',null]])->first();
-        return view('admin.animal.edit', ['animal' => $animal]);
+        $animal = $this->animal::find($id);
+
+       // $tamanho = $this->tamanho;
+
+      // $animal = Animal::where([['id', $id],['deleted_at',null]])->first();
+       // dd($animal); 
+        return view('admin.animal.edit', compact('animal'));
+    
     }
 
     /**
@@ -112,9 +128,10 @@ class AnimalController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @param  int $id
      * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Animal $animal)
+     */ 
+    public function update(Request $request, $id)
     {
+        $animal = Animal::find($id);
         $animal->nome = $request->nome;
         $animal->cor = $request->cor;
         $animal->raca = $request->raca;
@@ -125,7 +142,7 @@ class AnimalController extends Controller
         $animal->status = $request->status;
         if (!($request->imagem == null)){
             $animal->imagem = $request->file('imagem')->store('animais');
-        }
+        } 
 
         $animal->save();
 

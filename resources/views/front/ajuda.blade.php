@@ -26,16 +26,18 @@
         
         <div class="section-top-border">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 text-center" >
 					<div class="single-defination">
+                    <img  class="mb-5" style="width: 200px; height; 200px;" src="http://localhost/Adocao/public/front/assets/img/adapt_icon/ração.png" alt="">
 						<h4 class="mb-20">Ração para os animais</h4>
 						<p>Nossos animais se alimentam duas vezes ao dia. Logo, gastamos uma quantidade muito grande de ração diariamente
                             precisamos muito da contribuição de vocês para esta situação.
                         </p>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 text-center">
 					<div class="single-defination">
+                    <img  class="mb-5" style="width: 200px; height; 200px;" src="http://localhost/Adocao/public/front/assets/img/adapt_icon/limpeza.png" alt="">
 						<h4 class="mb-20">Materiais de limpeza</h4>
 						<p>Para que o ambiente possa se manter limpo, necessitamos de materiais de limpeza. Todos os dias os animais tem suas
                             necessidades e precisamos deixar tudo limpinho para que eles se sintam confortáveis em nossa ONG. Além disso,
@@ -43,8 +45,9 @@
                         </p>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 text-center">
 					<div class="single-defination">
+                    <img  class="mb-5" style="width: 200px; height; 200px;" src="http://localhost/Adocao/public/front/assets/img/adapt_icon/passear.png" alt="">
 						<h4 class="mb-20">Passeio com os animais</h4>
 						<p>Você pode escolher um animalzinho e ir passear com ele em algum dia da semana. Estamos abertos de segunda à sábado, de 9h às 17h. 
                         Nossos animais irão ficar muito felizes em sair um pouco.
@@ -76,7 +79,7 @@
                     </div> 
                     <div class="contact_btn d-flex align-items-center justify-content-center">
                         <a href="{{ route('front.contato')}}" class="boxed-btn4">Envie-nos um email</a>
-                        <p>Ou  <a href="#"> +880 4664 216</a></p>
+                    <p>Ou  <a href="{{ route('front.contato')}}"> +880 4664 216</a></p>
                     </div>
                 </div>
             </div>

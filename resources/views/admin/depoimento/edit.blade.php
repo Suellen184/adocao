@@ -33,8 +33,8 @@
             <div class="form-group col-sm-3">
                 <label for="status">Status</label>
                 <select class="form-control " id="status">
-                <option value="{{$depoimento->status}}">ativo</option>
-                <option value="{{$depoimento->status}}">inativo</option>
+                <option value="ativo" {{ $depoimento->status == 'ativo'? 'selected ="selected"' : '' }}>ativo</option>
+                <option value="inativo" {{ $depoimento->status == 'inativo'? 'selected ="selected"' : '' }}>inativo</option>
                 </select>
             </div>
         </div>  

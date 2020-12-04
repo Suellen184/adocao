@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Criar Solicitação')
+@section('title', 'Solicitação - Criar | Anipet')
 
 @section('content_header')
 
@@ -37,7 +37,7 @@
                     <label class="input-group-text" for="inputGroupSelect01">Animal em questão</label>
                 </div>
                 <select class="custom-select" id="inputGroupSelect01" name="animal">
-                    <option value="{{ $animal->id }}" selected>{{ $animal->nome }}, {{ $animal->tamanho }}</option>
+                    <option value="{{ $animal->id }}" selected>{{ $animal->nome }}, {{ $animal->tipo }}</option>
                 </select>
             </div>
 
@@ -149,18 +149,6 @@
             </div>
         </div>
 
-
-        <div class="form-group">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                    Eu concordo com os termos e condições.
-                </label>
-                <div class="invalid-feedback">
-                    Você deve concordar com os termos e condições.
-                </div>
-            </div>
-        </div>
         <button class="btn btn-primary" type="submit">Enviar</button>
 
     </form>

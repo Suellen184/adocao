@@ -15,9 +15,10 @@
 <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 <h4 class="text-center font-weight-bold mb-5">Atualizar Animal</h4>
-<form action="{{route('admin.animal.edit',['animal'=>$animal->id])}}" method="put" enctype="multipart/form-data" >
-    @csrf
-    @method('put')
+  <form action="{{-- route('admin.animal.edit',['animal'=>$animal->id]) --}}" method="put" enctype="multipart/form-data" >
+   
+    {{-- Form::model($animal, array('route' => array('animal.update', $animal->id), 'method' => 'PUT')) --}}
+  
     <img src="{{Storage::url($animal->imagem)}}" alt=""   style="width: 200px; height: 200px;" class=" rounded float-right">
     <input type="file" name="imagem" id="imagem"  value="{{$animal->imagem}}">
     <div class="row">
@@ -46,10 +47,12 @@
 
     <div class="form-group col-sm-4">
       <label for="tamanho">Tamanho</label>
-      <select class="form-control"  name="tamanho"  id="tamanho">
-        <option value=" {{ $animal->tamanho == 'Pequeno'? 'selected' : '' }}">Pequeno</option>
-        <option value="{{ $animal->tamanho == 'Médio'? 'selected' : '' }}">Médio</option>
-        <option value="{{ $animal->tamanho == 'Grande'? 'selected' : '' }}">Grande</option>
+
+     <select class="form-control"  name="tamanho"  id="tamanho">
+        <option value="pequeno" {{ $animal->tamanho == 'pequeno'? 'selected ="selected"' : '' }}>Pequeno</option>
+        <option value="medio" {{ $animal->tamanho == 'medio'? 'selected="selected"' : '' }}>Médio</option>
+        <option value="grande" {{ $animal->tamanho == 'grande'? 'selected="selected"' : '' }}>Grande</option>
+
       </select>
   </div>
 </div>
@@ -58,24 +61,24 @@
   <div class="form-group col-sm-4">
       <label for="tipo">Tipo</label>
         <select class="form-control" id="tipo" name="tipo">
-          <option value="{{$animal->tipo}}">Cachorro</option>
-          <option value="{{$animal->tipo}}">Gato</option>
+          <option value="cachorro" {{ $animal->tipo == 'cachorro'? 'selected ="selected"' : '' }}>Cachorro</option>
+          <option value="gato" {{ $animal->tipo == 'gato'? 'selected ="selected"' : '' }}>Gato</option>
         </select>
     </div>
 
     <div class="form-group col-sm-4">
         <label for="sexo">Sexo</label>
         <select class="form-control" id="sexo" name="sexo">
-          <option value="{{$animal->sexo}}">Fêmea</option>
-          <option value="{{$animal->sexo}}">Macho</option>
+          <option value="femea" {{ $animal->sexo == 'femea'? 'selected ="selected"' : '' }}>Fêmea</option>
+          <option value="macho" {{ $animal->sexo == 'macho'? 'selected ="selected"' : '' }}>Macho</option>
         </select>
     </div>
     <div class="form-group col-sm-4">
         <label for="status">Status</label>
         <select class="form-control" id="status"  name="status">
-          <option value="{{$animal->status}}">Inativo</option>
-          <option value="{{$animal->status}}">Disponivel</option>
-          <option value="{{$animal->status}}">Adotado</option>
+          <option value="inativo" {{ $animal->status == 'inativo'? 'selected ="selected"' : '' }}>Inativo</option>
+          <option value="disponivel" {{ $animal->status == 'disponivel'? 'selected ="selected"' : '' }}>Disponivel</option>
+          <option value="adotado" {{ $animal->status == 'adotado'? 'selected ="selected"' : '' }}>Adotado</option>
 
         </select>
     </div>
