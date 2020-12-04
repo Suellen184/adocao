@@ -110,8 +110,8 @@
     <!-- adapt_area_end  -->
 
     
-    <!-- testmonial_area_start  -->
-    <div class="testmonial_area">
+<!-- testmonial_area_start  -->
+<div class="testmonial_area">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
