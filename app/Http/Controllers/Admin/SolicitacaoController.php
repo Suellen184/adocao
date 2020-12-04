@@ -43,7 +43,7 @@ class SolicitacaoController extends Controller
         $verificaCPF = DB::table('adocao_solicitacoes')
             ->where([
                 ['cpf', '=', $request->cpf],
-                ['status', '=', 'adotado'],
+                ['status', '=', 'adotados'],
             ])
             ->count('status');
 
@@ -60,14 +60,14 @@ class SolicitacaoController extends Controller
         $solicitacao->nome = $request->nome;
         $solicitacao->sobrenome = $request->sobrenome;
         $solicitacao->cpf = $request->cpf;
-        $solicitacao->telefone = $resquest->telefone;
+        $solicitacao->telefone = $request->telefone;
         $solicitacao->email = $request->email;
         $solicitacao->cep = $request->cep;
 
         $solicitacao->mensagem = $request->mensagem;
-        $solicitacao->observacao_by_admin = $request ->observacao;
+        $solicitacao->observacao_by_admin = $request->observacao_by_admin;
 
-        $solicitacao->status = 'realizada';
+        $solicitacao->status = $request->status;
 
         $solicitacao->save();
 

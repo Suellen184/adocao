@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Visualizar')
+@section('title', 'Animais | Anipet')
 
 @section('content_header')
 @section('content')

@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Visualizar Solicitação')
+@section('title', 'Solicitação | Anipet')
 
 @section('content_header')
 @section('content')
@@ -28,17 +28,18 @@
              <div class="row">
                  <p class="col-sm-4"> <strong>Telefone: </strong>{{$solicitacao->telefone}}</p>
                  <p class="col-sm-4"> <strong>Email: </strong>{{$solicitacao->email}} </p>
-                 <p class="col-sm-4"> <strong>Cidade: </strong>{{$solicitacao->cidade}}</p>
              </div>
              
              <div class="row">
                  <p class="col-sm-4"> <strong>CEP: </strong>{{$solicitacao->cep}} </p>
                  <p class="col-sm-4"> <strong>Status: </strong>{{$solicitacao->status}} </p>
-                 <p class="col-sm-4"> <strong>Texto: </strong>{{$solicitacao->texto}} </p>
              </div>
+
              
              <div class="row">
-                 <p class="col-sm-12"> <strong>Observação: </strong>{{$solicitacao->observacao}}</p>
+                <p class="col-sm-4"> <strong>Mensagem do Adotante: </strong>{{$solicitacao->mensagem}} </p>
+
+                 <p class="col-sm-12"> <strong>Observação: </strong>{{$solicitacao->observacao_by_admin}}</p>
              </div>
                 <img src="" alt=""><br>
     

@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-md-5 mb-3">
                     <label for="validationCustom01">Telefone</label>
-                    <input value="{{ old('tel') }}" type="text" class="form-control" id="validationCustom01" name="tel"
+                    <input value="{{ old('telefone') }}" type="text" class="form-control" id="validationCustom01" name="telefone"
                            placeholder="Digite seu telefone" required minlength="8" maxlength="20">
                     <div class="valid-feedback">
                         Tudo certo!
@@ -122,8 +122,8 @@
                 <div class="form-group col-sm-4">
                     <label for="status">Status</label>
                     <select class="form-control"  name="status"  id="status">
-                        <option value="realizada">Disponivel</option>
-                        <option value="adotados">Inativo</option>
+                        <option value="realizada">Realizada</option>
+                        <option value="adotados">Adotados</option>
                     </select>
                 </div>
                 
@@ -143,8 +143,8 @@
 
                 <div class="form-group col-sm-12">
                     <label for="exampleFormControlTextarea1">Observação do Administrador</label>
-                    <textarea class="form-control " name="observacao" id="exampleFormControlTextarea1"
-                              rows="3">{{ old('observacao')   }}</textarea>
+                    <textarea class="form-control " name="observacao_by_admin" id="exampleFormControlTextarea1"
+                              rows="3">{{ old('observacao_by_admin')   }}</textarea>
                 </div>
             </div>
         </div>

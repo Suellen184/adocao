@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Visualizar Solicitações')
+@section('title', 'Solicitação | Anipet')
 
 @section('content_header')
 @section('content')

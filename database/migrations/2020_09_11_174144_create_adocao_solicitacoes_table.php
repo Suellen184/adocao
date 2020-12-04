@@ -29,7 +29,7 @@ class CreateAdocaoSolicitacoesTable extends Migration
 
             // mensagem e observação
             $table->text('mensagem');
-            $table->text('observacao_by_admin')->nullable();
+            $table->text('observacao_by_admin');
 
             // informações sobre o animal e o status de adoção
             $table->unsignedInteger('id_animal');

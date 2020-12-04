@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Visualizar Depoimento')
+@section('title', 'Depoimento | Anipet')
 
 @section('content_header')
 @section('content')
@@ -31,7 +31,7 @@
                  <p class="col-sm-12"> <strong>Mensagem:</strong> {{ $depoimento->mensagem }}</p>
              </div>
                 <img src="" alt=""><br>
-    
+     
             </div>
             <div class="box-footer">
                 <div class="btn-group">
