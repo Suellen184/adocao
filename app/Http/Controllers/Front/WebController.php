@@ -14,7 +14,12 @@ class WebController extends Controller
     // Index
     public function home()
     {
-        return view('front.home');
+
+        $depoimentos = DB::table('adocao_depoimentos')
+            ->where('status', '=', 1)
+           // ->orWhere('deleted_at', '!=', null)
+            ->get();
+        return view('front.home', ['depoimentos' => $depoimentos]);
     }
 
     // Animais

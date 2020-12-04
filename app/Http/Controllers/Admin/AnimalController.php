@@ -37,7 +37,7 @@ class AnimalController extends Controller
      */
     public function index()
     {
-        $animais = DB::table('animais')
+        $animais = DB::table('animais') 
             ->where([
                 ['status', '=', 'disponivel'],
                 ['deleted_at', '=', null]

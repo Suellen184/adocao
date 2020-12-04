@@ -25,7 +25,7 @@ class DepoimentoController extends Controller
     public function inativos()
     {
         $depoimentos = DB::table('adocao_depoimentos')
-            ->where('status', '=', 'inativo')
+            ->where('status', '=', 0)
            // ->orWhere('deleted_at', '!=', null)
             ->get();
         return view('admin.depoimento.inativos', ['depoimentos' => $depoimentos]);
@@ -34,7 +34,7 @@ class DepoimentoController extends Controller
     public function ativos()
     {
         $depoimentos = DB::table('adocao_depoimentos')
-            ->where('status', '=', 'ativo')
+            ->where('status', '=', 1)
            // ->orWhere('deleted_at', '!=', null)
             ->get();
         return view('admin.depoimento.ativos', ['depoimentos' => $depoimentos]);

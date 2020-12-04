@@ -43,7 +43,7 @@
         </div>  
             <div class="form-group">
                 <label for="">Mensagem</label>
-                <textarea class="form-control col-sm-11" name="mensagem" value="{{ old('mensagem') }} id="mensagem" rows="3"></textarea>
+                <textarea class="form-control col-sm-11" name="mensagem" value="{{ old('mensagem') }}" id="mensagem" rows="3"></textarea>
            </div>
 
                 <button type="submit" class="btn btn-success">Enviar</button>

@@ -42,7 +42,7 @@
                                                     <button type="button" style="margin-right: 5px;" class="btn btn-info"><i
                                                             class="fa fa-search"></i> Visualizar
                                                     </button>
-                                                </a>
+                        </a>
                             {{-- @permission('item-edit') --}}
                             <a href="{{route('admin.solicitacao.edit',['solicitacao'=>$s->id])}}" style="margin-right: 5px;">
                                                     <button type="button" class="btn btn-warning"><i

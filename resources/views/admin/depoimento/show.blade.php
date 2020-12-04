@@ -19,7 +19,7 @@
 
              
             <div class="row">   
-                <p class="col-sm-4">  <strong>Código:</strong>{{ $depoimento->codigo }} <br></p>
+                <p class="col-sm-4">  <strong>Código: </strong>{{ $depoimento->codigo_solicitacao }} <br></p>
             </div>    
                 <div class="row">
                     <p class="col-sm-4">  <strong>Nome:</strong> {{ $depoimento->nome }}<br></p>

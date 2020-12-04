@@ -16,7 +16,7 @@
     <div class="row">
         <div class="form-group col-sm-2">
             <label for="codigo">Código</label>
-            <input type="text" class="form-control" id="codigo" name="codigo" value="{{$depoimento->codigo}}">
+            <input type="text" class="form-control" id="codigo" name="codigo" value="{{$depoimento->codigo_solicitacao}}">
         </div>
     </div>
         <div class="row">
@@ -40,7 +40,7 @@
         </div>  
             <div class="form-group">
                 <label for="">Mensagem</label>
-                <textarea class="form-control col-sm-11" name="mensagem" id="mensagem" rows="3">{{ old('mensagem')   }}</textarea>
+            <textarea class="form-control col-sm-11" name="mensagem" id="mensagem" rows="3">{{$depoimento->mensagem}}</textarea>
            </div>
 
                 <button type="submit" class="btn btn-success">Enviar</button>

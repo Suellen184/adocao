@@ -89,6 +89,7 @@
                                         <a href="{{ route('admin.animal.inativos') }}" class="btn btn-outline-danger btn-sm">
                                             Inativos
                                         </a>
+                            
                                     </th>
                                 </tr>
                                 </thead>

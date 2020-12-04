@@ -113,19 +113,21 @@
                 <div class="col-lg-10">
                     <div class="textmonial_active owl-carousel">
                         <div class="testmonial_wrap">
-
+                        @foreach ($depoimentos as $item)
                             <div class="single_testmonial d-flex align-items-center">
                                 <div class="test_thumb">
-                                    <img style="width: 200px; height; 200px;"src="" alt="">
+                                    <img style="width: 200px; height; 200px;"src="{{Storage::url($item->imagem)}}" alt="">
                                 </div>
                                 <div class="test_content">
-                                    <h4></h4>
-                                    <span></span>
-                                    <p></p>
+                                <h4>{{$item->nome}}</h4>
+                                <span>{{$item->titulo}}</span>
+                                <p>{{$item->mensagem}}</p>
                                 </div>
                             </div>
     
                         </div>
+
+                @endforeach
                         <div class="testmonial_wrap">
                             <div class="single_testmonial d-flex align-items-center">
                                 <div class="test_thumb">
